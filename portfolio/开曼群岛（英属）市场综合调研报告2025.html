@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开曼群岛（英属）市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #050a30;
+            --secondary-color: #091353;
+            --accent-color: #00d4ff;
+            --text-color: #e6f1ff;
+            --text-secondary: #a3b1cc;
+            --highlight: #ff124f;
+            --card-bg: rgba(9, 19, 83, 0.7);
+            --gradient-start: #050a30;
+            --gradient-end: #091353;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 18, 79, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('kaiman.jpg') center/cover no-repeat;
+            filter: brightness(0.3) saturate(1.2);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 10, 48, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h3 i {
+            font-size: 1.6rem;
+            background: -webkit-linear-gradient(45deg, var(--highlight), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-canvas-wrapper {
+            position: relative;
+            flex-grow: 1;
+            min-height: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        th {
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f058"; /* check-circle */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: scale(1.2);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 18, 79, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+        }
+        
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        .chart-title {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="country-overview"></div>
+        <div class="nav-dot" data-section="economy"></div>
+        <div class="nav-dot" data-section="market"></div>
+        <div class="nav-dot" data-section="legal"></div>
+        <div class="nav-dot" data-section="finance"></div>
+        <div class="nav-dot" data-section="risk"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>CI</span>
+            </div>
+            <h1>开曼群岛（英属）市场综合调研报告</h1>
+            <p class="subtitle">深度解析全球领先离岸金融中心的投资机遇与监管环境 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            ⌄
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="country-overview" class="section">
+            <h2>国家/地区概况</h2>
+            
+            <div class="card">
+                <h3>地理位置与战略地位</h3>
+                <p>开曼群岛是位于加勒比海西部的英国海外领土，由大开曼、小开曼和开曼布拉克三座岛屿组成，总面积约264平方公里。地处古巴以南，牙买加以西，是连接北美与南美的重要航空和航运节点。作为全球<span class="highlight">第五大金融中心</span>，开曼群岛凭借其稳定的政治环境、健全的法律体系和零税收政策，成为全球企业和高净值人士进行国际投资、资产管理和财富规划的核心枢纽。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛地理位置与金融辐射示意图</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="caymanMapChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">总面积</div>
+                    <div class="stat-number">264</div>
+                    <div class="stat-title">平方公里</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">人口总数</div>
+                    <div class="stat-number">约8.5万</div>
+                    <div class="stat-title">国际化人口结构</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">金融中心排名</div>
+                    <div class="stat-number">第5</div>
+                    <div class="stat-title">全球金融中心指数(GFCI 35)</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">注册公司总数</div>
+                    <div class="stat-number">12万+</div>
+                    <div class="stat-title">全球领先的离岸公司注册地</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>政治体制与治理架构</h3>
+                <p>开曼群岛实行<span class="accent">议会制民主</span>，是内部自治的英国海外领土。英国国王是国家元首，由总督在当地代表。政府首脑为总理，由议会多数党领袖担任。其政治体制以稳定、亲商和高效著称，法律体系基于<span class="highlight">英国普通法</span>，为全球投资者提供了熟悉和可靠的法律保障。开曼群岛金融管理局(CIMA)是其核心监管机构，负责维护金融服务的稳健与声誉。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心治理优势</div>
+                    <ul class="bullet-list">
+                        <li>政治高度稳定，无党派纷争</li>
+                        <li>基于英国普通法的成熟法律体系</li>
+                        <li>独立的司法系统，判决可在英国枢密院上诉</li>
+                        <li>高效、透明、国际化的政府服务</li>
+                        <li>符合国际标准的审慎监管框架 (CIMA)</li>
+                        <li>致力于遵守全球反洗钱(AML)和税务信息交换(AEOI)标准</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>社会结构与人口特征</h3>
+                <p>开曼群岛社会呈现出典型的<span class="highlight">国际化</span>和<span class="highlight">多元文化</span>特征。总人口约<span class="data-marker">8.5万</span>，其中超过<span class="data-marker">50%</span>为外籍专业人士及其家属，来自超过135个国家。这种人口结构为金融、法律、会计等专业服务领域提供了丰富的人才储备。社会治安良好，生活水平高，人均GDP位居世界前列，使其成为极具吸引力的工作和生活目的地。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛人口国籍构成</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="populationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>国家发展阶段与定位</h3>
+                <p>开曼群岛是全球领先的<span class="accent">专业化离岸金融中心</span>，经济高度发达。其发展路径从20世纪60年代开始，成功地从一个依赖渔业和绳索制造的小岛经济体，转型为以<span class="highlight">金融服务</span>和<span class="highlight">高端旅游</span>为两大支柱的成熟经济体。在全球价值链中，开曼群岛专注于提供高效、中立、专业的法律和金融基础设施，服务于全球资本的跨境流动、配置和管理。</p>
+                <p>当前，开曼群岛正致力于巩固其在全球金融体系中的核心地位，不断升级其监管科技(RegTech)和法律框架，以适应全球监管新要求。同时，发展数字资产、金融科技和可持续金融等新兴领域，打造面向未来的"智能"离岸金融中心。</p>
+            </div>
+        </section>
+        
+        <section id="economy" class="section">
+            <h2>宏观经济分析</h2>
+            
+            <div class="card">
+                <h3>GDP总量与增长动力</h3>
+                <p>2025年，开曼群岛名义GDP预计达到<span class="data-marker">72亿美元</span>，人均GDP超过<span class="data-marker">85,000美元</span>，位居世界前列。经济增长稳健，2025年实际GDP增长率预计为<span class="data-marker">2.5%</span>。其经济增长主要由两大引擎驱动：<span class="highlight">金融服务业</span>的持续扩张和<span class="highlight">高端旅游业</span>的强劲复苏。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛GDP总量与增长率(2018-2025)</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="gdpChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>产业结构</h3>
+                <p>开曼群岛的经济结构高度集中于服务业。其中，<span class="accent">金融及保险服务业</span>是绝对核心，对GDP的贡献超过<span class="data-marker">55%</span>。<span class="accent">旅游及房地产</span>贡献约<span class="data-marker">25%</span>。这种高度专业化的产业结构使其经济表现与全球资本市场和高端消费趋势紧密相关。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛产业结构构成(2024)</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="industryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">通胀率</div>
+                    <div class="stat-number">3.2%</div>
+                    <div class="stat-title">2025年预测</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">基准利率</div>
+                    <div class="stat-number">5.5%</div>
+                    <div class="stat-title">与美元利率挂钩</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">失业率</div>
+                    <div class="stat-number">2.1%</div>
+                    <div class="stat-title">接近完全就业</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">开曼元/美元汇率</div>
+                    <div class="stat-number">1.20</div>
+                    <div class="stat-title">长期固定汇率</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>经济指标分析</h3>
+                <p>开曼群岛的主要经济指标呈现以下特点：</p>
+                <ul class="bullet-list">
+                    <li><span class="accent">通胀率：</span>由于高度依赖进口，通胀水平主要受国际商品价格影响，2025年预计为<span class="data-marker">3.2%</span>，较前两年有所回落。</li>
+                    <li><span class="accent">利率：</span>开曼元与美元实行<span class="data-marker">1:1.20</span>的固定汇率，因此其利率政策紧随美联储，基准利率维持在<span class="data-marker">5.5%</span>。</li>
+                    <li><span class="accent">汇率：</span>长期稳定的固定汇率制度为国际投资者提供了可预测的金融环境。</li>
+                    <li><span class="accent">就业率：</span>失业率极低，长期在<span class="data-marker">2-3%</span>之间徘徊，专业服务领域劳动力需求旺盛。</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>政府财政与支出结构</h3>
+                <p>开曼群岛政府拥有极为稳健的财政状况，长期保持<span class="highlight">财政盈余</span>和<span class="highlight">低负债</span>。政府收入主要来源于金融服务业的牌照费、注册费以及进口关税和工作许可费，无直接税。截至2024年底，政府债务占GDP比重低于<span class="data-marker">10%</span>，拥有超过<span class="data-marker">15亿</span>美元的储备。政府支出主要投向教育、医疗、基础设施和社会服务等领域，以维持高品质的公共服务。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛政府收入来源(2024财年)</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="govRevenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="market" class="section">
+            <h2>核心产业与市场机会</h2>
+            
+            <div class="card">
+                <h3>金融服务业：全球资本的超级连接器</h3>
+                <p>金融服务业是开曼经济的基石。作为全球最大的<span class="accent">投资基金注册地</span>和第二大<span class="accent">专属自保保险中心</span>，开曼群岛在全球资本市场中扮演着不可或缺的角色。</p>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">受监管基金数量</div>
+                        <div class="stat-number">32,000+</div>
+                        <div class="stat-title">全球约70%的对冲基金在此注册</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">银行总资产</div>
+                        <div class="stat-number">1.5万亿</div>
+                        <div class="stat-title">美元，国际银行业务中心</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">注册公司</div>
+                        <div class="stat-number">120,000+</div>
+                        <div class="stat-title">全球跨境交易和SPV首选地</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">专属自保公司</div>
+                        <div class="stat-number">700+</div>
+                        <div class="stat-title">全球领先的专属自保中心</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">优先关注领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">私募基金(PE)与风险投资(VC)基金：</span>受益于灵活的豁免有限合伙制(ELP)，成为全球PE/VC基金设立的标准平台。</li>
+                        <li><span class="accent">数字资产与金融科技：</span>《虚拟资产服务提供商法》(VASP Act)为数字资产基金、交易所和技术公司提供了清晰的监管框架。</li>
+                        <li><span class="accent">结构性融资与资本市场：</span>作为特殊目的载体(SPV)的首选地，广泛用于资产证券化、飞机租赁、项目融资等。</li>
+                        <li><span class="accent">再保险与保险连接证券(ILS)：</span>增长迅速的领域，吸引全球资本进入再保险市场。</li>
+                    </ul>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛注册基金类型分布</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="fundTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>高端旅游业与房地产市场</h3>
+                <p>开曼群岛以其世界级的海滩（如七英里海滩）、潜水胜地和高端度假设施而闻名。旅游业是其第二大经济支柱，主要吸引北美高收入游客。2025年，预计航空和邮轮游客总数将超过<span class="data-marker">250万</span>人次。高端旅游业的繁荣直接带动了房地产市场的增长，豪华公寓、别墅和商业地产需求旺盛，平均房价位居加勒比地区前列。市场对可持续旅游和生态度假村的需求正在上升。</p>
+            </div>
+        </section>
+        
+        <section id="legal" class="section">
+            <h2>法律与监管环境</h2>
+
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">公司注册效率</div>
+                    <div class="stat-number">24-48</div>
+                    <div class="stat-title">小时内完成</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">法律体系</div>
+                    <div class="stat-number">英国</div>
+                    <div class="stat-title">普通法系</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">年度新注册公司</div>
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-title">全球投资首选</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">全球司法管辖区排名</div>
+                    <div class="stat-number">Top 5</div>
+                    <div class="stat-title">金融保密与效率</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>公司设立流程与主体类型</h3>
+                <p>开曼群岛提供多种灵活、高效且国际认可的公司法律形式，设立流程通常可在<span class="data-marker">24-48小时</span>内完成。主要实体类型包括：</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>实体类型</th>
+                            <th>核心特点</th>
+                            <th>典型应用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>豁免公司<br>(Exempted Company)</td>
+                            <td>最常见的公司形式，股东信息不公开，可在海外经营，承诺20年内免税。</td>
+                            <td>控股公司、国际贸易、SPV、上市主体（如VIE架构）</td>
+                        </tr>
+                        <tr>
+                            <td>有限责任公司<br>(LLC)</td>
+                            <td>兼具公司和合伙企业特点，具有法人资格和成员有限责任，税务上可视为透明实体。</td>
+                            <td>投资基金、合资企业、私募股权平台</td>
+                        </tr>
+                        <tr>
+                            <td>豁免有限合伙企业<br>(ELP)</td>
+                            <td>由普通合伙人(GP)和有限合伙人(LP)组成，是基金的标准架构。</td>
+                            <td>对冲基金、私募股权基金、风险投资基金</td>
+                        </tr>
+                        <tr>
+                            <td>基金会公司<br>(Foundation Company)</td>
+                            <td>无股东的独立法人实体，可为特定目的持有资产，常用于慈善、继承规划。</td>
+                            <td>家族办公室、慈善信托、数字资产项目</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>税收体系：零税收天堂</h3>
+                <p>开曼群岛以其<span class="highlight">中立的税收政策</span>闻名于世，这是其作为国际金融中心的核心竞争力之一。其税收体系特点如下：</p>
+                <ul class="bullet-list">
+                    <li><span class="accent">无企业所得税：</span>公司利润无需在开曼群岛缴税。</li>
+                    <li><span class="accent">无资本利得税：</span>投资收益和资产增值无需缴税。</li>
+                    <li><span class="accent">无个人所得税：</span>居民和非居民均无需缴纳个人所得税。</li>
+                    <li><span class="accent">无预提所得税：</span>向海外支付股息、利息等款项无预提税。</li>
+                    <li><span class="accent">无遗产税或赠与税。</span></li>
+                </ul>
+                <p>这种税收中立性意味着商业交易的税务影响将在投资人或股东所在的司法管辖区确定，避免了双重征税的复杂性，使开曼群岛成为全球资本高效流动的理想平台。</p>
+            </div>
+            
+            <div class="card">
+                <h3>监管框架与合规要求</h3>
+                <p>尽管是零税收地区，开曼群岛拥有<span class="highlight">严格且符合国际标准</span>的监管框架，由开曼群岛金融管理局（CIMA）负责执行。近年来，为应对全球压力，开曼极大地加强了其合规体系建设。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心合规领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">反洗钱/反恐怖融资(AML/CFT)：</span>实施严格的客户尽职调查(KYC)和交易监控要求，法律框架被金融行动特别工作组(FATF)评为技术性合规高分。</li>
+                        <li><span class="accent">税务信息自动交换(AEOI)：</span>全面实施美国的《外国账户税收合规法案》(FATCA)和经合组织的《通用报告准则》(CRS)，与全球上百个税务管辖区交换金融账户信息。</li>
+                        <li><span class="accent">经济实质法(Economic Substance)：</span>要求从事特定活动（如基金管理、融资租赁、控股等）的实体在开曼拥有足够的经营实质，以防止空壳公司的滥用。</li>
+                        <li><span class="accent">数据保护法(DPL)：</span>基于欧盟GDPR原则，为个人数据提供强有力的保护。</li>
+                    </ul>
+                </div>
+                <p>对于投资者而言，这意味着在享受开曼平台便利性的同时，必须投入资源确保满足日益复杂的合规义务。聘请专业的本地法律和行政服务提供商至关重要。</p>
+            </div>
+        </section>
+        
+        <section id="finance" class="section">
+            <h2>金融与资本市场</h2>
+
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">全球第五大</div>
+                    <div class="stat-number">银行中心</div>
+                    <div class="stat-title">国际银行业务</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">全球第一大</div>
+                    <div class="stat-number">基金注册地</div>
+                    <div class="stat-title">投资基金</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">无</div>
+                    <div class="stat-number">外汇管制</div>
+                    <div class="stat-title">资本自由流动</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">固定汇率</div>
+                    <div class="stat-number">1.20</div>
+                    <div class="stat-title">KYD/USD</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-chart-pie"></i>投资基金中心</h3>
+                <p>开曼群岛是全球公认的<span class="highlight">投资基金司法管辖区之王</span>。其成功得益于现代化的《基金法》、专业的服务提供商网络（审计、法律、行政）以及监管机构的专业性。大约<span class="data-marker">70%</span>的全球离岸对冲基金和几乎所有亚洲的私募股权基金都在此设立。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">开曼群岛受监管基金数量增长趋势(2015-2025)</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="investmentFundChart"></canvas>
+                    </div>
+                </div>
+                
+                <p>开曼基金结构提供了极大的灵活性，能够满足全球投资者的不同需求，并被全球各主要证券交易所（如NYSE, NASDAQ, HKEX）所接受，常作为红筹/VIE架构的上市主体。</p>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-university"></i>银行业与资本市场</h3>
+                <p>开曼群岛是全球重要的<span class="accent">国际银行中心</span>，拥有超过<span class="data-marker">100</span>家持牌银行，其中大部分是全球顶尖银行的分支机构。其银行体系专注于服务全球资本流动。</p>
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                             <i class="fas fa-globe-americas fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">国际银行业务</div>
+                            <p>提供复杂的跨境贷款、贸易融资和财资管理服务。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <i class="fas fa-shield-alt fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">财富管理</div>
+                            <p>为全球高净值个人和家族办公室提供私人银行和信托服务。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                             <i class="fas fa-chart-line fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">资本市场</div>
+                            <p>开曼实体广泛用于结构性融资、资产证券化和在主要交易所上市。</p>
+                        </div>
+                    </div>
+                     <div class="grid-item">
+                        <div class="grid-item-content">
+                             <i class="fas fa-file-invoice-dollar fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">证券交易所(CSX)</div>
+                            <p>是全球领先的专业证券上市平台，尤其在基金和债务工具上市方面。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <h3><i class="fab fa-bitcoin"></i>金融科技与数字资产</h3>
+                <p>开曼群岛正迅速成为全球<span class="accent">数字资产和金融科技</span>的创新中心，这得益于其前瞻性的监管框架和对创新的开放态度。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心优势</div>
+                    <ul class="bullet-list">
+                        <li><b>《虚拟资产服务提供商法》(VASP Act):</b> 为数字资产基金、交易所和技术公司提供了清晰、稳健的监管环境。</li>
+                        <li><b>监管沙盒:</b> 允许创新型金融科技公司在受控环境中测试其产品和服务。</li>
+                        <li><b>技术中立的法律框架:</b> 适用于从DeFi协议到NFT平台的各类新兴技术。</li>
+                        <li><b>专业的生态系统:</b> 顶尖的法律和会计师事务所拥有专门的数字资产团队，提供世界级专业支持。</li>
+                    </ul>
+                </div>
+                <p>这些优势使开曼群岛成为全球众多大型区块链项目、加密货币基金和金融科技初创公司的首选注册地。</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-exchange-alt"></i>资本流动与外汇</h3>
+                <p>开曼群岛实行<span class="highlight">无外汇管制</span>的政策，资本和利润可以自由进出，这是其金融服务业成功的关键因素之一。</p>
+                 <ul class="bullet-list">
+                    <li><span class="accent">无汇兑限制：</span>任何货币的资金均可自由汇入和汇出。</li>
+                    <li><span class="accent">固定汇率：</span>开曼元(KYD)与美元(USD)实行 <span class="data-marker">1 KYD = 1.20 USD</span> 的固定汇率，提供了高度的确定性。</li>
+                    <li><span class="accent">美元广泛使用：</span>美元在开曼群岛被广泛接受和使用，日常交易和金融业务多以美元计价。</li>
+                </ul>
+                <p>这种自由的资本流动环境，结合其稳定的法律和政治体系，使开曼群岛成为全球资本进行整合、管理和再投资的高效平台。</p>
+            </div>
+        </section>
+        
+        <section id="talent" class="section">
+            <h2>人才与劳动力市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-globe-americas"></i>国际化专业人才中心</h3>
+                <p>开曼群岛的劳动力市场是其作为全球金融中心的核心优势之一。市场高度<span class="highlight">国际化</span>和<span class="highlight">精英化</span>，超过50%的劳动力来自海外，汇集了全球顶级的法律、会计、金融和基金管理领域的专业人士。这种人才聚集效应为复杂的跨境交易和金融产品的设计与管理提供了无与伦比的智力支持。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-chart-bar"></i>劳动力市场概况</h3>
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">劳动力总数</div>
+                        <div class="stat-number">~4.5万</div>
+                        <div class="stat-title">专业服务驱动</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">外籍劳工占比</div>
+                        <div class="stat-number">>50%</div>
+                        <div class="stat-title">来自135+国家</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">失业率</div>
+                        <div class="stat-number">~2.1%</div>
+                        <div class="stat-title">接近完全就业</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">人才优势</div>
+                        <div class="stat-number">精英化</div>
+                        <div class="stat-title">金融、法律、会计</div>
+                    </div>
+                </div>
+                 <p style="margin-top: 1.5rem;">对国际人才实行高效的工作许可制度，在确保本地就业优先的同时，持续引进全球顶尖的专业技能，维持其在全球金融服务链中的核心竞争力。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-star"></i>热门技能与人才需求</h3>
+                <p>对具备以下技能的专业人才需求持续旺盛：</p>
+                <div class="chart-container" style="height: 450px;">
+                    <div class="chart-title">开曼群岛热门技能需求指数 (2025)</div>
+                    <canvas id="hotSkillsChartCayman"></canvas>
+                </div>
+                <ul class="bullet-list">
+                    <li><b>合规与反洗钱(AML)专家:</b> 经验丰富的合规官和AML分析师。</li>
+                    <li><b>基金会计与管理:</b> 专业的基金会计和基金行政管理人员。</li>
+                    <li><b>公司法与信托律师:</b> 精通英国普通法，处理复杂跨境交易的律师。</li>
+                    <li><b>数据分析与IT安全:</b> 满足数据保护法(DPL)和金融科技发展的技术人才。</li>
+                    <li><b>财富管理顾问:</b> 服务高净值客户的私人银行家和投资顾问。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="technology" class="section">
+            <h2>科技与创新生态</h2>
+             <div class="grid">
+                <div class="stat-box">
+                    <i class="fas fa-cogs fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">监管科技 (RegTech)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">广泛采用e-KYC、交易监控等自动化方案，提高合规效率与准确性。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fab fa-bitcoin fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">数字资产与区块链</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">全球领先的数字资产项目注册地，VASP法案提供清晰监管框架。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-laptop-code fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">金融科技 (FinTech)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">财富管理平台、支付方案等利用开曼架构服务全球客户的应用沃土。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-seedling fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">可持续金融科技</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">积极打造可持续与影响力投资中心，推动ESG基金设立与管理。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section">
+            <h2>商业文化与社会习俗</h2>
+            <div class="grid">
+                <div class="stat-box">
+                    <i class="fas fa-globe fa-2x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title">国际化与专业主义</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">高度国际化的英美模式，沟通直接、清晰、重结果，严守合同。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-handshake fa-2x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title">关系建立</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">基于专业能力和可靠性，而非个人交情。专业声誉至关重要。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-umbrella-beach fa-2x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title">工作与生活平衡</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">社会氛围轻松，重视工作与生活平衡，社交活动是建立联系的好机会。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-balance-scale fa-2x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title">法律与合规驱动</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">所有商业活动以法律和合规为最高准则，与法律顾问密切合作是常态。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="risk" class="section">
+            <h2>风险与挑战</h2>
+            <div class="card">
+                <h3><i class="fas fa-exclamation-triangle"></i>主要风险评估</h3>
+                <p>尽管开曼群岛提供了诸多优势，但投资者仍需关注以下潜在风险：</p>
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                             <i class="fas fa-eye fa-2x" style="color: var(--highlight); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">国际监管压力</div>
+                            <p>持续受OECD、欧盟等国际组织审查，政策可能改变，增加合规成本（如"灰名单"事件）。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <i class="fas fa-theater-masks fa-2x" style="color: var(--highlight); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">声誉风险</div>
+                            <p>"避税天堂"标签可能给企业带来声誉风险，尤其是在其本国市场。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                             <i class="fas fa-dollar-sign fa-2x" style="color: var(--highlight); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">运营成本高昂</div>
+                            <p>专业的法律、会计和行政服务费用，以及满足经济实质法要求的成本较高。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                             <i class="fas fa-cloud-showers-heavy fa-2x" style="color: var(--highlight); margin-bottom: 1rem;"></i>
+                            <div class="grid-item-title">自然灾害风险</div>
+                            <p>位于加勒比飓风带，面临季节性热带气旋威胁，但基础设施抗灾能力强。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategy" class="section">
+            <h2>市场进入策略</h2>
+             <div class="grid">
+                <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-users-cog fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">聘请顶级专业服务</div>
+                        <p class="grid-item-description">成功的关键是与顶级的律师事务所、会计师事务所和基金行政管理人合作。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-sitemap fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">设计清晰的法律架构</div>
+                        <p class="grid-item-description">根据最终投资者的税务居民身份和投资目标，设计最优的离岸实体组合。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-shield-alt fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">建立健全的合规体系</div>
+                        <p class="grid-item-description">从一开始就建立严格的AML/CFT和AEOI合规流程，以应对监管审查。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-network-wired fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">利用专业网络</div>
+                        <p class="grid-item-description">积极参与本地的行业协会和社交活动，融入精英专业服务网络。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-balance-scale-right fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">理解经济实质要求</div>
+                        <p class="grid-item-description">确保业务满足经济实质法的要求，避免被认定为空壳公司，从而引发税务风险。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2>结论与建议</h2>
+            <div class="card">
+                <h3>核心结论</h3>
+                <p>开曼群岛不仅是一个避税天堂，更是一个高度成熟、监管完善、服务顶尖的全球金融基础设施。其成功建立在英国普通法系的稳定基石、与全球金融体系的深度融合以及对市场变化的快速适应能力之上。对于寻求全球化、税收中立和高效资本运作的企业和高净值人士而言，开曼群岛仍然是无可替代的首选平台。</p>
+                <p>然而，其经济对金融和旅游业的高度依赖，以及在全球反避税和加强监管的大背景下面临的持续压力，是其必须正视的挑战。成功利用开曼平台的关键在于深刻理解其法律、合规与经济实质要求，并与本地顶级专业服务机构紧密合作。</p>
+            </div>
+            <div class="card">
+                <h3>战略建议</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">对于投资基金：</span>继续利用开曼ELP和LLC结构的灵活性，尤其在PE/VC和数字资产领域，同时为日益增长的AEOI和AML合规要求做好准备。</li>
+                    <li><span class="accent">对于跨国公司：</span>将开曼作为集团的全球或区域投融资中心、知识产权持有中心和SPV平台，但必须确保满足经济实质要求，避免税务风险。</li>
+                    <li><span class="accent">对于家族办公室：</span>利用开曼的基金会公司和信托结构，进行财富传承、资产保护和慈善规划，享受其政治稳定和法律确定性的优势。</li>
+                    <li><span class="accent">对于金融科技企业：</span>抓住开曼在VASP法案下的监管清晰度，将其作为全球数字资产业务的合规注册地和运营中心。</li>
+                    <li><span class="accent">总体建议：</span>进入开曼市场前，必须进行全面的税务和法律规划，聘请经验丰富的顾问。不要仅将其视为"避税"工具，而应看作是优化全球业务架构和提升资本效率的战略性平台。</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-title">开曼群岛（英属）市场综合调研报告2025</h3>
+            <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+            <p>AI赋能精准决策 专业成就全球商机</p>
+            <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+        </div>
+        
+        <div class="sources">
+            <h4 class="sources-title">数据来源</h4>
+            <ul class="sources-list">
+                <li>开曼群岛金融管理局 (CIMA) - 《2024年度报告及统计数据》</li>
+                <li>开曼群岛经济与统计办公室 (ESO) - 《2024年经济报告》</li>
+                <li>全球金融中心指数 (GFCI 35) 报告</li>
+                <li>国际货币基金组织 (IMF) - Article IV Consultation Report for the UK - Cayman Islands</li>
+                <li>金融行动特别工作组 (FATF) - Mutual Evaluation Report</li>
+                <li>主要法律事务所报告 (Maples, Walkers, Conyers)</li>
+                <li>世界银行 - 全球治理指标</li>
+                <li>美国中央情报局 - 《世界概况》</li>
+            </ul>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                <p>微信视频号公众号： 张小强出海</p>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navDots = document.querySelectorAll('.nav-dot');
+            const scrollDown = document.querySelector('.scroll-down');
+            
+            if(scrollDown) {
+                scrollDown.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            navDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    let targetId = this.getAttribute('data-section');
+                    let targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            function checkScroll() {
+                let scrollPosition = window.scrollY + window.innerHeight / 2;
+                let activeIndex = 0;
+                
+                if (scrollPosition >= window.innerHeight) {
+                    sections.forEach((section, index) => {
+                        if (scrollPosition >= section.offsetTop) {
+                            activeIndex = index + 1;
+                        }
+                    });
+                }
+                updateActiveDot(activeIndex);
+                
+                sections.forEach(section => {
+                    let sectionTop = section.offsetTop;
+                    if (window.scrollY + window.innerHeight * 0.8 >= sectionTop) {
+                        section.classList.add('visible');
+                    }
+                });
+            }
+            
+            function updateActiveDot(index) {
+                navDots.forEach(dot => dot.classList.remove('active'));
+                if (navDots[index]) {
+                    navDots[index].classList.add('active');
+                }
+            }
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+            createCharts();
+        });
+
+        function createCharts() {
+            Chart.defaults.font.family = 'Roboto, sans-serif';
+            Chart.defaults.color = '#e6f1ff';
+            Chart.defaults.plugins.legend.labels.color = '#e6f1ff';
+            Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+            
+            // 地图
+            const caymanMapChart = document.getElementById('caymanMapChart');
+            if (caymanMapChart) {
+                const mapImageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/World_map_blank_without_borders.svg/2560px-World_map_blank_without_borders.svg.png';
+                
+                const backgroundPlugin = {
+                    id: 'backgroundPlugin',
+                    beforeDraw: (chart) => {
+                        const { ctx, width, height } = chart;
+                        const img = new Image();
+                        img.src = mapImageUrl;
+                        if (img.complete) {
+                            ctx.drawImage(img, 0, 0, width, height);
+                        } else {
+                            img.onload = () => chart.draw();
+                        }
+                    }
+                };
+
+                new Chart(caymanMapChart, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [
+                            {
+                                label: '开曼群岛',
+                                data: [{x: -81.24, y: 19.31, name: '开曼群岛'}],
+                                backgroundColor: '#ff124f',
+                                pointRadius: 10,
+                                pointHoverRadius: 15,
+                            },
+                            {
+                                label: '主要金融中心辐射点',
+                                data: [
+                                    {x: -74.00, y: 40.71, name: '纽约'},
+                                    {x: -0.12, y: 51.50, name: '伦敦'},
+                                    {x: 116.40, y: 39.90, name: '北京'},
+                                    {x: 121.47, y: 31.23, name: '上海'},
+                                    {x: 114.16, y: 22.31, name: '香港'},
+                                    {x: 103.85, y: 1.35, name: '新加坡'},
+                                    {x: 4.89, y: 52.37, name: '阿姆斯特丹'},
+                                    {x: 8.54, y: 47.37, name: '苏黎世'},
+                                    {x: -46.63, y: -23.55, name: '圣保罗'}
+                                ],
+                                backgroundColor: 'rgba(0, 212, 255, 0.8)',
+                                pointRadius: 6,
+                                pointHoverRadius: 10,
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                type: 'linear',
+                                position: 'bottom',
+                                min: -180,
+                                max: 180,
+                                display: false,
+                            },
+                            y: {
+                                min: -90,
+                                max: 90,
+                                display: false,
+                            }
+                        },
+                        plugins: {
+                            datalabels: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                borderRadius: 4,
+                                color: 'white',
+                                font: {
+                                    weight: 'bold'
+                                },
+                                padding: 6,
+                                align: 'top',
+                                offset: 8,
+                                formatter: (value) => value.name
+                            },
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.raw.name;
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    plugins: [backgroundPlugin, ChartDataLabels]
+                });
+            }
+
+            // 人口构成
+            const populationChart = document.getElementById('populationChart');
+            if (populationChart) {
+                new Chart(populationChart, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['开曼本地人', '外籍人士 (牙买加)', '外籍人士 (菲律宾)', '外籍人士 (英国)', '外籍人士 (美国/加拿大)', '其他国籍'],
+                        datasets: [{
+                            data: [48, 15, 8, 7, 7, 15],
+                            backgroundColor: ['#00d4ff', '#ff124f', '#ffd700', '#32cd32', '#9370db', '#ff6b81']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'right' },
+                            datalabels: {
+                                color: '#ffffff',
+                                formatter: (value) => value + '%'
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+
+            // GDP图表
+            const gdpChart = document.getElementById('gdpChart');
+            if (gdpChart) {
+                new Chart(gdpChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            {
+                                label: 'GDP(亿美元)',
+                                data: [58.5, 62.9, 58.8, 60.1, 65.4, 68.9, 70.5, 72.3],
+                                backgroundColor: 'rgba(0, 212, 255, 0.7)',
+                                yAxisID: 'y'
+                            },
+                            {
+                                label: 'GDP增长率(%)',
+                                data: [3.3, 4.1, -5.9, 1.8, 4.5, 3.8, 2.8, 2.5],
+                                type: 'line',
+                                borderColor: '#ff124f',
+                                tension: 0.3,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { beginAtZero: false, position: 'left', title: { display: true, text: 'GDP(亿美元)' }},
+                            y1: { beginAtZero: false, position: 'right', title: { display: true, text: '增长率(%)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+
+            // 产业结构
+            const industryChart = document.getElementById('industryChart');
+            if (industryChart) {
+                new Chart(industryChart, {
+                    type: 'pie',
+                    data: {
+                        labels: ['金融与保险', '房地产与商业服务', '酒店与餐饮', '建筑业', '其他'],
+                        datasets: [{
+                            data: [55, 20, 8, 7, 10],
+                            backgroundColor: ['#00d4ff', '#ff124f', '#ffd700', '#32cd32', '#9370db']
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'right' },
+                            datalabels: { color: '#fff', formatter: (value) => value + '%' }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 政府收入结构
+            const govRevenueChart = document.getElementById('govRevenueChart');
+            if(govRevenueChart) {
+                 new Chart(govRevenueChart, {
+                    type: 'pie',
+                    data: {
+                        labels: ['进口关税', '金融服务费', '工作许可费', '旅游住宿税', '其他'],
+                        datasets: [{
+                            data: [45, 25, 18, 7, 5],
+                            backgroundColor: ['#00d4ff', '#ff124f', '#ffd700', '#32cd32', '#9370db']
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'right' },
+                            datalabels: { color: '#fff', formatter: (value) => value + '%' }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+
+            // 基金类型分布
+            const fundTypeChart = document.getElementById('fundTypeChart');
+            if (fundTypeChart) {
+                new Chart(fundTypeChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['主基金', '联接基金', '私募基金', '有限合伙基金', '其他'],
+                        datasets: [{
+                            label: '基金数量占比 (%)',
+                            data: [45, 30, 15, 8, 2],
+                            backgroundColor: ['#00d4ff', '#ff124f', '#ffd700', '#32cd32', '#9370db']
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            datalabels: { color: '#fff', formatter: (value) => value + '%' }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 受监管基金数量
+            const investmentFundChart = document.getElementById('investmentFundChart');
+            if (investmentFundChart) {
+                new Chart(investmentFundChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2015', '2017', '2019', '2021', '2023', '2025 (est.)'],
+                        datasets: [
+                            {
+                                label: 'CIMA监管基金总数',
+                                data: [11000, 10500, 10900, 12600, 13200, 13500],
+                                borderColor: '#00d4ff',
+                                fill: true,
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)'
+                            },
+                             {
+                                label: '豁免/注册私人基金总数',
+                                data: [0, 0, 0, 14500, 16100, 18500],
+                                borderColor: '#ff124f',
+                                fill: true,
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: { y: { beginAtZero: true, title: { display: true, text: '基金数量' } } }
+                    }
+                });
+            }
+        }
+
+        // 新增：热门技能需求图表
+        const hotSkillsChartCayman = document.getElementById('hotSkillsChartCayman');
+        if (hotSkillsChartCayman) {
+            new Chart(hotSkillsChartCayman, {
+                type: 'bar',
+                data: {
+                    labels: ['合规/AML', '基金会计', '公司法/信托', '数据分析/IT', '财富管理'],
+                    datasets: [{
+                        label: '需求指数',
+                        data: [98, 95, 92, 85, 88],
+                        backgroundColor: 'rgba(0, 212, 255, 0.7)',
+                        borderColor: '#00d4ff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: { beginAtZero: true, max: 100, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
+                        y: { grid: { color: 'rgba(255, 255, 255, 0.1)' } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: {
+                            color: '#ffffff',
+                            anchor: 'end',
+                            align: 'right',
+                            font: { weight: 'bold' }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+            console.log('开曼热门技能图表已创建');
+        } else {
+            console.error('未找到开曼热门技能图表的canvas元素');
+        }
+    </script>
+</body>
+</html> 

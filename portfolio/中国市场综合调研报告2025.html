@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #050a30;
+            --secondary-color: #091353;
+            --accent-color: #00d4ff;
+            --text-color: #e6f1ff;
+            --text-secondary: #a3b1cc;
+            --highlight: #ff124f;
+            --card-bg: rgba(9, 19, 83, 0.7);
+            --gradient-start: #050a30;
+            --gradient-end: #091353;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 18, 79, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('shanghai.jpg') center/cover no-repeat;
+            filter: brightness(0.3) saturate(1.2);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 10, 48, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0 4rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .chart-canvas-wrapper {
+            flex-grow: 1;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        th {
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f101"; /* 使用Font Awesome的箭头图标 */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 18, 79, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+        }
+        
+        /* 数据标记样式 */
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        /* 图表标题样式 */
+        .chart-title {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* 脉冲效果 */
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+            }
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: -webkit-linear-gradient(45deg, var(--accent-color), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="overview"></div>
+        <div class="nav-dot" data-section="macro-economy"></div>
+        <div class="nav-dot" data-section="market-opportunity"></div>
+        <div class="nav-dot" data-section="legal-environment"></div>
+        <div class="nav-dot" data-section="business-culture"></div>
+        <div class="nav-dot" data-section="risk-challenge"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+        <div class="nav-dot" data-section="conclusion"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>CN</span>
+            </div>
+            <h1>中国市场综合调研报告</h1>
+            <p class="subtitle">全面解析全球第二大经济体的市场机遇与挑战 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p></p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            ⌄
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="overview" class="section">
+            <h2>国家/地区概况</h2>
+            
+            <div class="card">
+                <h3>地理位置与战略地位</h3>
+                <p>中国位于亚洲东部，太平洋西岸，陆地面积约960万平方公里，是世界上面积第三大的国家。拥有14个陆地邻国和广阔的海域，地理位置优越，是连接欧亚大陆和太平洋的重要枢纽。作为全球第二大经济体和联合国安理会常任理事国，中国在全球政治、经济格局中扮演着至关重要的角色。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国地理位置战略示意图</div>
+                    <div class="chart-canvas-wrapper"><canvas id="chinaMapChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">国土面积</div>
+                    <div class="stat-number">960万</div>
+                    <div class="stat-title">平方公里</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">人口总数</div>
+                    <div class="stat-number">14.2亿</div>
+                    <div class="stat-title">全球人口第二大国</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">城市化率</div>
+                    <div class="stat-number">66.2%</div>
+                    <div class="stat-title">持续快速推进</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">经济体量</div>
+                    <div class="stat-number">第2</div>
+                    <div class="stat-title">全球经济体排名</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>政治体制与外交政策</h3>
+                <p>中国实行<span class="accent">中国共产党领导的多党合作和政治协商制度</span>，是人民民主专政的社会主义国家。政治环境高度稳定，政策具有强大的连续性和执行力。外交上，中国奉行独立自主的和平外交政策，积极推动构建"人类命运共同体"，倡导"一带一路"合作。近年来，中国在全球治理、气候变化、地区安全等议题上发挥着日益重要的作用。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心国家战略</div>
+                    <ul class="bullet-list">
+                        <li>推进"中国式现代化"建设</li>
+                        <li>实施"创新驱动发展"战略</li>
+                        <li>构建"双循环"新发展格局</li>
+                        <li>推动"一带一路"高质量发展</li>
+                        <li>实现"3060"碳达峰与碳中和目标</li>
+                        <li>维护国家主权、安全和发展利益</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>社会结构与人口特征</h3>
+                <p>中国社会正经历深刻转型，<span class="highlight">人口老龄化</span>、<span class="highlight">少子化</span>和<span class="highlight">快速城镇化</span>是其主要特征。总人口约14.2亿，自2022年起进入负增长阶段。65岁及以上老年人口占比已达<span class="data-marker">15.4%</span>，预计到2035年将超过<span class="data-marker">20%</span>，进入重度老龄化社会。城镇化率超过<span class="data-marker">66%</span>，形成了多个世界级的城市群。人口结构的变化对中国的消费市场、劳动力供给和社会保障体系构成了长期挑战。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国人口结构变化趋势(2000-2050)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="populationChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>国家发展阶段与定位</h3>
+                <p>中国是全球最大的发展中国家，已稳居世界第二大经济体，并建成了全球最完整、规模最大的工业体系。经过四十余年的改革开放，中国已从世界工厂转变为全球创新版图的重要一极。</p>
+                
+                <p>当前，中国正处于从高速增长转向<span class="accent">高质量发展</span>的关键阶段，致力于通过科技自立自强、产业升级、绿色转型和扩大内需来重塑经济增长动力。在全球价值链中，中国不仅是主要的生产和出口基地，也正努力向研发、设计和品牌等高附加值环节攀升。</p>
+            </div>
+        </section>
+        
+        <section id="macro-economy" class="section">
+            <h2>宏观经济分析</h2>
+            
+            <div class="card">
+                <h3>GDP总量与增长率</h3>
+                <p>2025年，中国GDP预计约为<span class="data-marker">19.8万亿美元</span>（约142万亿人民币），稳居全球第二位。经济增长正从高速转向中高速，2025年实际GDP增长率预计为<span class="data-marker">4.8%</span>。经济面临内部结构调整和外部复杂环境的双重压力，但长期向好的基本面没有改变。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国GDP总量与增长率(2015-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="gdpChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>产业结构</h3>
+                <p>中国经济结构持续优化，<span class="accent">服务业</span>已成为经济增长的主要驱动力，占GDP比重达<span class="data-marker">54.5%</span>。<span class="accent">工业</span>（特别是制造业）仍然是经济的压舱石，占比约<span class="data-marker">39.5%</span>。<span class="accent">农业</span>占比下降至<span class="data-marker">6.0%</span>，但其现代化和安全问题备受关注。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国产业结构构成(2023)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="industryChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">CPI通胀率</div>
+                    <div class="stat-number">2.1%</div>
+                    <div class="stat-title">2025年预期</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">贷款市场报价利率(LPR)</div>
+                    <div class="stat-number">3.45%</div>
+                    <div class="stat-title">1年期, 2025年6月</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">城镇调查失业率</div>
+                    <div class="stat-number">5.0%</div>
+                    <div class="stat-title">2025年第二季度</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">人民币/美元汇率</div>
+                    <div class="stat-number">7.25</div>
+                    <div class="stat-title">2025年6月平均</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>经济指标分析</h3>
+                <p>中国经济的主要指标呈现以下特点：</p>
+                <ul class="bullet-list">
+                    <li><span class="accent">通胀率：</span>总体温和可控，2025年CPI预计约为<span class="data-marker">2.1%</span>，PPI（工业生产者出厂价格指数）则可能保持在较低水平。</li>
+                    <li><span class="accent">利率：</span>货币政策维持稳健偏松，通过下调LPR和存款准备金率等方式引导融资成本下行，1年期LPR维持在<span class="data-marker">3.45%</span>左右。</li>
+                    <li><span class="accent">汇率：</span>人民币兑美元汇率实行有管理的浮动汇率制度，总体保持在<span class="data-marker">7.2-7.3</span>区间双向波动，弹性增强。</li>
+                    <li><span class="accent">就业：</span>就业市场总体稳定，但结构性矛盾突出，青年失业率问题受到高度关注。</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>外汇储备与国际收支</h3>
+                <p>截至2025年6月，中国外汇储备规模约为<span class="data-marker">3.25万亿美元</span>，连续多年位居全球第一。中国长期维持经常账户和货物贸易"双顺差"，是全球最大的贸易顺差国。同时，中国也是全球第二大外资流入国和重要的对外投资国。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">国际收支特点</div>
+                    <ul class="bullet-list">
+                        <li>经常账户持续保持顺差，2025年顺差规模预计占GDP的<span class="data-marker">1.5%</span></li>
+                        <li>货物贸易是顺差的主要来源，服务贸易则长期处于逆差状态</li>
+                        <li>近年来，证券投资项下资金双向流动日益活跃</li>
+                        <li>人民币在国际支付和储备中的份额稳步提升</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>政府财政与支出结构</h3>
+                <p>中国政府财政状况总体稳健，但地方政府债务风险值得关注。截至2025年底，中国政府宏观杠杆率（总债务/GDP）约为<span class="data-marker">80%</span>，低于主要发达经济体。财政支出重点投向民生、科技创新和基础设施建设等领域。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国政府支出结构(2023财年)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="govExpenditureChart"></canvas></div>
+                </div>
+                
+                <p>为应对经济下行压力，中国实施积极的财政政策，通过发行专项债券、减税降费等方式支持经济发展。化解地方政府隐性债务是当前财政工作的重点之一。</p>
+            </div>
+            
+            <div class="card">
+                <h3>当前经济政策</h3>
+                <p>当前，中国经济政策的核心是"稳中求进"，统筹发展与安全，主要措施包括：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">宏观调控：</span>积极的财政政策和稳健的货币政策相配合，加强逆周期和跨周期调节。</li>
+                    <li><span class="highlight">扩大内需：</span>把实施扩大内需战略同深化供给侧结构性改革有机结合起来，促进消费和投资。</li>
+                    <li><span class="highlight">科技自强：</span>加快建设现代化产业体系，发展战略性新兴产业，推动"新质生产力"发展。</li>
+                    <li><span class="highlight">深化改革：</span>建设高标准市场体系，优化营商环境，激发各类经营主体活力。</li>
+                    <li><span class="highlight">绿色转型：</span>积极稳妥推进碳达峰碳中和，加快能源结构绿色转型。</li>
+                    <li><span class="highlight">高水平开放：</span>稳步扩大制度型开放，吸引和利用外资，推动共建"一带一路"高质量发展。</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="market-opportunity" class="section">
+            <h2>市场环境与行业机会</h2>
+            
+            <div class="card">
+                <h3>市场容量与增长潜力</h3>
+                <p>中国拥有全球规模最大、最具成长性的中等收入群体（超过<span class="data-marker">4亿</span>人），构成了超大规模的国内消费市场。尽管经济增速放缓，但消费升级和产业升级带来的结构性机会依然巨大。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">高增长潜力领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">数字经济：</span>市场规模超<span class="data-marker">8万亿美元</span>，预计未来五年将以<span class="data-marker">9%</span>的速度增长，人工智能、云计算等领域潜力巨大。</li>
+                        <li><span class="accent">新能源汽车：</span>产销量全球第一，预计到2030年市场渗透率将超过<span class="data-marker">60%</span>。</li>
+                        <li><span class="accent">大健康产业：</span>受人口老龄化和健康意识提升推动，预计到2030年市场规模将达到<span class="data-marker">2.5万亿美元</span>。</li>
+                        <li><span class="accent">绿色产业：</span>为实现"双碳"目标，未来十年在清洁能源、储能、碳捕捉等领域的投资将超过<span class="data-marker">10万亿美元</span>。</li>
+                    </ul>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国高增长行业市场规模预测(2025-2030)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="growthIndustriesChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>主要行业概览及优先关注行业</h3>
+                <p>中国正加速构建现代化产业体系，未来五年内，以下行业尤其值得关注：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">信息技术与人工智能</div>
+                            <div class="grid-item-value">+15%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>作为国家核心战略，政府和企业大力投资AI、大数据、云计算和半导体。应用场景从互联网向工业、医疗、金融等实体经济快速渗透。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">新能源与新材料</div>
+                            <div class="grid-item-value">+20%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>在"双碳"目标驱动下，光伏、风电、储能、氢能和新能源汽车产业链蓬勃发展，并已在全球形成领先优势。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">生物医药与大健康</div>
+                            <div class="grid-item-value">+12%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>人口老龄化、消费升级和政策支持共同驱动创新药、高端医疗器械、基因技术和健康管理服务市场高速增长。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">高端制造与机器人</div>
+                            <div class="grid-item-value">+10%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>产业升级推动工业机器人、数控机床、航空航天装备和智能传感等领域的需求，国产化替代进程加速。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>行业竞争格局分析</h3>
+                <p>中国市场竞争格局具有以下特点：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">竞争异常激烈：</span>几乎所有行业都是"红海"，市场迭代速度快。</li>
+                    <li><span class="highlight">本土巨头主导：</span>在互联网、电商、社交等领域，本土科技巨头（如腾讯、阿里、字节跳动）拥有绝对优势。</li>
+                    <li><span class="highlight">国企影响力大：</span>在能源、金融、电信、交通等战略性行业，大型国有企业占据主导地位。</li>
+                    <li><span class="highlight">"隐形冠军"众多：</span>在许多细分制造业领域，存在大量技术领先、市场份额高的民营企业。</li>
+                    <li><span class="highlight">政策导向性强：</span>国家产业政策对行业竞争格局有重要影响，新兴战略性产业常获得大量资源支持。</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">外资企业竞争建议</div>
+                    <p>在中国市场竞争中，外资企业应避免同质化竞争，专注于技术、品牌和服务的差异化优势。采取"在中国，为中国"的深度本地化战略，充分授权本地团队，快速响应市场变化，是成功的关键。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>进口替代/本地制造政策</h3>
+                <p>中国政府大力推进<span class="accent">产业基础高级化和产业链现代化</span>，旨在提升关键核心技术的自主可控能力。相关政策包括：</p>
+                <ul class="bullet-list">
+                    <li>通过"中国制造2025"、"产业基础再造工程"等计划，支持半导体、高端装备、新材料等领域的国产化替代。</li>
+                    <li>为高新技术企业提供税收优惠和研发补贴，鼓励企业增加研发投入。</li>
+                    <li>强调供应链安全，鼓励企业在国内建立多元化的供应链体系。</li>
+                    <li>利用政府采购支持国产创新产品。</li>
+                </ul>
+                
+                <p>对外资企业而言，这意味着在某些敏感领域可能面临更大的竞争压力，但在非核心领域，中国依然鼓励外资参与本地制造和产业升级。</p>
+            </div>
+            
+            <div class="card">
+                <h3>消费趋势与行为</h3>
+                <p>中国消费者行为正呈现多元化和快速演变的特点：</p>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">国潮兴起</div>
+                        <div class="stat-number">78%</div>
+                        <div class="stat-title">的消费者更偏爱购买国产品牌</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">健康生活</div>
+                        <div class="stat-number">85%</div>
+                        <div class="stat-title">的消费者关注健康饮食和生活方式</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">理性消费</div>
+                        <div class="stat-number">65%</div>
+                        <div class="stat-title">的消费者在购物时更注重性价比</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">线上渠道</div>
+                        <div class="stat-number">48.5%</div>
+                        <div class="stat-title">社会消费品零售总额来自线上</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心消费趋势</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">体验式消费：</span>从"拥有产品"转向"享受服务"，文旅、餐饮、娱乐等体验性消费增长。</li>
+                        <li><span class="accent">圈层化与个性化：</span>年轻消费者追求个性表达，小众品牌和定制化产品受到欢迎。</li>
+                        <li><span class="accent">绿色可持续：</span>环保理念逐渐深入人心，消费者愿意为可持续产品支付一定溢价。</li>
+                        <li><span class="accent">即时零售：</span>线上购买、线下即时送达的"小时达"模式快速普及。</li>
+                        <li><span class="accent">内容驱动：</span>通过直播、短视频等内容形式"种草"和购买成为主流。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>数字渗透与线上渠道</h3>
+                <p>中国是全球数字化程度最高的社会之一，拥有超过<span class="data-marker">11亿</span>网民，数字生活已全面普及：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国电子商务市场规模(2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="ecommerceChart"></canvas></div>
+                </div>
+                
+                <ul class="bullet-list">
+                    <li>中国是全球最大的电子商务市场，2023年网络零售额超过<span class="data-marker">2.1万亿美元</span>。</li>
+                    <li>移动支付普及率超过<span class="data-marker">90%</span>，几乎完全取代现金。</li>
+                    <li>主要电商平台包括淘宝/天猫、京东、拼多多，以及抖音、快手等内容电商平台。</li>
+                    <li>社交电商、直播电商、社区团购等新零售模式不断涌现，迭代迅速。</li>
+                    <li>O2O（线上到线下）服务，如外卖、网约车、本地生活服务等高度发达。</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>案例参考</h3>
+                <h4>案例：特斯拉(Tesla)在中国的成功策略</h4>
+                <p>作为全球领先的新能源汽车公司，特斯拉通过以下策略在中国市场取得了巨大成功：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">超级工厂本地化：</span>在上海建立"超级工厂"，实现快速、低成本的本地化生产，并享受政策优惠。</li>
+                    <li><span class="highlight">直营模式与数字营销：</span>采用全国统一价格的直营模式，并通过社交媒体和创始人IP进行高效的数字营销。</li>
+                    <li><span class="highlight">技术领先与品牌塑造：</span>以自动驾驶技术和极简设计树立了强大的科技品牌形象，吸引了大量年轻消费者。</li>
+                    <li><span class="highlight">基础设施建设：</span>在中国大力投资建设超级充电网络，解决了用户的里程焦虑。</li>
+                    <li><span class="highlight">快速响应与本土化研发：</span>建立本地数据中心和研发团队，针对中国路况和用户习惯优化产品。</li>
+                </ul>
+                <p>特斯拉的成功证明，即使在竞争激烈的市场，拥有核心技术、采用创新商业模式并进行深度本地化的外资企业仍能获得巨大成功。</p>
+            </div>
+        </section>
+        
+        <section id="legal-environment" class="section">
+            <h2>法律与监管环境</h2>
+            
+            <div class="card">
+                <h3>外资准入政策与投资自由度</h3>
+                <p>中国实行<span class="accent">外商投资准入前国民待遇加负面清单管理制度</span>。负面清单以外的领域，外资享有与内资同等的待遇。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国外商投资准入负面清单变化(2018-2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="investmentChart"></canvas></div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">外资准入限制/禁止领域(2024年版)</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">禁止类：</span>新闻机构、社交调查、人文社科研究机构、互联网新闻信息服务等。</li>
+                        <li><span class="accent">限制类（需满足特定条件或有股比限制）：</span>电信、核电站建设运营、市场调查、广播电视节目制作等。</li>
+                        <li>近年来，金融、汽车等领域的股比限制已大幅放宽或取消。</li>
+                    </ul>
+                </div>
+                
+                <p>此外，中国还建立了<span class="accent">外商投资安全审查制度</span>，对影响或可能影响国家安全的外商投资进行审查。</p>
+            </div>
+            
+            <div class="card">
+                <h3>公司设立流程与主体类型</h3>
+                <p>在中国，外商投资企业的主要法律形式包括：</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>公司类型</th>
+                            <th>特点</th>
+                            <th>最低资本金</th>
+                            <th>设立时间</th>
+                            <th>适用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>外商独资企业<br>(WFOE)</td>
+                            <td>外方100%持股，独立运营，承担全部责任。</td>
+                            <td>无法定最低要求，但需满足实际运营需要。</td>
+                            <td>4-8周</td>
+                            <td>最常见的外商投资形式，便于控制。</td>
+                        </tr>
+                        <tr>
+                            <td>中外合资经营企业<br>(EJV/CJV)</td>
+                            <td>中外方共同投资、共同经营、共担风险。</td>
+                            <td>无法定最低要求。</td>
+                            <td>6-10周</td>
+                            <td>需要借助中方渠道、资源或进入限制性行业。</td>
+                        </tr>
+                        <tr>
+                            <td>代表处<br>(RO)</td>
+                            <td>不具法人资格，不能从事直接经营活动。</td>
+                            <td>无要求</td>
+                            <td>2-4周</td>
+                            <td>市场调研、联络、产品推广等辅助活动。</td>
+                        </tr>
+                        <tr>
+                            <td>分公司<br>(Branch)</td>
+                            <td>不独立法人，由总公司承担责任。</td>
+                            <td>无要求</td>
+                            <td>4-6周</td>
+                            <td>较少见，通常用于银行、保险等特殊行业。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">公司设立基本流程</div>
+                    <ol class="bullet-list">
+                        <li>市场监督管理局进行企业名称预核准</li>
+                        <li>商务部门进行外商投资信息报告</li>
+                        <li>准备公司章程、可行性研究报告等文件</li>
+                        <li>市场监督管理局办理营业执照</li>
+                        <li>刻制公章、财务章等</li>
+                        <li>银行开立资本金账户和基本存款账户</li>
+                        <li>税务、社保、外汇管理登记</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>税收体系</h3>
+                <p>中国税收体系以流转税（增值税）和所得税为主，主要税种包括：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">中国主要税种税率(2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="taxRateChart"></canvas></div>
+                </div>
+                
+                <p>企业所得税标准税率为<span class="data-marker">25%</span>，但对高新技术企业、小型微利企业等有优惠税率（如15%或更低）。增值税是主要税种，根据行业不同税率分为<span class="data-marker">13%</span>、<span class="data-marker">9%</span>、<span class="data-marker">6%</span>等多档。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">主要税收优惠政策</div>
+                    <ul class="bullet-list">
+                        <li>高新技术企业所得税减按15%征收</li>
+                        <li>研发费用加计扣除政策（科技型中小企业按200%）</li>
+                        <li>对集成电路、工业母机等关键行业有特殊税收优惠</li>
+                        <li>特定区域（如自贸区、海南自贸港）有特殊税收政策</li>
+                        <li>小型微利企业所得税优惠</li>
+                    </ul>
+                </div>
+                
+                <p>中国已与110多个国家和地区签署了避免双重征税协定。</p>
+            </div>
+            
+            <div class="card">
+                <h3>数据保护与隐私法规</h3>
+                <p>中国建立了严格且全面的数据安全和个人信息保护法律体系，被称为中国的"数据法律三驾马车"：</p>
+                
+                <ul class="bullet-list">
+                    <li><b>《网络安全法》：</b>确立了网络安全等级保护制度，对关键信息基础设施（CII）运营者有严格要求。</li>
+                    <li><b>《数据安全法》：</b>对数据进行分类分级管理，规范数据处理活动，特别是对重要数据的处理和出境有严格规定。</li>
+                    <li><b>《个人信息保护法》(PIPL)：</b>中国的"GDPR"，要求处理个人信息必须取得个人"单独同意"，对自动化决策、敏感个人信息处理、跨境传输等有严格规定。</li>
+                    <li>违规处罚严厉，最高可达5000万人民币或上一年度营业额的5%。</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">数据合规建议</div>
+                    <p>在华运营的企业必须高度重视数据合规。建议设立专门的数据保护官（DPO）或团队，进行全面的数据合规审计，特别是针对个人信息和重要数据的跨境传输，必须满足法定条件（如通过国家安全评估、获得个人信息保护认证等）。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>劳工法与用工合规</h3>
+                <p>中国劳动法律体系健全，对劳动者保护力度较大，主要法律为《劳动法》和《劳动合同法》：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">劳动合同</div>
+                            <p>必须签订书面劳动合同。连续订立二次固定期限劳动合同后，再次续订需订立无固定期限劳动合同。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">工作时间</div>
+                            <p>标准工时为每日8小时，每周40小时。加班受严格限制并需支付150%-300%的加班费。企业可申请综合计算工时或不定时工作制。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">薪酬福利</div>
+                            <p>各地设有最低工资标准。雇主必须为员工缴纳"五险一金"（养老、医疗、失业、工伤、生育保险和住房公积金）。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">解雇规定</div>
+                            <p>解雇员工条件非常严格，单方面解除合同需有法定理由且遵循严格程序，否则构成违法解除，需支付双倍经济补偿金。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">用工模式选择</div>
+                    <p>除标准劳动关系外，企业也采用劳务派遣、业务外包等灵活用工模式。但需注意法律对劳务派遣的严格限制（"三性"岗位、比例限制）。近年来，"零工经济"发展迅速，但相关法律关系尚在完善中。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="business-culture" class="section">
+            <h2>商业文化与社会习俗</h2>
+            <div class="card">
+                <h3><i class="fas fa-users"></i>核心价值观："关系" (Guanxi)</h3>
+                <p>"关系"是中国商业文化的核心，它指的是建立在信任和互惠基础上的人际网络。商业成功在很大程度上依赖于强大的"关系网"。建立和维护"关系"需要长期投入，通过宴请、送礼和非正式交流来加深个人情谊。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-comments"></i>"面子" (Mianzi)</h3>
+                <p>"面子"即个人或集体的声誉、尊严和荣誉。商业沟通中需时刻注意维护对方和自己的"面子"。沟通方式往往<span class="accent">含蓄、委婉</span>，避免直接冲突和让对方难堪。直接说"不"被认为是不礼貌的，通常会用"我考虑一下"或"有难度"来表达否定意见。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-handshake"></i>商务礼仪：宴请与酒桌文化</h3>
+                <ul class="bullet-list">
+                    <li><b>宴请：</b>是建立"关系"和商务谈判的重要场合。座位安排有严格的等级次序，主宾通常坐在正对门口的位置。</li>
+                    <li><b>酒桌文化：</b>饮酒（特别是白酒）是表达诚意和拉近关系的重要方式。祝酒和干杯有复杂的礼仪。</li>
+                    <li><b>微信主导：</b>名片交换依然存在，但添加微信已成为更重要的商务社交方式，工作沟通和非正式交流大量通过微信进行。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-sitemap"></i>等级制度与决策：灵活与权威并存</h3>
+                <p>中国企业内部存在明确的等级制度，尊重权威和上级是基本准则。但与日本的共识型决策不同，中国企业的决策模式更为<span class="highlight">灵活和高效</span>。通常由最高领导者做出最终决策（"拍板"），决策一旦做出，执行速度非常快。决策过程可能不透明，依赖于高层之间的非正式沟通。</p>
+            </div>
+        </section>
+
+        <section id="risk-challenge" class="section">
+            <h2>风险与挑战</h2>
+            <div class="grid">
+                <div class="stat-box">
+                    <i class="fas fa-globe-americas fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">地缘政治风险</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">中美战略竞争加剧，可能导致贸易、技术和金融领域的摩擦与制裁。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-gavel fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">监管不确定性</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">法律法规更新迅速，政策解读和执行存在不确定性，合规成本高。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-chart-line fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">经济结构性问题</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">房地产市场调整、地方政府债务、人口老龄化等问题对长期增长构成挑战。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-users-cog fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">市场竞争加剧</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">本土企业创新能力和品牌实力迅速提升，外资企业面临激烈竞争。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-shield-halved fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">数据安全与IP保护</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">严格的数据跨境流动规定和依然存在的知识产权侵权风险。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-arrows-to-circle fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">运营成本上升</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">劳动力、土地、环保等合规成本持续上升，传统成本优势减弱。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategy" class="section">
+            <h2>市场进入策略</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-flag fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">深度本地化战略</div>
+                        <p class="grid-item-description">"在中国，为中国"。从产品研发、市场营销到供应链管理，全面适应本地市场需求。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-hands-helping fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">寻找可靠的合作伙伴</div>
+                        <p class="grid-item-description">通过合资或战略合作，利用中方伙伴的渠道、资源和政府关系，有效规避风险。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-digital-tachograph fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">拥抱数字化渠道</div>
+                        <p class="grid-item-description">精通微信生态、直播电商、短视频营销等数字化工具，是触达消费者的必备能力。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-balance-scale fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">建立强大的合规体系</div>
+                        <p class="grid-item-description">投资于专业的法务、财务和数据合规团队，主动适应快速变化的监管环境。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas-solid fa-users-viewfinder fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">聚焦细分和高端市场</div>
+                        <p class="grid-item-description">避免在主流市场与本土巨头直接竞争，利用技术和品牌优势，服务高端和细分客户群。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2>结论与建议</h2>
+            <div class="card">
+                <h3><i class="fas fa-flag-checkered"></i>核心结论</h3>
+                <p>中国是一个<span class="highlight">充满活力、规模巨大但又极具挑战性</span>的战略市场。其核心吸引力在于无与伦比的市场规模、完整的产业链和不断涌现的创新活力。然而，<span class="accent">日益复杂的地缘政治环境和不断强化的监管</span>是投资者面临的最大不确定性。市场竞争已从"引进来"转向"内生驱动"，本土品牌和技术实力迅速崛起。对于外国投资者而言，中国市场已不再是简单的"成本洼地"或"销售终端"，而是需要采取<span class="highlight">"在中国，为全球"的深度融合战略</span>，并具备高度风险管理能力的创新中心和关键市场。成功属于那些能深刻理解中国、尊重其规则、并能为中国创造独特价值的长期主义者。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-compass"></i>战略建议</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">对于高科技企业：</span>紧密对接中国的"新质生产力"发展方向。在半导体、人工智能、生物制造等"卡脖子"领域，通过技术合作或在华设立研发中心，参与并服务于中国的产业升级。</li>
+                    <li><span class="accent">对于消费品品牌：</span>聚焦<span class="highlight">品牌价值、情感链接和文化叙事</span>。深入研究"国潮"、健康、绿色等消费趋势，通过内容电商和社交平台与Z世代消费者建立深度互动。高端和奢侈品市场依然潜力巨大。</li>
+                    <li><span class="accent">对于B2B工业企业：</span>提供助力中国企业实现<span class="highlight">数字化转型和绿色转型</span>的解决方案。例如，为制造业提供智能工厂解决方案，为能源行业提供碳管理和能效提升技术。</li>
+                    <li><span class="accent">对于医疗健康领域：</span>关注<span class="highlight">应对人口老龄化的创新药物、高端医疗器械和数字健康管理服务</span>。中国的创新药审评审批改革（"药监改革"）为全球领先的生物医药公司提供了快速进入市场的通道。</li>
+                    <li><span class="accent">通用建议：</span><span class="highlight">将合规（特别是数据安全合规）置于最高优先级。</span>建立弹性的、多元化的供应链，降低地缘政治风险。充分授权中国区管理团队，赋予其更快的决策权以适应"中国速度"。积极履行社会责任，建立正面的企业公民形象。</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">中国市场综合调研报告2025</h3>
+                <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+                <p>AI赋能精准决策 专业成就全球商机</p>
+                <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+            </div>
+            
+            <div class="sources">
+                <h4 class="sources-title">数据来源</h4>
+                <ul class="sources-list">
+                    <li>中国国家统计局 - 《2025年国民经济和社会发展统计公报》</li>
+                    <li>中国人民银行 - 《2025年第一季度中国货币政策执行报告》</li>
+                    <li>中国海关总署 - 《2025年第一季度贸易统计数据》</li>
+                    <li>中国商务部 - 《2024年中国外商投资报告》</li>
+                    <li>世界银行 - 《全球营商环境报告2025》 & 《中国经济简报》</li>
+                    <li>国际货币基金组织(IMF) - 《世界经济展望2025》</li>
+                    <li>经济合作与发展组织(OECD) - 《对华经济调查报告2025》</li>
+                    <li>中国互联网络信息中心(CNNIC) - 《中国互联网络发展状况统计报告》</li>
+                    <li>中国信息通信研究院(CAICT) - 《中国数字经济发展报告(2025)》</li>
+                    <li>普华永道(PwC) - 《2025年中国并购市场展望》</li>
+                    <li>德勤(Deloitte) - 《中国消费品和零售行业纵览2025》</li>
+                </ul>
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                    <p>微信视频号公众号： 张小强出海</p>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navDots = document.querySelectorAll('.nav-dot');
+            const scrollDown = document.querySelector('.scroll-down');
+            
+            if(scrollDown) {
+                scrollDown.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            navDots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    let targetId = this.getAttribute('data-section');
+                    let targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    } else if (index === 0) {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            function checkScroll() {
+                let scrollPosition = window.scrollY + window.innerHeight / 2;
+                
+                if (scrollPosition < window.innerHeight) {
+                    updateActiveDot(0);
+                } else {
+                    sections.forEach((section, index) => {
+                        let sectionTop = section.offsetTop;
+                        let sectionBottom = sectionTop + section.offsetHeight;
+                        
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            updateActiveDot(index + 1);
+                        }
+                    });
+                }
+                
+                sections.forEach(section => {
+                    let sectionTop = section.offsetTop;
+                    let sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (window.scrollY + window.innerHeight * 0.8 >= sectionTop && window.scrollY <= sectionBottom) {
+                        section.classList.add('visible');
+                    }
+                });
+            }
+            
+            function updateActiveDot(index) {
+                navDots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                if (navDots[index]) {
+                    navDots[index].classList.add('active');
+                }
+            }
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+            
+            createCharts();
+
+            window.addEventListener('resize', function() {
+                Chart.helpers.each(Chart.instances, function(instance) {
+                    instance.destroy();
+                });
+                setTimeout(createCharts, 200);
+            });
+        });
+        
+        function createCharts() {
+            Chart.defaults.font.family = "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+            Chart.defaults.font.size = 13;
+            Chart.defaults.color = '#e6f1ff';
+            Chart.defaults.plugins.legend.position = 'bottom';
+            Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(5, 10, 48, 0.9)';
+            Chart.defaults.plugins.tooltip.titleFont = { size: 14, weight: 'bold' };
+            Chart.defaults.plugins.tooltip.bodyFont = { size: 12 };
+            Chart.defaults.plugins.tooltip.borderColor = 'rgba(0, 212, 255, 0.7)';
+            Chart.defaults.plugins.tooltip.borderWidth = 1;
+            Chart.defaults.plugins.tooltip.padding = 10;
+            
+            const chartContainers = document.querySelectorAll('.chart-container');
+            chartContainers.forEach(container => {
+                container.style.height = '550px';
+                container.style.padding = '20px 20px 40px 20px';
+            });
+
+            // 人口结构图表
+            const populationChart = document.getElementById('populationChart');
+            if (populationChart) {
+                new Chart(populationChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2000', '2010', '2020', '2025', '2030', '2040', '2050'],
+                        datasets: [
+                            {
+                                label: '总人口(亿)',
+                                data: [12.67, 13.41, 14.12, 14.22, 14.19, 13.85, 13.31],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                yAxisID: 'y'
+                            },
+                            {
+                                label: '65岁以上人口比例(%)',
+                                data: [7.0, 8.9, 13.5, 16.2, 20.8, 26.9, 30.1],
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { position: 'left', min: 12, max: 15, title: { display: true, text: '总人口(亿)' } },
+                            y1: { position: 'right', min: 5, max: 35, title: { display: true, text: '65岁以上人口比例(%)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+            
+            // GDP图表
+            const gdpChart = document.getElementById('gdpChart');
+            if (gdpChart) {
+                new Chart(gdpChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            {
+                                label: 'GDP(万亿美元)',
+                                data: [11.2, 11.2, 12.3, 14.0, 14.2, 14.6, 17.8, 18.0, 18.5, 19.1, 19.8],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                tension: 0.3, fill: true, yAxisID: 'y'
+                            },
+                            {
+                                label: 'GDP增长率(%)',
+                                data: [7.0, 6.8, 6.9, 6.7, 6.0, 2.2, 8.4, 3.0, 5.2, 5.0, 4.8],
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3, fill: true, yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { position: 'left', min: 10, title: { display: true, text: 'GDP(万亿美元)' } },
+                            y1: { position: 'right', min: 0, title: { display: true, text: 'GDP增长率(%)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+            
+            // 产业结构图表
+            const industryChart = document.getElementById('industryChart');
+            if (industryChart) {
+                new Chart(industryChart, {
+                    type: 'pie',
+                    data: {
+                        labels: ['服务业 (第三产业)', '工业 (第二产业)', '农业 (第一产业)'],
+                        datasets: [{
+                            data: [54.5, 39.5, 6.0],
+                            backgroundColor: ['#00d4ff', '#ff124f', '#ffd700']
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'right' },
+                            datalabels: { color: '#ffffff', font: { weight: 'bold' }, formatter: (value) => value + '%' }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 政府支出结构图表
+            const govExpenditureChart = document.getElementById('govExpenditureChart');
+            if (govExpenditureChart) {
+                new Chart(govExpenditureChart, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['社会保障和就业', '教育', '科学技术', '城乡社区事务', '农林水事务', '卫生健康', '其他'],
+                        datasets: [{
+                            data: [14.5, 14.2, 8.5, 8.1, 7.5, 7.2, 40],
+                            backgroundColor: ['#00d4ff', '#ff124f', '#ffd700', '#32cd32', '#9370db', '#ff6b81', '#4ecdc4']
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false, cutout: '40%',
+                        plugins: {
+                            legend: { position: 'right' },
+                            datalabels: { color: '#ffffff', font: { weight: 'bold' }, formatter: (value) => value + '%' }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 高增长行业市场规模预测图表
+            const growthIndustriesChart = document.getElementById('growthIndustriesChart');
+            if (growthIndustriesChart) {
+                new Chart(growthIndustriesChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['数字经济', '大健康产业', '新能源汽车', '绿色产业', '高端制造'],
+                        datasets: [
+                            { label: '2025年市场规模(万亿美元)', data: [8.5, 2.0, 0.9, 1.5, 2.2], backgroundColor: 'rgba(0, 212, 255, 0.7)' },
+                            { label: '2030年市场规模(万亿美元)', data: [12.5, 2.8, 2.5, 3.0, 3.5], backgroundColor: 'rgba(255, 18, 79, 0.7)' }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: { y: { title: { display: true, text: '市场规模(万亿美元)' } } },
+                        plugins: { legend: { position: 'top' }, datalabels: { color: '#ffffff', anchor: 'end', align: 'top', font: { weight: 'bold' } } }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+
+            // 电子商务市场规模图表
+            const ecommerceChart = document.getElementById('ecommerceChart');
+            if (ecommerceChart) {
+                new Chart(ecommerceChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            { label: '网络零售额(万亿美元)', data: [1.33, 1.52, 1.80, 1.95, 2.05, 2.15, 2.28, 2.40], borderColor: '#00d4ff', fill: true, backgroundColor: 'rgba(0, 212, 255, 0.1)', yAxisID: 'y' },
+                            { label: '占社零总额比重(%)', data: [23.6, 25.8, 30.0, 32.5, 38.1, 42.6, 45.5, 48.5], borderColor: '#ff124f', fill: true, backgroundColor: 'rgba(255, 18, 79, 0.1)', yAxisID: 'y1' }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { position: 'left', title: { display: true, text: '网络零售额(万亿美元)' } },
+                            y1: { position: 'right', title: { display: true, text: '占社零总额比重(%)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+            
+            // 外资准入负面清单图表
+            const investmentChart = document.getElementById('investmentChart');
+            if (investmentChart) {
+                new Chart(investmentChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            label: '全国版负面清单条目数量',
+                            data: [48, 40, 33, 31, 31, 31, 30],
+                            backgroundColor: 'rgba(0, 212, 255, 0.7)'
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, datalabels: { color: '#ffffff', anchor: 'end', align: 'right', font: { weight: 'bold' } } },
+                        scales: { x: { title: { display: true, text: '清单条目数量' } } }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 税率图表
+            const taxRateChart = document.getElementById('taxRateChart');
+            if (taxRateChart) {
+                new Chart(taxRateChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['企业所得税(标准)', '企业所得税(高新)', '增值税(标准)', '个人所得税(最高)', '社会保险(企业部分)'],
+                        datasets: [{
+                            label: '税率/费率(%)',
+                            data: [25, 15, 13, 45, 28],
+                            backgroundColor: ['rgba(0, 212, 255, 0.7)', 'rgba(0, 212, 255, 0.4)', 'rgba(255, 18, 79, 0.7)', 'rgba(255, 215, 0, 0.7)', 'rgba(147, 112, 219, 0.7)']
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, datalabels: { color: '#ffffff', font: { weight: 'bold' }, formatter: (value) => value + '%' } },
+                        scales: { x: { ticks: { maxRotation: 45, minRotation: 45 } }, y: { title: { display: true, text: '税率/费率(%)' } } }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 贸易图表
+            const tradeChart = document.getElementById('tradeChart');
+            if (tradeChart) {
+                new Chart(tradeChart, {
+                    type: 'radar',
+                    data: {
+                        labels: ['机电产品', '高新技术产品', '劳动密集型', '农产品', '集成电路', '能源'],
+                        datasets: [
+                            { label: '出口占比(%)', data: [58.6, 28.5, 17.8, 3.5, 5.0, 1.0], backgroundColor: 'rgba(0, 212, 255, 0.2)', borderColor: '#00d4ff' },
+                            { label: '进口占比(%)', data: [42.5, 30.0, 5.0, 10.2, 14.7, 15.8], backgroundColor: 'rgba(255, 18, 79, 0.2)', borderColor: '#ff124f' }
+                        ]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+
+            // FTA覆盖率变化图表
+            const ftaChart = document.getElementById('ftaChart');
+            if (ftaChart) {
+                new Chart(ftaChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2010', '2015', '2020', '2022', '2025'],
+                        datasets: [{
+                            label: '贸易额占总额比重(%)',
+                            data: [17, 27, 29, 35, 40],
+                            borderColor: '#00d4ff',
+                            backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                            fill: true,
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: { y: { beginAtZero: true, max: 50, title: { display: true, text: '覆盖率(%)' } } }
+                    }
+                });
+            }
+
+            // 快递业务量图表
+            const logisticsChart = document.getElementById('logisticsChart');
+            if (logisticsChart) {
+                new Chart(logisticsChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            { label: '快递业务量(亿件)', data: [507, 635, 833, 1083, 1105, 1320, 1450, 1580], backgroundColor: 'rgba(0, 212, 255, 0.7)' },
+                            { label: '同比增长率(%)', data: [26.6, 25.3, 31.2, 30.0, 2.1, 19.5, 9.8, 9.0], type: 'line', borderColor: '#ff124f', fill: false, yAxisID: 'y1' }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { position: 'left', title: { display: true, text: '快递业务量(亿件)' } },
+                            y1: { position: 'right', title: { display: true, text: '同比增长率(%)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+
+            // 风险投资规模图表
+            const vcChart = document.getElementById('vcChart');
+            if (vcChart) {
+                new Chart(vcChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        datasets: [
+                            { label: '投资总额(亿美元)', data: [1150, 780, 850, 1350, 720, 480, 550], borderColor: '#00d4ff', fill: true, backgroundColor: 'rgba(0, 212, 255, 0.1)', yAxisID: 'y' },
+                            { label: '投资案例数(起)', data: [11000, 8500, 8900, 10500, 9500, 7800, 8200], borderColor: '#ff124f', fill: false, yAxisID: 'y1' }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { position: 'left', title: { display: true, text: '投资总额(亿美元)' } },
+                            y1: { position: 'right', title: { display: true, text: '投资案例数(起)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+
+            // 汇率走势图
+            const exchangeRateChart = document.getElementById('exchangeRateChart');
+            if (exchangeRateChart) {
+                new Chart(exchangeRateChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            label: '美元/人民币 年末中间价',
+                            data: [6.12, 6.49, 6.94, 6.53, 6.86, 6.98, 6.52, 6.37, 6.96, 7.08, 7.15],
+                            borderColor: '#00d4ff',
+                            backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                            fill: true
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+
+            // 劳动力人口图表
+            const laborForceChart = document.getElementById('laborForceChart');
+            if (laborForceChart) {
+                new Chart(laborForceChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2010', '2020', '2025', '2030', '2040'],
+                        datasets: [
+                            { label: '劳动年龄人口(16-59岁, 亿人)', data: [9.4, 8.8, 8.6, 8.3, 7.6], borderColor: '#ff6384', fill: true, backgroundColor: 'rgba(255, 99, 132, 0.1)', yAxisID: 'y' },
+                            { label: '占总人口比重(%)', data: [70.1, 62.4, 60.5, 58.1, 54.5], borderColor: '#36a2eb', fill: false, yAxisID: 'y1' }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            y: { position: 'left', title: { display: true, text: '劳动年龄人口(亿人)' } },
+                            y1: { position: 'right', title: { display: true, text: '占总人口比重(%)' }, grid: { drawOnChartArea: false } }
+                        }
+                    }
+                });
+            }
+
+            // 热门技能需求图表
+            const hotSkillsChart = document.getElementById('hotSkillsChart');
+            if (hotSkillsChart) {
+                new Chart(hotSkillsChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['AI/大模型', '半导体', '新能源', '生物医药', '数据分析', '智能制造'],
+                        datasets: [{
+                            label: '人才需求指数 (100为最高)',
+                            data: [98, 95, 92, 88, 85, 82],
+                            backgroundColor: 'rgba(0, 212, 255, 0.7)'
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, datalabels: { color: '#ffffff', anchor: 'end', align: 'right', font: { weight: 'bold' } } },
+                        scales: { x: { beginAtZero: true, max: 100 } }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+
+            // 中国地图 - 优化版
+            const chinaMapChart = document.getElementById('chinaMapChart');
+            if (chinaMapChart) {
+                const mapContainer = chinaMapChart.parentElement;
+                if (mapContainer) {
+                    // 移除背景图，采用纯色背景以突出数据
+                    mapContainer.style.backgroundImage = 'none';
+                }
+                
+                new Chart(chinaMapChart, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [
+                            {
+                                label: '中国核心经济区',
+                                data: [
+                                    {x: 55, y: 80, name: '京津冀',           labelAlign: 'top'},
+                                    {x: 75, y: 70, name: '长三角',       labelAlign: 'right', labelOffset: 12},
+                                    {x: 70, y: 50, name: '粤港澳大湾区', labelAlign: 'bottom'},
+                                    {x: 35, y: 60, name: '成渝经济圈',   labelAlign: 'left', labelOffset: 12}
+                                ],
+                                backgroundColor: 'rgba(255, 18, 79, 0.9)',
+                                pointStyle: 'rectRot',
+                                radius: 12,
+                                hoverRadius: 18
+                            },
+                            {
+                                label: '丝绸之路经济带 (陆路)',
+                                data: [
+                                    {x: 50, y: 65, name: '西安 (起点)',   labelAlign: 'top', labelOffset: 10},
+                                    {x: 30, y: 85, name: '阿拉木图 (中亚)', labelAlign: 'top'},
+                                    {x: 15, y: 75, name: '埃里温 (西亚)',   labelAlign: 'left'},
+                                    {x: 5,  y: 60, name: '安卡拉 (土耳其)', labelAlign: 'left'},
+                                    {x: 10, y: 45, name: '雅典 (欧洲)',     labelAlign: 'left'},
+                                    {x: 20, y: 30, name: '柏林 (中欧)',     labelAlign: 'bottom'}
+                                ],
+                                backgroundColor: 'rgba(255, 215, 0, 0.8)',
+                                pointStyle: 'triangle',
+                                radius: 7,
+                                hoverRadius: 12
+                            },
+                            {
+                                label: '21世纪海上丝绸之路',
+                                data: [
+                                    {x: 80, y: 60, name: '泉州 (起点)',   labelAlign: 'right', labelOffset: 12},
+                                    {x: 75, y: 25, name: '曼谷 (东南亚)', labelAlign: 'right'},
+                                    {x: 55, y: 15, name: '新德里 (南亚)',   labelAlign: 'bottom'},
+                                    {x: 35, y: 5,  name: '马斯喀特 (中东)', labelAlign: 'left'},
+                                    {x: 15, y: 20, name: '喀土穆 (非洲)',   labelAlign: 'bottom'},
+                                    {x: 40, y: 45, name: '罗马 (欧洲)',     labelAlign: 'top'}
+                                ],
+                                backgroundColor: 'rgba(0, 212, 255, 0.8)',
+                                pointStyle: 'circle',
+                                radius: 7,
+                                hoverRadius: 12
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { type: 'linear', position: 'bottom', min: 0, max: 100, display: false },
+                            y: { min: 0, max: 100, display: false }
+                        },
+                        plugins: {
+                            datalabels: {
+                                backgroundColor: 'rgba(5, 10, 48, 0.7)',
+                                borderRadius: 4,
+                                color: 'white',
+                                font: { weight: 'bold', size: 10 },
+                                padding: 6,
+                                align: function(context) {
+                                    const pointData = context.dataset.data[context.dataIndex];
+                                    return pointData && pointData.labelAlign ? pointData.labelAlign : 'top';
+                                },
+                                offset: function(context) {
+                                    const pointData = context.dataset.data[context.dataIndex];
+                                    return pointData && pointData.labelOffset ? pointData.labelOffset : 8;
+                                },
+                                formatter: (value) => value.name
+                            },
+                            legend: { 
+                                display: true, 
+                                position: 'bottom',
+                                labels: {
+                                    usePointStyle: true,
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return ' ' + context.raw.name;
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南非市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #050a30;
+            --secondary-color: #091353;
+            --accent-color: #00d4ff;
+            --text-color: #e6f1ff;
+            --text-secondary: #a3b1cc;
+            --highlight: #ff124f;
+            --card-bg: rgba(9, 19, 83, 0.7);
+            --gradient-start: #050a30;
+            --gradient-end: #091353;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 18, 79, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('nanfei.jpg') center/cover no-repeat;
+            filter: brightness(0.3) saturate(1.2);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 10, 48, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0 4rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .chart-canvas-wrapper {
+            flex-grow: 1;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        th {
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f101"; /* 使用Font Awesome的箭头图标 */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 18, 79, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+        }
+        
+        /* 数据标记样式 */
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        /* 图表标题样式 */
+        .chart-title {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* 脉冲效果 */
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+            }
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: -webkit-linear-gradient(45deg, var(--accent-color), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .industry-card {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="country-overview"></div>
+        <div class="nav-dot" data-section="key-industries"></div>
+        <div class="nav-dot" data-section="economy"></div>
+        <div class="nav-dot" data-section="market"></div>
+        <div class="nav-dot" data-section="legal"></div>
+        <div class="nav-dot" data-section="trade"></div>
+        <div class="nav-dot" data-section="finance"></div>
+        <div class="nav-dot" data-section="talent"></div>
+        <div class="nav-dot" data-section="technology"></div>
+        <div class="nav-dot" data-section="culture"></div>
+        <div class="nav-dot" data-section="risk"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+        <div class="nav-dot" data-section="conclusion"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>ZA</span>
+            </div>
+            <h1>南非市场综合调研报告</h1>
+            <p class="subtitle">探索"彩虹之国"的经济脉搏与商业前景 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            ⌄
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="country-overview" class="section">
+            <h2>国家/地区概况</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-map-marked-alt"></i> 地理位置与战略地位</h3>
+                <p>南非位于非洲大陆的最南端，东、南、西三面分别濒临印度洋、南大西洋和北大西洋，拥有超过<span class="data-marker">2,800公里</span>的海岸线。其独特的地理位置使其成为连接东西方的重要海上通道——好望角航线的必经之地，战略地位极其重要。南非陆上与纳米比亚、博茨瓦纳、津巴布韦、莫桑比克和斯威士兰接壤，并环抱着主权独立的莱索托王国。</p>
+                <p>作为非洲经济最发达、工业化程度最高的国家之一，南非是金砖国家(BRICS)成员国和非洲联盟的重要成员，在非洲乃至全球政治经济格局中扮演着"非洲门户"和区域性领导者的角色。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">南非地理位置与主要城市示意图</div>
+                    <div class="chart-canvas-wrapper"><canvas id="southAfricaMapChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">国土面积</div>
+                    <div class="stat-number">122万</div>
+                    <div class="stat-title">平方公里</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">人口总数 (2024)</div>
+                    <div class="stat-number">6,200万</div>
+                    <div class="stat-title">非洲第五人口大国</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">三大首都</div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-title">行政(比勒陀利亚), 立法(开普敦), 司法(布隆方丹)</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">官方语言</div>
+                    <div class="stat-number">12种</div>
+                    <div class="stat-title">体现文化多样性</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-landmark"></i> 政治体制与稳定性</h3>
+                <p>南非实行<span class="accent">议会制共和制</span>。自1994年结束种族隔离制度以来，南非建立了基于多种族民主的政治框架。总统为国家元首和政府首脑。非洲人国民大会(ANC)长期执政，但在2024年大选中首次失去多数席位，目前与主要反对党民主联盟(DA)等组建了<span class="highlight">民族团结政府(GNU)</span>，标志着南非政治进入了新的合作与博弈时期。</p>
+                <p>尽管政治转型成就显著，南非仍面临治理腐败、政策执行效率低下以及社会经济不平等等严峻挑战，这些因素对政治稳定性构成持续考验。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心外交政策</div>
+                    <ul class="bullet-list">
+                        <li>坚持多边主义，积极参与联合国、G20、金砖国家等多边机制</li>
+                        <li>将非洲作为外交政策基石，推动非洲大陆和平、稳定与发展</li>
+                        <li>倡导建立更加公平合理的国际政治经济新秩序</li>
+                        <li>与主要大国保持平衡关系，奉行不结盟政策</li>
+                     </ul>
+                </div>
+             </div>
+             
+             <div class="card">
+                <h3><i class="fas fa-users"></i> 社会结构与人口特征</h3>
+                <p>南非被誉为<span class="highlight">"彩虹之国"</span>，拥有极其多元的种族、语言和文化。人口结构中，黑人占<span class="data-marker">81.4%</span>，有色人种占<span class="data-marker">8.2%</span>，白人占<span class="data-marker">7.3%</span>，印度/亚裔占<span class="data-marker">2.7%</span>。南非是一个年轻的国家，年龄中位数约为<span class="data-marker">28岁</span>，但同时也面临着<span class="highlight">全球最高之一的青年失业率</span>。</p>
+                <p>严重的社会不平等是南非最突出的问题，基尼系数长期位居世界前列，贫富差距悬殊。高犯罪率、教育资源不均以及艾滋病流行等问题，都对社会稳定和经济发展构成重大制约。</p>
+                
+                <div class="chart-container" style="height: 500px;">
+                    <div class="chart-title">南非人口结构金字塔 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="populationPyramidChart"></canvas></div>
+                </div>
+             </div>
+         </section>
+         <section id="key-industries" class="section">
+            <h2>重点行业市场分析</h2>
+             <div class="card">
+                <h3><i class="fas fa-industry"></i> 核心产业概览</h3>
+                <p>南非经济由多元化的产业结构支撑，其中矿业、汽车制造业、旅游业和金融服务业是其经济的四大支柱。这些行业不仅对GDP和就业做出巨大贡献，也是吸引外国直接投资和推动技术创新的关键领域。然而，所有行业都面临着电力短缺、物流瓶颈和全球经济波动等共同挑战。</p>
+                <div class="chart-container" style="height: 350px;">
+                    <div class="chart-title">重点行业对GDP贡献率对比 (估算)</div>
+                    <canvas id="industryGdpChart"></canvas>
+                </div>
+             </div>
+ 
+            <div class="industry-grid">
+                <div class="card industry-card">
+                    <h4><i class="fas fa-gem"></i> 采矿业 (Mining)</h4>
+                    <p><strong>市场概览:</strong> 作为南非经济的传统基石，矿业在2024年贡献了约<span class="data-marker">7.5%</span>的GDP，雇佣超过47万名员工。南非是全球最大的铂族金属（PGMs）、铬、锰和钒生产国之一，拥有丰富的关键矿产储量，在全球能源转型中占据战略地位。</p>
+                    <p><strong>主要参与者:</strong> Anglo American Platinum, Sibanye-Stillwater, Impala Platinum (PGMs); Gold Fields, Harmony Gold (黄金); Kumba Iron Ore (铁矿石); Exxaro Resources, Sasol (煤炭)。</p>
+                    <p><strong>趋势与挑战:</strong> 行业面临<span class="highlight">电力供应不稳定 (Eskom)</span> 和<span class="highlight">铁路与港口物流效率低下 (Transnet)</span> 的双重制约，严重影响产量和出口。非法采矿和监管审批延迟也是重大挑战。未来趋势是向"绿色金属"（如锂、钒）转型，以适应全球需求。</p>
+                </div>
+
+                <div class="card industry-card">
+                    <h4><i class="fas fa-car"></i> 汽车制造业 (Automotive)</h4>
+                    <p><strong>市场概览:</strong> 汽车行业是南非制造业的驱动核心，约占GDP的<span class="data-marker">4.9%</span>。2024年，新车销量和出口均实现稳健增长，显示出行业韧性。政府的"南非汽车总体规划2035" (SAAM2035) 旨在提升本地化率和推动向新能源汽车（NEV）转型。</p>
+                    <p><strong>主要参与者:</strong> Toyota, Volkswagen, Ford, Mercedes-Benz, BMW, Isuzu等国际品牌均在南非设有大型生产基地。</p>
+                    <p><strong>趋势与挑战:</strong> 主要挑战是如何从传统内燃机（ICE）生产<span class="highlight">过渡到新能源汽车（NEV）</span>，这需要大量投资和政策支持。供应链中断和全球需求放缓是潜在风险。行业正积极提升本地零部件采购比例，以增强竞争力。</p>
+                </div>
+
+                <div class="card industry-card">
+                    <h4><i class="fas fa-plane-departure"></i> 旅游业 (Tourism)</h4>
+                    <p><strong>市场概览:</strong> 旅游业是创造就业和赚取外汇的关键行业，疫情后强劲复苏。2024年国际游客数量显著回升，预计2025年将全面恢复至疫情前水平。南非拥有丰富的自然风光和文化遗产，吸引着全球游客。</p>
+                    <p><strong>主要参与者:</strong> 包括大型酒店集团（如Sun International, Tsogo Sun Hotels）、航空公司（如South African Airways）、以及众多旅行社和野生动物保护区。</p>
+                    <p><strong>趋势与挑战:</strong> 游客安全问题和基础设施（特别是道路和部分公共设施）是持续存在的挑战。行业趋势正转向<span class="highlight">生态旅游和可持续旅游</span>，以及利用数字平台进行更精准的营销。签证政策的便利性也直接影响着国际游客的流入。</p>
+                </div>
+
+                <div class="card industry-card">
+                    <h4><i class="fas fa-university"></i> 金融服务业 (Financial Services)</h4>
+                    <p><strong>市场概览:</strong> 南非拥有非洲最成熟、最复杂的金融体系，对GDP贡献超过<span class="data-marker">20%</span>。该行业包括银行业、保险业和庞大的投资管理市场，约翰内斯堡证券交易所(JSE)是非洲最大的资本市场。</p>
+                    <p><strong>主要参与者:</strong> 银行业由"五大行"（Standard Bank, Absa, FNB, Nedbank, Capitec）主导。保险业有Sanlam, Old Mutual等巨头。近年来，TymeBank等数字银行和众多金融科技(Fintech)公司迅速崛起。</p>
+                    <p><strong>趋势与挑战:</strong> <span class="highlight">金融科技(Fintech)</span>正在重塑行业格局，尤其是在支付、小额贷款和数字银行领域。主要趋势是数字化转型、开放银行和人工智能应用。挑战则来自日益增长的网络安全威胁、严格的监管以及如何普惠更多未被传统银行覆盖的人群。</p>
+                </div>
+             </div>
+         </section>
+         <section id="economy" class="section">
+            <h2>宏观经济分析</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-chart-line"></i> GDP总量与增长趋势</h3>
+                <p>2025年，南非的名义GDP预计约为<span class="data-marker">4010亿美元</span>，使其成为非洲第三大经济体，仅次于尼日利亚和埃及。然而，近年来南非经济增长持续面临挑战，2025年实际GDP增长率预计仅为<span class="data-marker">1.2%</span>。结构性障碍，特别是持续的电力危机、物流瓶颈和高失业率，严重制约了其经济潜力的释放。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">南非GDP总量与增长率 (2020-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="gdpChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-balance-scale"></i> 核心经济指标</h3>
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">通货膨胀率 (2025)</div>
+                        <div class="stat-number">4.9%</div>
+                        <div class="stat-title">在目标区间(3-6%)内波动</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">政策利率 (Repo Rate)</div>
+                        <div class="stat-number">8.25%</div>
+                        <div class="stat-title">为抑制通胀维持高位</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">失业率 (2025 Q1)</div>
+                        <div class="stat-number">32.9%</div>
+                        <div class="stat-title">全球最高水平之一</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">兰特/美元汇率</div>
+                        <div class="stat-number">18.5</div>
+                        <div class="stat-title">受内外部因素影响波动较大</div>
+                    </div>
+                </div>
+                <p>南非经济呈现高利率、高失业率和货币波动的复杂局面。南非储备银行(SARB)采取紧缩货币政策以控制通胀，但这在一定程度上抑制了信贷增长和投资。结构性高失业，特别是青年失业，是经济和社会稳定的核心挑战。</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-landmark"></i> 政府财政与公共债务</h3>
+                <p>南非政府面临严峻的财政压力。2025财年，财政赤字预计占GDP的<span class="data-marker">4.5%</span>。公共债务持续攀升，预计到2025年底将达到GDP的<span class="data-marker">75%</span>以上。高额的公务员薪酬和对亏损国有企业(SOEs)的救助是财政支出的主要负担。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">财政整顿措施</div>
+                    <ul class="bullet-list">
+                        <li>控制政府支出增长，特别是公务员薪酬。</li>
+                        <li>改善税收征管效率，打击偷税漏税。</li>
+                        <li>对国有企业进行改革，减少财政依赖。</li>
+                        <li>寻求公私合营(PPP)模式为基础设施项目融资。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="market" class="section">
+            <h2>市场环境与行业机会</h2>
+            <div class="card">
+                <h3><i class="fas fa-users"></i> 消费者市场</h3>
+                <p>南非拥有约<span class="data-marker">6200万</span>人口，是一个多元化但高度分化的消费市场。市场特点包括：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">中产阶级崛起：</span>尽管贫富差距悬殊，但不断壮大的中产阶级对优质商品和服务的需求日益增长。</li>
+                    <li><span class="highlight">年轻化人口：</span>年龄中位数仅28岁，年轻消费者对数字产品、时尚和娱乐有浓厚兴趣。</li>
+                    <li><span class="highlight">价格敏感性：</span>高失业率和低收入水平使得大部分消费者对价格高度敏感。</li>
+                    <li><span class="highlight">品牌忠诚度：</span>本地和国际知名品牌拥有较高的市场认可度。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-wifi"></i> 数字渗透与线上渠道</h3>
+                <p>南非的数字经济正在快速发展。互联网普及率已超过<span class="data-marker">70%</span>，智能手机渗透率高。电子商务市场预计在未来五年将以年均<span class="data-marker">15%</span>的速度增长。领先的电商平台包括Takealot.com，以及Superbalist, Zando等时尚电商。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">线上渠道机遇</div>
+                    <p>移动支付（如Vodapay, SnapScan）的普及为线上和线下零售创造了新的机会。社交媒体营销（尤其是在Instagram和Facebook上）是触及年轻消费者的有效途径。</p>
+                </div>
+            </div>
+         </section>
+         <section id="legal" class="section">
+            <h2>法律与监管环境</h2>
+            <div class="card">
+                <h3><i class="fas fa-balance-scale-right"></i> 外资准入与B-BBEE政策</h3>
+                <p>南非对外资普遍开放，但在某些领域（如安保、广播）有股权限制。最重要的本地化政策是<span class="highlight">《广泛基础的黑人经济赋权法案》(B-BBEE)</span>。该政策旨在纠正历史不公，要求企业在股权、管理、技能发展、采购等方面满足一定的本地化评分。不遵守B-BBEE将严重影响企业获取政府合同和部分私营部门业务的能力。</p>
+            </div>
+            <div class="card">
+                <h3><i class="far fa-building"></i> 公司设立</h3>
+                <p>外国投资者在南非最常用的公司形式是<span class="accent">私营有限公司 (Pty Ltd)</span>。设立流程相对直接，通常需要4-8周。企业需要在公司和知识产权委员会(CIPC)注册，并向南非税务局(SARS)进行税务登记。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> 数据保护法规</h3>
+                <p>南非的《个人信息保护法》(POPIA) 于2021年全面生效，其标准与欧盟的GDPR类似。该法案对个人数据的收集、处理、存储和跨境传输提出了严格要求。所有在南非运营的企业都必须任命一名信息官并确保合规。</p>
+            </div>
+         </section>
+         <section id="trade" class="section">
+            <h2>跨境贸易与物流体系</h2>
+            <div class="card">
+                <h3><i class="fas fa-globe-africa"></i> 贸易概览与AfCFTA</h3>
+                <p>南非是通往南部非洲市场的门户。主要贸易伙伴包括中国、德国、美国、日本和印度。作为<span class="highlight">《非洲大陆自由贸易协定》(AfCFTA)</span>的签署国，南非在进入拥有超过13亿人口的非洲统一市场方面具有战略优势。</p>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-ship"></i> 物流基础设施</h3>
+                <p>南非拥有非洲最发达的港口和铁路网络，但近年来面临严峻挑战。</p>
+                <ul class="bullet-list">
+                    <li><span class="accent">主要港口：</span>德班港是南半球最繁忙的港口之一，处理南非大部分集装箱货运。其他重要港口包括开普敦、伊丽莎白港和理查兹湾。</li>
+                    <li><span class="accent">物流挑战：</span>国有物流公司Transnet的效率低下，导致港口拥堵和铁路运输延迟，对供应链构成严重制约。</li>
+                </ul>
+                 <div class="chart-container" style="height: 350px;">
+                    <div class="chart-title">南非主要出口目的地 (2024)</div>
+                    <canvas id="exportPartnersChart"></canvas>
+                </div>
+            </div>
+         </section>
+         <section id="finance" class="section">
+            <h2>金融与资本市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-university"></i> 成熟的金融体系</h3>
+                <p>南非拥有非洲最成熟、监管最完善的金融体系。其银行业由<span class="highlight">五大银行</span>（Standard Bank, Absa, FNB, Nedbank, Capitec）主导。约翰内斯堡证券交易所(JSE)是非洲规模最大、流动性最强的资本市场。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-rocket"></i> 融资渠道与风险投资</h3>
+                <p>企业融资渠道多样，包括银行贷款、上市融资和私募股权。南非的风险投资(VC)生态系统正在不断发展，尤其是在<span class="accent">金融科技(Fintech)</span>领域。开普敦和约翰内斯堡是主要的创业中心。然而，与全球标准相比，早期融资仍然具有挑战性。</p>
+            </div>
+         </section>
+         <section id="talent" class="section">
+            <h2><i class="fas fa-users-cog"></i> 人才与劳动力市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-briefcase"></i> 劳动力市场概览</h3>
+                <p>南非劳动力市场的最大特点是其<span class="highlight">二元性</span>。一方面，拥有一批在金融、法律、工程等领域受过良好教育的专业人才。另一方面，则面临着全球最高的结构性失业率，非熟练劳动力的供应严重过剩。根据B-BBEE政策要求，企业在技能发展方面有法定的培训和投入义务。</p>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-magnifying-glass-chart"></i> 人才短缺领域</h3>
+                <p>尽管总体失业率高，但在特定领域依然存在严重的人才短缺，对具备专业技能的专家需求旺盛。企业在招聘时应关注以下高需求领域：</p>
+                <div class="chart-container" style="height: 400px;">
+                    <div class="chart-title">南非关键人才短缺指数 (2025)</div>
+                    <canvas id="talentShortageChart"></canvas>
+                </div>
+            </div>
+        </section>
+        <section id="technology" class="section">
+            <h2><i class="fas fa-microchip"></i> 科技与创新生态</h2>
+            <div class="card">
+                <h3><i class="fas fa-lightbulb"></i> 创新中心与挑战</h3>
+                <p>南非拥有非洲最活跃的科技创新生态之一，主要集中在<span class="accent">西开普省（开普敦-斯泰伦博斯）</span>和<span class="accent">豪登省（约翰内斯堡）</span>。创新活动主要围绕解决本地核心挑战展开，形成了独特的增长领域。然而，持续的<span class="highlight">电力危机（限电）</span>和不稳定的网络连接对数字经济的发展构成了基础性制约。</p>
+            </div>
+            <div class="grid">
+                <div class="stat-box">
+                    <i class="fas fa-money-bill-wave fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">金融科技 (FinTech)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">为解决金融普惠性问题，支付、小额贷款和数字银行等领域创新活跃。</p>
+                </div>
+                 <div class="stat-box">
+                    <i class="fas fa-shopping-cart fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">电子商务 (E-commerce)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">移动互联网普及推动了线上零售的快速增长，尤其是在服装、电子产品领域。</p>
+                </div>
+                 <div class="stat-box">
+                    <i class="fas fa-heart-pulse fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">健康科技 (HealthTech)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">旨在利用技术改善公共和私营医疗服务的可及性和效率，远程医疗是重点。</p>
+                </div>
+                 <div class="stat-box">
+                    <i class="fas fa-user-graduate fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">教育科技 (EduTech)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">为应对教育资源不均问题，提供在线学习平台和技能培训解决方案。</p>
+                </div>
+            </div>
+        </section>
+        <section id="culture" class="section">
+            <h2><i class="fas fa-users"></i> 商业文化与社会习俗</h2>
+            <div class="card">
+                <h3><i class="fas fa-handshake"></i> "彩虹之国"的多元文化</h3>
+                <p>南非的商业文化是其多元种族的反映，融合了非洲、欧洲和亚洲的传统。商务活动中通常使用英语。建立<span class="highlight">人际关系和信任</span>至关重要，首次会议往往用于相互了解，而非直接进入商业谈判。着装根据行业不同而有差异，金融等领域较为正式，而科技行业则相对轻松。</p>
+            </div>
+        </section>
+        <section id="risk" class="section">
+            <h2><i class="fas fa-exclamation-triangle"></i> 风险评估</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="stat-box">
+                    <i class="fas fa-plug-circle-xmark fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">电力与基建瓶颈</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">持续的全国性限电和低效的港口铁路严重影响生产和供应链。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-arrow-trend-down fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">经济增长乏力</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">结构性问题导致经济长期低增长，限制了市场扩张潜力。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-user-slash fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">高失业与不平等</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">全球最高的失业率和贫富差距可能引发社会不稳定。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-landmark-dome fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">政治与治理风险</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">联合政府的政策协调性和稳定性待考，腐败问题依然严峻。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-shield-halved fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">高犯罪率</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">社会治安问题对人员和资产安全构成直接威胁。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-file-invoice-dollar fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">合规风险</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">需遵守复杂的B-BBEE本地化政策，FATF"灰名单"可能增加金融交易复杂性。</p>
+                </div>
+            </div>
+        </section>
+        <section id="strategy" class="section">
+             <h2><i class="fas fa-chess"></i> 市场进入与增长策略</h2>
+             <div class="grid">
+                <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-hands-helping fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">建立本地伙伴关系</div>
+                        <p class="grid-item-description">与本地企业合资或合作，是克服监管障碍、理解市场和满足BEE政策要求的关键。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-crosshairs fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">解决本土核心痛点</div>
+                        <p class="grid-item-description">提供离网能源、优化物流、开发普惠金融产品等，能精准切入市场需求。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-mobile-screen-button fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">拥抱数字化转型</div>
+                        <p class="grid-item-description">利用蓬勃发展的电商、社交媒体和移动支付生态，通过线上渠道触及广泛的消费者。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-map-signs fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">采取灵活进入模式</div>
+                        <p class="grid-item-description">初期可与本地分销商合作降低风险，后续根据发展考虑设立合资或全资子公司。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas-solid fa-leaf fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">注重可持续性与CSR</div>
+                        <p class="grid-item-description">积极投资社区发展和环保实践，能建立积极品牌形象和深厚信任感。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-map-marked-alt fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">深度本地化运营</div>
+                        <p class="grid-item-description">产品、服务和营销策略必须根据不同地区、文化和收入水平进行精细调整。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="conclusion" class="section">
+            <h2><i class="fas fa-flag-checkered"></i> 结论与建议</h2>
+            <div class="card">
+                <h3><i class="fas fa-bullseye"></i> 核心结论：一个充满二元性的市场</h3>
+                <p>南非是一个充满显著机遇与严峻挑战并存的复杂市场。一方面，它拥有非洲最发达、最多元化的经济体之一，基础设施相对完善，金融体系成熟，并且是一个通往撒哈拉以南非洲市场的关键门户。其年轻化的人口结构、日益增长的数字化浪潮以及丰富的自然资源，为消费品、高科技、可再生能源和金融服务等领域提供了巨大的增长潜力。</p>
+                <p>另一方面，投资者必须清醒地认识到其面临的系统性风险。根深蒂固的社会不平等、全球最高的失业率、持续的电力和物流危机，以及政治和治理上的不确定性，共同构成了一个极具挑战性的商业环境。成功驾驭这一市场，需要的不仅是资本，更是深刻的洞察力、强大的适应能力和长期的战略耐心。</p>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-compass"></i> 战略建议</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">对于技术与能源解决方案提供商：</span>聚焦于解决电力短缺（如太阳能、储能）和物流效率低下的核心痛点，市场需求明确且迫切。</li>
+                    <li><span class="accent">对于消费品品牌：</span>针对不断壮大的年轻中产阶级，提供兼具性价比和品牌价值的产品。利用数字渠道进行营销是关键。</li>
+                    <li><span class="accent">对于金融科技企业：</span>在支付、信贷和保险领域，针对服务不足的广大用户群体，提供便捷的移动金融解决方案有巨大空间。</li>
+                    <li><span class="accent">通用建议：</span><span class="highlight">建立强大的本地伙伴关系是成功的基石。</span>这不仅有助于导航复杂的B-BBEE法规，也是建立信任和渠道的必要步骤。必须为应对基础设施挑战做好预案，并保持长期的战略耐心。</li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">南非市场综合调研报告2025</h3>
+                <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+                <p>AI赋能精准决策 专业成就全球商机</p>
+                <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+            </div>
+            
+            <div class="sources">
+                <h4 class="sources-title">数据来源 (占位符)</h4>
+                <ul class="sources-list">
+                    <li>南非国家统计局 (Stats SA)</li>
+                    <li>南非储备银行 (SARB)</li>
+                    <li>南非税务局 (SARS)</li>
+                    <li>世界银行 - 南非经济更新</li>
+                    <li>国际货币基金组织 - 南非报告</li>
+                </ul>
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                    <p>微信视频号公众号： 张小强出海</p>
+                </p>
+            </div>
+        </footer>
+     </div>
+    
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const header = document.querySelector('header');
+            const dots = document.querySelectorAll('.nav-dot');
+            const allSectionsForDots = [header, ...sections];
+
+            // --- Scroll-to functionality for nav dots ---
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const sectionId = this.getAttribute('data-section');
+                    const targetSection = document.getElementById(sectionId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // --- Scroll-down arrow functionality ---
+            const scrollDown = document.querySelector('.scroll-down');
+             if(scrollDown) {
+                 scrollDown.addEventListener('click', function() {
+                     const firstSection = document.querySelector('.section');
+                     if (firstSection) {
+                         window.scrollTo({
+                             top: firstSection.offsetTop - 50,
+                             behavior: 'smooth'
+                         });
+                     }
+                 });
+             }
+
+            // --- Animate sections and update nav dots on scroll ---
+            const handleScroll = () => {
+                let currentSectionId = '';
+                
+                // --- Animate sections ---
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY + window.innerHeight * 0.8 >= sectionTop) {
+                         section.classList.add('visible');
+                    }
+                });
+
+                // --- Update nav dots ---
+                allSectionsForDots.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 2) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+
+                dots.forEach(dot => {
+                    dot.classList.toggle('active', dot.getAttribute('data-section') === currentSectionId);
+                });
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            
+            // --- Initial setup ---
+            createCharts();
+            handleScroll(); // Run on page load to set initial state
+        });
+
+        function createCharts() {
+            // --- Chart.js Global Defaults ---
+            Chart.defaults.font.family = 'Roboto, sans-serif';
+            Chart.defaults.color = 'rgba(230, 241, 255, 0.8)';
+            Chart.defaults.borderColor = 'rgba(230, 241, 255, 0.2)';
+            Chart.defaults.plugins.legend.position = 'bottom';
+            Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(9, 19, 83, 0.9)';
+            Chart.defaults.plugins.tooltip.borderColor = 'rgba(0, 212, 255, 1)';
+            Chart.defaults.plugins.tooltip.borderWidth = 1;
+            Chart.defaults.plugins.tooltip.padding = 10;
+            
+            // --- Register ChartDataLabels plugin ---
+            Chart.register(ChartDataLabels);
+            
+            // --- Create all charts ---
+            createCountryOverviewCharts();
+            createIndustryChart();
+            createGdpChart();
+            createExportPartnersChart();
+            createTalentShortageChart();
+        }
+
+        function createCountryOverviewCharts() {
+            // --- South Africa Map Chart (Bubble) ---
+            const mapCtx = document.getElementById('southAfricaMapChart');
+            if(mapCtx) {
+                 new Chart(mapCtx, {
+                    type: 'bubble',
+                    data: {
+                        datasets: [
+                        { label: '比勒陀利亚 (行政首都)', data: [{x: 28.2, y: -25.7, r:15}], backgroundColor: 'rgba(255, 18, 79, 0.7)' },
+                        { label: '开普敦 (立法首都)', data: [{x: 18.4, y: -33.9, r:12}], backgroundColor: 'rgba(0, 212, 255, 0.7)' },
+                        { label: '布隆方丹 (司法首都)', data: [{x: 26.2, y: -29.1, r:8}], backgroundColor: 'rgba(255, 206, 86, 0.7)' },
+                        { label: '约翰内斯堡', data: [{x: 28.0, y: -26.2, r:20}], backgroundColor: 'rgba(75, 192, 192, 0.7)' },
+                        { label: '德班', data: [{x: 31.0, y: -29.8, r:18}], backgroundColor: 'rgba(153, 102, 255, 0.7)' }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { tooltip: { callbacks: { label: (c) => c.dataset.label } } },
+                        scales: {
+                            y: { title: { display: true, text: '纬度' }, min: -35, max: -22 },
+                            x: { title: { display: true, text: '经度' }, min: 16, max: 33 }
+                        }
+                    }
+                });
+            }
+
+            // --- Population Pyramid Chart ---
+            const pyramidCtx = document.getElementById('populationPyramidChart');
+            if(pyramidCtx) {
+                new Chart(pyramidCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['0-4','5-9','10-14','15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64','65+'],
+                        datasets: [
+                            { label: '男性', data: [-5.2,-5.1,-5.0,-4.9,-4.8,-4.7,-4.5,-4.2,-3.8,-3.3,-2.8,-2.3,-1.8,-1.5].map(v=>v*1e6), backgroundColor: 'rgba(0, 212, 255, 0.6)', stack: 'age' },
+                            { label: '女性', data: [5.1,5.0,4.9,4.8,4.8,4.7,4.6,4.3,3.9,3.4,2.9,2.4,2.0,1.8].map(v=>v*1e6), backgroundColor: 'rgba(255, 18, 79, 0.6)', stack: 'age' }
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: { x: { ticks: { callback: (v) => Math.abs(v/1e6) + 'M' } } },
+                        plugins: { tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${(Math.abs(c.parsed.x)/1e6).toFixed(2)}M` } } }
+                    }
+                });
+            }
+        }
+
+        function createIndustryChart() {
+            // --- Industry GDP Doughnut Chart ---
+            const industryCtx = document.getElementById('industryGdpChart');
+            if (!industryCtx) return;
+            new Chart(industryCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['金融服务业', '采矿业', '汽车制造业', '旅游业', '其他'],
+                    datasets: [{
+                        label: '对GDP贡献率 (%)',
+                        data: [21.5, 7.5, 4.9, 2.8, 63.3],
+                        backgroundColor: ['rgba(0, 212, 255, 0.7)','rgba(255, 206, 86, 0.7)','rgba(75, 192, 192, 0.7)','rgba(153, 102, 255, 0.7)','rgba(201, 203, 207, 0.7)']
+                    }]
+                },
+                 options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { datalabels: { color: '#fff', formatter: (v) => v + '%' } },
+                    layout: {
+                        padding: {
+                            top: 20,
+                            bottom: 40,
+                            left: 20,
+                            right: 20
+                        }
+                    }
+                }
+            });
+        }
+
+        function createGdpChart() {
+            // --- GDP Bar/Line Combo Chart ---
+            const gdpCtx = document.getElementById('gdpChart');
+            if (!gdpCtx) return;
+            new Chart(gdpCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2020','2021','2022','2023','2024(E)','2025(F)'],
+                    datasets: [
+                        { label: 'GDP总量 (十亿美元)', data: [337,419,405,377,389,401], backgroundColor: 'rgba(0, 212, 255, 0.6)', yAxisID: 'y' },
+                        { label: 'GDP增长率 (%)', data: [-6.3,4.9,1.9,0.6,0.9,1.2], backgroundColor: 'rgba(255, 18, 79, 0.6)', type: 'line', yAxisID: 'y1', fill: true }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { position: 'left', title: { display: true, text: 'GDP总量 (十亿美元)' }, beginAtZero: false },
+                        y1: { position: 'right', title: { display: true, text: 'GDP增长率 (%)' }, grid: { drawOnChartArea: false }, beginAtZero: false }
+                    }
+                }
+            });
+        }
+
+        function createExportPartnersChart() {
+            // --- Export Partners Pie Chart ---
+            const exportCtx = document.getElementById('exportPartnersChart');
+            if (!exportCtx) return;
+            new Chart(exportCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['中国','美国','德国','日本','英国','其他'],
+                    datasets: [{
+                        label: '出口份额',
+                        data: [11.2,11.1,7.8,6.2,4.7,59],
+                        backgroundColor: ['rgba(255,18,79,0.7)','rgba(0,212,255,0.7)','rgba(255,206,86,0.7)','rgba(75,192,192,0.7)','rgba(153,102,255,0.7)','rgba(201,203,207,0.7)']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' },
+                        datalabels: {
+                            color: '#fff',
+                            formatter: (value, ctx) => {
+                                const sum = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / sum) * 100).toFixed(1) + "%";
+                                return percentage;
+                            }
+                        }
+                    },
+                    layout: {
+                        padding: {
+                            top: 20,
+                            bottom: 40,
+                            left: 20,
+                            right: 20
+                        }
+                    }
+                }
+            });
+        }
+
+        function createTalentShortageChart() {
+            const ctx = document.getElementById('talentShortageChart');
+            if (!ctx) return;
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['IT/数字技能', '工程师', '项目经理', '注册会计师', '网络安全'],
+                    datasets: [{
+                        label: '人才短缺指数 (满分100)',
+                        data: [92, 88, 85, 81, 78],
+                        backgroundColor: 'rgba(0, 212, 255, 0.7)',
+                        borderColor: '#00d4ff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { 
+                            beginAtZero: true, 
+                            max: 100,
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                         y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: {
+                            color: '#ffffff',
+                            anchor: 'end',
+                            align: 'right',
+                            font: { weight: 'bold' }
+                        }
+                    }
+                }
+            });
+        }
+     </script>
+ </body>
+ </html> 

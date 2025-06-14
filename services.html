@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务与定价 - InsightGen AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 新增：html2pdf.js 用于生成PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">智</div>
+                    <span>InsightGen AI</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#services">核心服务</a></li>
+                    <li><a href="index.html#portfolio">案例展示</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html" class="active">服务与定价</a></li>
+                    <li><a href="index.html#contact">立即咨询</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pricing-hero">
+            <div class="hero-background"></div>
+            <div class="container">
+                <h1>灵活、透明、高价值</h1>
+                <p class="subtitle">从即时AI洞察到深度专家策略，选择最适合您发展阶段的方案。</p>
+            </div>
+        </section>
+
+        <section id="pricing-plans">
+            <div class="container">
+                <div class="pricing-grid">
+                    <!-- Plan 1: AI速览报告 -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>AI速览报告</h3>
+                            <p class="plan-subtitle">流量引擎 & 体验工具</p>
+                            <p class="price"><sup>¥</sup>1<span>/份</span></p>
+                        </div>
+                        <div class="pricing-body">
+                             <p>用一杯咖啡的价格，即时获取一份浓缩的市场概览，感受AI的强大分析力。</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check-circle"></i> 核心市场规模与增长预测</li>
+                                <li><i class="fas fa-check-circle"></i> 关键发展趋势摘要</li>
+                                <li><i class="fas fa-check-circle"></i> Top 5 主要竞争者列表</li>
+                                <li><i class="fas fa-check-circle"></i> 3分钟内即时交付</li>
+                                <li><i class="fas fa-times-circle"></i> 消费者画像分析</li>
+                                <li><i class="fas fa-times-circle"></i> 详细渠道与供应链分析</li>
+                                <li><i class="fas fa-times-circle"></i> 专家解读与建议</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="javascript:void(0);" id="trigger-payment-modal-from-services-btn" class="btn">立即体验</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2: 标准化深度报告 -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">最受欢迎</div>
+                        <div class="pricing-header">
+                            <h3>标准化深度报告</h3>
+                            <p class="plan-subtitle">核心产品 & 利润中心</p>
+                            <p class="price"><sup>¥</sup>999<span>起/份</span></p>
+                        </div>
+                        <div class="pricing-body">
+                             <p>与我们的分析师进行一对一需求会议后，为您量身打造一份内容全面、数据详实、媲美传统咨询的专业报告。</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check-circle"></i> **包含速览报告全部内容**</li>
+                                <li><i class="fas fa-check-circle"></i> 深度消费者画像与行为分析</li>
+                                <li><i class="fas fa-check-circle"></i> 市场渠道与供应链结构解析</li>
+                                <li><i class="fas fa-check-circle"></i> 机会与风险（SWOT）评估</li>
+                                <li><i class="fas fa-check-circle"></i> 技术与政策法规环境分析</li>
+                                <li><i class="fas fa-check-circle"></i> 交付周期根据需求确定</li>
+                                <li><i class="fas fa-times-circle"></i> 专家一对一解读</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="index.html#contact" class="btn-primary">预约需求会议</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3: 专家定制与咨询 -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>专家定制与咨询</h3>
+                            <p class="plan-subtitle">品牌顶峰 & 高价值服务</p>
+                            <p class="price">面议</p>
+                        </div>
+                        <div class="pricing-body">
+                            <p>由我们的资深合伙人（上海张小强企业咨询事务所）亲自带队，为您提供最高级别的战略支持与落地服务。</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check-circle"></i> **包含深度报告全部内容**</li>
+                                <li><i class="fas fa-check-circle"></i> 一对一专家咨询与解读</li>
+                                <li><i class="fas fa-check-circle"></i> 完全按需定制的研究模块</li>
+                                <li><i class="fas fa-check-circle"></i> 商业计划书撰写与融资对接</li>
+                                <li><i class="fas fa-check-circle"></i> 本地资源整合与商务拓展</li>
+                                <li><i class="fas fa-check-circle"></i> 长期战略顾问服务</li>
+                                <li><i class="fas fa-check-circle"></i> 全球市场落地执行支持</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="index.html#contact" class="btn">预约专家咨询</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">智</div>
+                        <span>InsightGen AI</span>
+                    </a>
+                    <p class="tagline">本服务由『智探GlobalAI』市场分析系统强力驱动</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> BDU@163.com, BDA@163.com</p>
+                    <p><i class="fab fa-weixin"></i> 微信公众号: 超级个体-上海张小强</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 上海张小强企业咨询事务所 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 新增：支付弹窗 Modal -->
+    <div id="payment-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="关闭">&times;</button>
+            <h3>AI速览报告 · 扫码支付</h3>
+            <p class="modal-subtitle">支付成功后将立即开始为您生成报告</p>
+            <div class="qr-code-container">
+                <img src="images/payment-qr-placeholder.png" alt="请放置您的收款二维码">
+                <p class="price-tag">支付金额：<strong>¥ 1.00</strong></p>
+            </div>
+            <div class="payment-providers">
+                <i class="fab fa-weixin" style="color: #07C160;"></i>
+                <i class="fab fa-alipay" style="color: #1677FF;"></i>
+            </div>
+            <button id="confirm-payment-btn" class="btn-primary">我已完成支付</button>
+        </div>
+    </div>
+
+    <!-- 新增：报告任务指令界面 (全屏Modal) -->
+    <div id="mission-control-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content mission-control-content">
+            <button class="modal-close" aria-label="关闭">&times;</button>
+            <div class="mission-control-header">
+                <i class="fas fa-rocket"></i>
+                <h3>任务指令已激活</h3>
+                <p>请输入您的目标，我们将立即为您启动全球市场分析引擎。</p>
+            </div>
+            <div class="mission-form">
+                <input type="text" id="mission-input" placeholder="例如：电动汽车 在 欧盟市场" aria-label="报告任务输入">
+                <button id="execute-mission-btn" class="btn-primary"><i class="fas fa-cogs"></i> 生成精美速览报告</button>
+            </div>
+            <div id="mission-loader" style="display: none;">
+                <p>正在连接全球数据节点...</p>
+                <div class="loader"></div>
+                <p class="eta">预计完成时间：3分钟</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="js/script.js?v=2024061201"></script>
+</body>
+</html> 

@@ -1,0 +1,3602 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #050a30;
+            --secondary-color: #091353;
+            --accent-color: #00d4ff;
+            --text-color: #e6f1ff;
+            --text-secondary: #a3b1cc;
+            --highlight: #ff124f;
+            --card-bg: rgba(9, 19, 83, 0.7);
+            --gradient-start: #050a30;
+            --gradient-end: #091353;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 18, 79, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('riben.jpg') center/cover no-repeat;
+            filter: brightness(0.3) saturate(1.2);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 10, 48, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0 4rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .chart-canvas-wrapper {
+            flex-grow: 1;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        th {
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f101"; /* 使用Font Awesome的箭头图标 */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 18, 79, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+        }
+        
+        /* 数据标记样式 */
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        /* 图表标题样式 */
+        .chart-title {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* 脉冲效果 */
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+            }
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: -webkit-linear-gradient(45deg, var(--accent-color), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="country-overview"></div>
+        <div class="nav-dot" data-section="economy"></div>
+        <div class="nav-dot" data-section="market"></div>
+        <div class="nav-dot" data-section="legal"></div>
+        <div class="nav-dot" data-section="trade"></div>
+        <div class="nav-dot" data-section="finance"></div>
+        <div class="nav-dot" data-section="talent"></div>
+        <div class="nav-dot" data-section="technology"></div>
+        <div class="nav-dot" data-section="culture"></div>
+        <div class="nav-dot" data-section="risk"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+        <div class="nav-dot" data-section="conclusion"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>JP</span>
+            </div>
+            <h1>日本市场综合调研报告</h1>
+            <p class="subtitle">全面解析全球第三大经济体的市场机遇与挑战 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p></p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            ⌄
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="country-overview" class="section">
+            <h2>国家/地区概况</h2>
+            
+            <div class="card">
+                <h3>地理位置与战略地位</h3>
+                <p>日本是位于东亚的岛国，由本州、北海道、九州和四国四个主要岛屿以及6,800多个小岛组成，总面积约37.8万平方公里。东临太平洋，西隔日本海与亚洲大陆相望，地理位置优越，是连接亚洲与太平洋地区的重要枢纽。作为全球第三大经济体，日本在亚太地区政治、经济和安全格局中扮演着举足轻重的角色。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本地理位置战略示意图</div>
+                    <div class="chart-canvas-wrapper"><canvas id="japanMapChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">国土面积</div>
+                    <div class="stat-number">37.8万</div>
+                    <div class="stat-title">平方公里</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">人口总数</div>
+                    <div class="stat-number">1.25亿</div>
+                    <div class="stat-title">人口规模全球第11位</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">老龄人口比例</div>
+                    <div class="stat-number">29.3%</div>
+                    <div class="stat-title">全球最高</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">经济体量</div>
+                    <div class="stat-number">第3</div>
+                    <div class="stat-title">全球经济体排名</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>政治体制与外交政策</h3>
+                <p>日本实行<span class="accent">议会制君主立宪制</span>，天皇为国家象征，首相为政府首脑。政治格局以自民党长期执政为主，政治环境总体稳定。外交上，日本与美国保持紧密的同盟关系，同时积极发展与亚洲邻国的关系，参与地区和全球多边机制，追求成为联合国安理会常任理事国。近年来，日本外交更加积极主动，推动"自由开放的印太"战略，增强在区域和全球事务中的影响力。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心外交政策</div>
+                    <ul class="bullet-list">
+                        <li>维护和强化日美同盟关系</li>
+                        <li>推动"自由开放的印太"战略</li>
+                        <li>加强与亚洲邻国的经济和安全合作</li>
+                        <li>积极参与国际多边机制，如G7、G20、联合国等</li>
+                        <li>推动国际贸易自由化，如CPTPP、RCEP等</li>
+                        <li>谋求联合国安理会常任理事国地位</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>社会结构与人口特征</h3>
+                <p>日本社会以<span class="highlight">高度老龄化</span>、<span class="highlight">低出生率</span>和<span class="highlight">城市化</span>为显著特征。人口约1.25亿，是全球人口老龄化程度最高的国家，65岁及以上老年人口占比达<span class="data-marker">29.9%</span>。同时，日本面临严重的少子化问题，2025年总和生育率仅为<span class="data-marker">1.23</span>。预计到2050年，日本人口将减少至约<span class="data-marker">1.05亿</span>。人口减少和老龄化对日本的劳动力市场、社会保障体系和经济增长都构成重大挑战。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本人口结构变化趋势(2000-2050)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="populationChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>国家发展阶段与定位</h3>
+                <p>日本是一个高度发达的工业化国家，在汽车、电子、机械、精密仪器等领域拥有全球领先的技术和企业。作为亚洲第一个实现现代化的国家，日本在20世纪80年代曾一度跃居全球第二大经济体。尽管自90年代泡沫经济崩溃后经历了长期的经济低迷，但日本仍保持着强大的技术创新能力和产业竞争力。</p>
+                
+                <p>当前，日本正致力于通过数字化转型、绿色技术创新、产业结构优化等举措实现经济复兴，并积极应对人口老龄化等社会挑战。在全球价值链中，日本企业凭借高品质、高可靠性和精益生产能力，在高端制造和关键零部件领域保持领先地位。</p>
+            </div>
+        </section>
+        
+        <section id="economy" class="section">
+            <h2>宏观经济分析</h2>
+            
+            <div class="card">
+                <h3>GDP总量与增长率</h3>
+                <p>2025年，日本GDP约为<span class="data-marker">5.5万亿美元</span>，居全球第三位，仅次于美国和中国。尽管如此，日本经济增长率较为缓慢，2025年实际GDP增长率为<span class="data-marker">1.3%</span>。受全球经济形势和国内结构性问题影响，日本经济增长持续面临挑战。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本GDP总量与增长率(2015-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="gdpChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>产业结构</h3>
+                <p>日本经济已完成向服务业为主导的转型，<span class="accent">服务业</span>占GDP的<span class="data-marker">71%</span>，<span class="accent">制造业</span>约占<span class="data-marker">20%</span>，<span class="accent">农业</span>占比不足<span class="data-marker">1%</span>。尽管服务业比重较大，但制造业仍是日本经济的重要支柱和国际竞争优势所在。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本产业结构构成(2023)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="industryChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">通胀率</div>
+                    <div class="stat-number">1.8%</div>
+                    <div class="stat-title">2025年</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">基准利率</div>
+                    <div class="stat-number">0.75%</div>
+                    <div class="stat-title">2025年6月</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">失业率</div>
+                    <div class="stat-number">2.4%</div>
+                    <div class="stat-title">2025年第二季度</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-title">日元/美元汇率</div>
+                    <div class="stat-number">148.5</div>
+                    <div class="stat-title">2025年6月平均</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>经济指标分析</h3>
+                <p>日本经济的主要指标呈现以下特点：</p>
+                <ul class="bullet-list">
+                    <li><span class="accent">通胀率：</span>长期处于低位，2025年约为<span class="data-marker">1.8%</span>，日本央行致力于维持2%的通胀目标</li>
+                    <li><span class="accent">利率：</span>日本长期维持超低利率政策，2023年初首次调整收益率曲线控制政策，2024年3月结束负利率政策，2025年6月基准利率为<span class="data-marker">0.75%</span></li>
+                    <li><span class="accent">汇率：</span>日元兑美元汇率在2022-2024年间持续贬值，2025年有所企稳，平均汇率约<span class="data-marker">148.5</span></li>
+                    <li><span class="accent">就业率：</span>日本就业率高，失业率稳定在<span class="data-marker">2.4%-2.7%</span>之间，但工资增长缓慢</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>外汇储备与国际收支</h3>
+                <p>截至2025年6月，日本外汇储备规模约为<span class="data-marker">1.35万亿美元</span>，位居全球第二，仅次于中国。日本长期维持经常账户顺差，主要来源于贸易顺差和海外投资收益。作为全球最大的债权国，日本对外净资产超过<span class="data-marker">3.7万亿美元</span>。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">国际收支特点</div>
+                    <ul class="bullet-list">
+                        <li>经常账户持续保持顺差，2025年顺差约<span class="data-marker">1850亿美元</span></li>
+                        <li>一次性收入(投资收益)是顺差的主要来源，超过贸易顺差</li>
+                        <li>是全球最大的资本输出国之一，对外直接投资和证券投资活跃</li>
+                        <li>海外资产管理效率较高，投资回报稳定</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>政府财政与支出结构</h3>
+                <p>日本政府财政面临严峻挑战，公共债务水平居主要发达经济体之首。截至2025年底，日本政府债务占GDP比重超过<span class="data-marker">264%</span>。政府支出结构中，社会保障支出占比最大，约占总支出的<span class="data-marker">33%</span>，其次是公共事业和国债费用。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本政府支出结构(2023财年)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="govExpenditureChart"></canvas></div>
+                </div>
+                
+                <p>尽管债务水平高企，但日本政府债务绝大部分由国内持有，债务结构相对稳定，短期违约风险较低。然而，长期而言，人口老龄化导致的社会保障支出增加和税基缩小将进一步加剧财政压力。</p>
+            </div>
+            
+            <div class="card">
+                <h3>当前经济政策</h3>
+                <p>当前，日本经济政策的核心是推动经济可持续增长，主要措施包括：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">货币政策：</span>从超宽松货币政策逐步正常化，2024年3月结束负利率政策</li>
+                    <li><span class="highlight">财政政策：</span>实施扩张性财政政策，推出多轮经济刺激计划</li>
+                    <li><span class="highlight">结构改革：</span>推动劳动力市场改革，增加女性和老年人劳动参与率</li>
+                    <li><span class="highlight">科技创新：</span>支持数字化转型、人工智能、机器人技术等前沿领域发展</li>
+                    <li><span class="highlight">绿色转型：</span>2050年碳中和目标下的能源结构调整和清洁技术投资</li>
+                    <li><span class="highlight">区域振兴：</span>促进地方经济发展，缓解东京过度集中问题</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">岸田经济政策的"新资本主义"愿景</div>
+                    <p>岸田政府提出的"新资本主义"政策旨在实现经济增长与分配并重，通过提高工资、扩大中产阶级、促进数字化和绿色转型等措施，推动日本经济重回增长轨道。该政策计划到2030年，使日本实质GDP达到600万亿日元，较2022年增长约23%。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="market" class="section">
+            <h2>市场环境与行业机会</h2>
+            
+            <div class="card">
+                <h3>市场容量与增长潜力</h3>
+                <p>日本作为世界第三大经济体，拥有约<span class="data-marker">1.25亿</span>人口和高达<span class="data-marker">3.9万美元</span>的人均GDP，市场购买力强劲。虽然总体经济增长缓慢，但特定行业依然展现出显著的增长潜力。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">高增长潜力领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">医疗健康市场：</span>受老龄化推动，预计到2030年规模将达到<span class="data-marker">8500亿美元</span>，年均增长率<span class="data-marker">4.5%</span></li>
+                        <li><span class="accent">数字经济：</span>市场规模约<span class="data-marker">9000亿美元</span>，预计未来五年将以<span class="data-marker">6.7%</span>的速度增长</li>
+                        <li><span class="accent">绿色能源：</span>日本计划到2030年将可再生能源比例提高到<span class="data-marker">36-38%</span>，相关投资将超过<span class="data-marker">1万亿美元</span></li>
+                        <li><span class="accent">机器人与自动化：</span>预计市场规模到2030年将达到<span class="data-marker">440亿美元</span>，年均增长率<span class="data-marker">9.5%</span></li>
+                    </ul>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本高增长行业市场规模预测(2025-2030)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="growthIndustriesChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>主要行业概览及优先关注行业</h3>
+                <p>日本经济以高附加值制造业和服务业为主，未来五年内，以下行业尤其值得关注：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">人工智能与大数据</div>
+                            <div class="grid-item-value">+12.3%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>日本政府将AI定为核心科技战略，大力投资研发和应用，预计到2030年市场规模将达到310亿美元。优势领域包括计算机视觉、工业自动化AI应用和语言处理技术。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">机器人与自动化</div>
+                            <div class="grid-item-value">+9.5%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>日本是全球机器人技术领导者，工业机器人密度全球第三。在劳动力短缺背景下，服务机器人、护理机器人和工业自动化系统需求强劲增长。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">医疗健康</div>
+                            <div class="grid-item-value">+4.5%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>老龄化社会背景下，医疗设备、远程医疗、护理服务和生物制药等细分领域增长迅速。特别是数字医疗和个性化医疗领域投资活跃。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">清洁能源</div>
+                            <div class="grid-item-value">+8.2%</div>
+                            <div class="grid-item-description">年均增长率(2025-2030)</div>
+                            <p>日本致力于2050年实现碳中和，对太阳能、氢能、能源存储和智能电网技术投资巨大。尤其是氢能领域，日本技术和市场处于全球领先地位。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>行业竞争格局分析</h3>
+                <p>日本市场竞争格局具有以下特点：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">高度成熟市场：</span>大多数传统行业已形成稳定的竞争格局，行业集中度高</li>
+                    <li><span class="highlight">本土企业优势明显：</span>日本本土企业在多数行业占据主导地位，尤其在制造业和零售业</li>
+                    <li><span class="highlight">产业集群效应：</span>相关企业地理上集中分布，形成了强大的产业链协同效应</li>
+                    <li><span class="highlight">高壁垒市场：</span>市场准入、渠道建设、消费者认同等方面存在较高壁垒</li>
+                    <li><span class="highlight">新兴领域机会：</span>数字经济、绿色技术等新兴领域竞争格局尚未完全固化，为外资企业提供了机会</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">外资企业竞争建议</div>
+                    <p>在日本市场竞争中，外资企业应重点关注本地化战略、长期关系建设、高品质产品定位和创新技术优势。通过与本土企业合作或战略联盟进入市场通常比直接竞争更有效。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>进口替代/本地制造政策</h3>
+                <p>日本政府积极推动关键产业本地化和供应链安全，主要政策方向包括：</p>
+                <ul class="bullet-list">
+                    <li>提供补贴鼓励半导体和电池等战略产业在日本国内投资建厂</li>
+                    <li>支持本土企业通过技术创新实现进口替代，尤其在能源和医疗领域</li>
+                    <li>推动关键产业供应链多元化，减少对特定国家的过度依赖</li>
+                    <li>鼓励高附加值产业回流，并通过自动化和智能制造提升国内生产竞争力</li>
+                </ul>
+                
+                <p>同时，日本也在RCEP、CPTPP等框架下推动贸易自由化，外资企业可结合日本产业政策方向，选择合适的细分领域和进入模式。</p>
+            </div>
+            
+            <div class="card">
+                <h3>消费趋势与行为</h3>
+                <p>日本消费者行为呈现以下特点和趋势：</p>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">品质至上</div>
+                        <div class="stat-number">86%</div>
+                        <div class="stat-title">的日本消费者愿意为高品质产品支付溢价</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">健康消费</div>
+                        <div class="stat-number">73%</div>
+                        <div class="stat-title">的消费者优先考虑健康和保健产品</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">环保意识</div>
+                        <div class="stat-number">68%</div>
+                        <div class="stat-title">的消费者愿意购买环保可持续产品</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">线上消费</div>
+                        <div class="stat-number">29.3%</div>
+                        <div class="stat-title">零售总额来自电子商务渠道</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心消费趋势</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">小型化与便利性：</span>小户型住宅增加推动对紧凑型产品的需求</li>
+                        <li><span class="accent">老龄友好型产品：</span>适合老年人使用的产品和服务市场迅速扩大</li>
+                        <li><span class="accent">健康与功能性：</span>具有健康功效的食品和产品越来越受欢迎</li>
+                        <li><span class="accent">性价比消费：</span>长期经济低迷使价格意识提高，但不以牺牲品质为代价</li>
+                        <li><span class="accent">线上线下融合：</span>全渠道购物体验成为消费者期望</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>数字渗透与线上渠道</h3>
+                <p>日本数字经济发展迅速，电子商务和数字支付等领域呈现以下特点：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本电子商务市场规模(2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="ecommerceChart"></canvas></div>
+                </div>
+                
+                <ul class="bullet-list">
+                    <li>电子商务渗透率持续提高，2023年零售总额的<span class="data-marker">29.3%</span>来自线上渠道</li>
+                    <li>移动购物占电子商务总额的<span class="data-marker">67%</span>，移动支付使用率快速增长</li>
+                    <li>主要电商平台包括乐天(Rakuten)、亚马逊日本、雅虎购物等</li>
+                    <li>社交电商和直播电商等新零售模式在年轻消费群体中迅速普及</li>
+                    <li>跨境电商增长迅速，中国、美国和韩国是主要商品来源地</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">疫情后数字化趋势</div>
+                    <p>COVID-19疫情显著加速了日本社会的数字化转型，远程工作、在线教育、电子商务和非接触式支付等数字服务的采用率大幅提升，这一趋势在疫情后依然持续。企业应重视线上渠道建设，打造一体化的数字化消费体验。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>案例参考</h3>
+                <h4>案例：默沙东(MSD)在日本市场的成功策略</h4>
+                <p>作为全球领先的制药公司，默沙东(MSD)通过以下策略成功打入并扩大在日本医疗健康市场的份额：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">本地合作伙伴关系：</span>与日本制药巨头大冢制药建立战略合作，利用其分销渠道和市场影响力</li>
+                    <li><span class="highlight">研发本地化：</span>在日本设立研发中心，开发针对亚洲人群的药物，满足本地需求</li>
+                    <li><span class="highlight">政策合规：</span>严格遵守日本药品监管要求，建立专业的本地合规团队</li>
+                    <li><span class="highlight">人才本地化：</span>招募和培养本地医药专业人才，建立本土化管理团队</li>
+                    <li><span class="highlight">长期社会责任：</span>积极参与日本医疗健康公益项目，建立品牌信誉</li>
+                </ul>
+                <p>通过这些策略，默沙东在日本市场销售额从2010年的约<span class="data-marker">10亿美元</span>增长到2023年的<span class="data-marker">26亿美元</span>，成为在日本最成功的外资制药企业之一。</p>
+            </div>
+        </section>
+        
+        <section id="legal" class="section">
+            <h2>法律与监管环境</h2>
+            
+            <div class="card">
+                <h3>外资准入政策与投资自由度</h3>
+                <p>日本总体上奉行开放的外资政策，但在特定领域设有准入限制：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本外资准入政策概览(2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="investmentChart"></canvas></div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">外资准入限制领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">国家安全相关产业：</span>武器装备、核能、航空航天等</li>
+                        <li><span class="accent">广播电视与媒体：</span>外资持股比例不得超过20%</li>
+                        <li><span class="accent">电信运营：</span>NTT等特定电信运营商外资持股上限为1/3</li>
+                        <li><span class="accent">航空运输：</span>外资持股比例上限为1/3</li>
+                        <li><span class="accent">农业与渔业：</span>对外资收购农地有严格限制</li>
+                    </ul>
+                </div>
+                
+                <p>除上述领域外，日本对外资实行国民待遇，法律保护外资权益。2019年修订的《外汇法》加强了对涉及国家安全领域投资的审查，投资者需关注最新政策变化。</p>
+            </div>
+            
+            <div class="card">
+                <h3>公司设立流程与主体类型</h3>
+                <p>在日本设立公司的主要法律形式包括：</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>公司类型</th>
+                            <th>特点</th>
+                            <th>最低资本金</th>
+                            <th>设立时间</th>
+                            <th>适用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>株式会社<br>(KK, Kabushiki-Kaisha)</td>
+                            <td>股份有限公司，相当于中国的股份有限公司</td>
+                            <td>1日元（实际建议≥500万日元）</td>
+                            <td>4-8周</td>
+                            <td>大型投资项目，正式业务运营</td>
+                        </tr>
+                        <tr>
+                            <td>合同会社<br>(GK, Godo-Kaisha)</td>
+                            <td>有限责任公司，相当于中国的有限责任公司</td>
+                            <td>1日元</td>
+                            <td>3-6周</td>
+                            <td>中小型企业，简化治理结构</td>
+                        </tr>
+                        <tr>
+                            <td>代表处<br>(Representative Office)</td>
+                            <td>不具备法人资格，不能从事直接经营活动</td>
+                            <td>无要求</td>
+                            <td>1-2周</td>
+                            <td>市场调研，联络功能</td>
+                        </tr>
+                        <tr>
+                            <td>分公司<br>(Branch Office)</td>
+                            <td>不独立法人，由总公司承担全部责任</td>
+                            <td>无要求</td>
+                            <td>2-4周</td>
+                            <td>初期市场进入，业务规模较小</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">公司设立基本流程</div>
+                    <ol class="bullet-list">
+                        <li>公司名称预先检查</li>
+                        <li>准备公司章程及相关文件（需公证）</li>
+                        <li>银行开立资本金账户并存入资本金</li>
+                        <li>向法务局提交注册申请</li>
+                        <li>获得公司注册证明和公司印章登记证明</li>
+                        <li>税务登记和社会保险登记</li>
+                        <li>开立企业银行账户</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>行业特定牌照要求与审批流程</h3>
+                <p>在日本，多个行业需要特定牌照才能开展经营活动，主要包括：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">金融服务业</div>
+                            <p>包括银行、证券、保险、资产管理等，需由金融厅(FSA)审批。审批流程严格，时间较长（6-12个月），资本金和合规要求高。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">医疗与制药</div>
+                            <p>药品、医疗器械的制造和销售需获得厚生劳动省审批，临床试验需通过PMDA(医药品医疗器械综合机构)审查，流程复杂，周期长。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">电信与广播</div>
+                            <p>通信运营商需获得总务省颁发的电信业务经营许可证，分为登记制和申报制两类，根据业务规模和类型而定。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">能源与公用事业</div>
+                            <p>电力、燃气等公用事业需获得经济产业省许可，并符合严格的安全和环保标准。近年来随着能源市场自由化，准入壁垒有所降低。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">获取行业牌照建议</div>
+                    <p>对于需要特定牌照的行业，建议聘请专业的行业顾问和法律顾问协助申请过程，并预留充足的时间和资源。与监管部门保持积极沟通，理解并满足合规要求是获得审批的关键。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>税收体系</h3>
+                <p>日本税收体系全面且税率相对较高，主要税种包括：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本主要税种税率(2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="taxRateChart"></canvas></div>
+                </div>
+                
+                <p>企业所得税实际税率约为<span class="data-marker">29.74%</span>（包括国税、地方法人税、法人住民税和法人事业税），但可通过研发税收抵免、特定区域投资优惠等方式降低实际税负。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">税收优惠政策</div>
+                    <ul class="bullet-list">
+                        <li>研发费用税收抵免，最高可抵减企业所得税额的25%</li>
+                        <li>战略特区投资减免，如东京都国际金融特区</li>
+                        <li>节能环保设备投资特别折旧或税收抵免</li>
+                        <li>地方创生企业迁移特别减税措施</li>
+                        <li>特定行业（如数字内容、先进制造）特殊税收优惠</li>
+                    </ul>
+                </div>
+                
+                <p>日本与100多个国家和地区签订了避免双重征税协定，包括与中国、美国、欧盟主要国家等。企业应充分利用这些协定降低国际业务的税务成本。</p>
+            </div>
+            
+            <div class="card">
+                <h3>数据保护与隐私法规</h3>
+                <p>日本实施严格的数据保护法规，主要法律框架为《个人信息保护法》(APPI)，该法案已于2022年进行全面修订，与欧盟GDPR趋同：</p>
+                
+                <ul class="bullet-list">
+                    <li>明确个人数据定义，扩大保护范围至匿名化数据</li>
+                    <li>要求获得用户明确同意才能收集和处理个人数据</li>
+                    <li>赋予个人访问、更正、删除个人数据的权利</li>
+                    <li>对数据泄露实施严格的通知和报告制度</li>
+                    <li>限制个人数据跨境传输，要求满足充分保护措施</li>
+                    <li>违规处罚最高可达1亿日元或公司年收入的1%</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">数据合规建议</div>
+                    <p>企业应建立健全的数据保护体系，指定数据保护负责人，制定明确的数据收集和处理政策，对员工进行培训，并定期更新隐私政策。特别是处理大量个人数据的企业，建议进行数据保护影响评估，并考虑获取JIPDEC颁发的P-Mark认证。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>劳工法与用工合规</h3>
+                <p>日本劳动法保护体系完善，对雇主有较高合规要求，主要包括：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">劳动合同</div>
+                            <p>必须提供书面劳动合同，明确规定工作内容、工作地点、工作时间、薪酬等条件。固定期限合同最长可签5年，此后需转为无固定期限合同。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">工作时间</div>
+                            <p>法定工作时间为每日8小时，每周40小时。超时工作需支付25-50%的加班费。近年工作方式改革推动加班时间上限管控。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">薪酬福利</div>
+                            <p>最低工资因地区而异，每年调整，东京地区约1100日元/小时。雇主必须为员工提供健康保险、养老保险、工伤保险和失业保险。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">解雇规定</div>
+                            <p>日本解雇员工条件严格，需有"合理理由"且"社会上可接受"。通常需提前30天通知或支付代通知金，裁员需遵循严格程序。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">用工模式选择</div>
+                    <p>在日本，企业可考虑多种用工方式，包括正式员工(正社员)、合同工(契約社員)、派遣工(派遣社員)和兼职(パート/アルバイト)。不同用工模式有不同的法律要求和成本结构，企业应根据业务需求和合规风险评估选择适当的用工方式。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>合同执行与知识产权保护</h3>
+                <p>日本拥有健全的法律体系和高效的司法制度，合同执行力强，知识产权保护完善：</p>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">合同争议解决时间</div>
+                        <div class="stat-number">13个月</div>
+                        <div class="stat-title">一审平均审理时间</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">知识产权全球排名</div>
+                        <div class="stat-number">第3位</div>
+                        <div class="stat-title">全球创新指数2023</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">专利申请量</div>
+                        <div class="stat-number">28.9万件</div>
+                        <div class="stat-title">2023年（全球第3位）</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">执行合同成本</div>
+                        <div class="stat-number">23.4%</div>
+                        <div class="stat-title">占争议金额百分比</div>
+                    </div>
+                </div>
+                
+                <p>日本的知识产权保护制度包括专利、商标、版权和商业秘密保护，执行力度大，侵权处罚严厉。外国企业应主动在日本注册和保护自己的知识产权。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">合同文化特点</div>
+                    <p>虽然日本法律体系完善，但商业实践中更注重关系和信任。合同通常较为简洁，很多细节依赖于双方的相互理解和信任。尽管如此，外资企业仍应确保合同条款清晰完整，特别是在知识产权保护、保密条款和争议解决机制方面。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="trade" class="section">
+            <h2>跨境贸易与物流体系</h2>
+            
+            <div class="card">
+                <h3>主要出口/进口商品结构</h3>
+                <p>作为世界第四大贸易国，日本进出口贸易规模庞大，2025年贸易总额约为<span class="data-marker">1.8万亿美元</span>：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本进出口商品结构(2023)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="tradeChart"></canvas></div>
+                </div>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">主要出口商品</div>
+                            <ul class="bullet-list">
+                                <li>汽车及零部件 (<span class="data-marker">29.2%</span>)</li>
+                                <li>机械设备 (<span class="data-marker">20.3%</span>)</li>
+                                <li>电子产品 (<span class="data-marker">16.5%</span>)</li>
+                                <li>钢铁 (<span class="data-marker">5.1%</span>)</li>
+                                <li>化学品 (<span class="data-marker">9.8%</span>)</li>
+                                <li>医疗器械 (<span class="data-marker">3.5%</span>)</li>
+                            </ul>
+                            <p>主要出口目的地：美国(19.5%)、中国(18.7%)、韩国(6.8%)、中国台湾(6.7%)、泰国(4.3%)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">主要进口商品</div>
+                            <ul class="bullet-list">
+                                <li>原油和矿物燃料 (<span class="data-marker">22.1%</span>)</li>
+                                <li>电子设备 (<span class="data-marker">15.0%</span>)</li>
+                                <li>机械设备 (<span class="data-marker">13.5%</span>)</li>
+                                <li>医药产品 (<span class="data-marker">6.2%</span>)</li>
+                                <li>食品 (<span class="data-marker">9.3%</span>)</li>
+                                <li>纺织品 (<span class="data-marker">4.0%</span>)</li>
+                            </ul>
+                            <p>主要进口来源国：中国(24.8%)、美国(11.0%)、澳大利亚(6.1%)、韩国(4.3%)、沙特阿拉伯(3.8%)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">贸易结构特点</div>
+                    <p>日本贸易结构体现明显的"微笑曲线"特征，进口主要是原材料和低端制成品，出口以高附加值制成品和关键零部件为主。近年来，日本积极调整贸易结构，降低对中国市场依赖，同时增加与东南亚国家的贸易联系。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>自由贸易协定与国际贸易组织成员身份</h3>
+                <p>日本是主要国际贸易组织的积极成员，同时通过双边和多边自由贸易协定扩大市场准入：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本FTA覆盖率变化(2000-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="ftaChart"></canvas></div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">主要贸易协定</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">CPTPP</span> (全面与进步跨太平洋伙伴关系协定) - 11个成员国，占日本贸易额的约15%</li>
+                        <li><span class="accent">RCEP</span> (区域全面经济伙伴关系协定) - 15个成员国，占日本贸易额的约30%</li>
+                        <li><span class="accent">日欧EPA</span> (日本-欧盟经济伙伴关系协定) - 覆盖欧盟27国，占日本贸易额的约12%</li>
+                        <li><span class="accent">日美贸易协定</span> - 2020年生效，主要覆盖农产品和工业品</li>
+                        <li><span class="accent">日英EPA</span> - 2021年生效，基本延续日欧EPA框架</li>
+                        <li>其他双边FTA - 与新加坡、墨西哥、瑞士、澳大利亚等17个国家签署</li>
+                    </ul>
+                </div>
+                
+                <p>日本是WTO、APEC、G7、G20、OECD等国际组织的成员，积极参与全球贸易规则制定。截至2024年，日本的FTA覆盖率已达贸易总额的<span class="data-marker">82.7%</span>，未来将继续扩大FTA网络。</p>
+            </div>
+            
+            <div class="card">
+                <h3>港口/机场/陆运枢纽及覆盖能力</h3>
+                <p>作为岛国，日本拥有完善的港口和航空网络，支撑其庞大的国际贸易：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">港口设施</div>
+                            <p>日本拥有超过1000个港口，其中五大国际枢纽港分别是东京港、横滨港、名古屋港、大阪港和神户港。2023年集装箱吞吐量达<span class="data-marker">2340万TEU</span>，全球排名第6位。</p>
+                            <p>主要港口特点：自动化程度高，数字化管理先进，通关效率高</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">航空运输</div>
+                            <p>主要国际航空枢纽包括东京成田国际机场、东京羽田国际机场、大阪关西国际机场和名古屋中部国际机场。2023年航空货运量约<span class="data-marker">240万吨</span>。</p>
+                            <p>特点：客货分离高效，冷链物流完善，高价值货物处理专业</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">铁路网络</div>
+                            <p>高速铁路网络(新干线)连接主要城市，全国铁路网总长超过<span class="data-marker">27,000公里</span>。铁路货运占国内货运比例约<span class="data-marker">5%</span>，主要用于大宗商品运输。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">公路运输</div>
+                            <p>高速公路网络覆盖全国，总长约<span class="data-marker">9,000公里</span>。公路货运占国内货运总量的<span class="data-marker">91%</span>，是最主要的国内物流方式。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">物流基础设施特点</div>
+                    <p>日本物流基础设施整体特点是高度现代化、自动化程度高、服务可靠性强。主要港口和机场都配备先进的集装箱处理设备和冷链设施，特别适合高价值、时效性强的货物运输。日本正积极推进"综合物流政策大纲"，通过数字化和绿色化提升物流效率，应对劳动力短缺挑战。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>供应链稳定性与成本</h3>
+                <p>日本供应链管理在全球享有盛誉，但也面临一些挑战：</p>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">物流成本占GDP比重</div>
+                        <div class="stat-number">8.5%</div>
+                        <div class="stat-title">高于美国和欧洲平均水平</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">全球物流绩效指数排名</div>
+                        <div class="stat-number">第7位</div>
+                        <div class="stat-title">世界银行评估(2023)</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">平均通关时间</div>
+                        <div class="stat-number">24小时</div>
+                        <div class="stat-title">优于亚洲平均水平</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">物流自动化率</div>
+                        <div class="stat-number">53%</div>
+                        <div class="stat-title">全球领先水平</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">供应链挑战与变革</div>
+                    <ul class="bullet-list">
+                        <li><span class="highlight">高成本挑战：</span>日本物流成本相对较高，主要受劳动力成本、能源成本和基础设施维护费用影响</li>
+                        <li><span class="highlight">劳动力短缺：</span>卡车司机等物流行业从业人员短缺，推动自动化技术应用</li>
+                        <li><span class="highlight">供应链多元化：</span>近年来日本企业积极推动"中国+1"策略，分散供应链风险</li>
+                        <li><span class="highlight">绿色物流：</span>碳中和目标推动物流企业采用清洁能源车辆和优化配送路线</li>
+                        <li><span class="highlight">数字化转型：</span>区块链、IoT、AI等技术在供应链管理中的应用日益广泛</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>关税政策与报关效率</h3>
+                <p>日本关税政策总体适中，报关流程高效：</p>
+                
+                <ul class="bullet-list">
+                    <li>平均实施关税税率约<span class="data-marker">4.1%</span>，低于全球平均水平</li>
+                    <li>工业品平均关税率<span class="data-marker">2.5%</span>，农产品平均关税率<span class="data-marker">15.7%</span></li>
+                    <li>高关税商品主要集中在农产品（如大米关税高达778%）、皮革制品和部分纺织品</li>
+                    <li>通过各类FTA可享受优惠关税待遇，部分商品零关税</li>
+                    <li>采用电子通关系统(NACCS)，98%的报关申请通过电子方式提交</li>
+                    <li>报关文件要求相对简单，主要包括商业发票、装箱单、提单/空运单和原产地证明</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">报关效率提升措施</div>
+                    <p>日本海关实施多项措施提高通关效率，包括预申报制度、AEO认证企业优先通关、"一站式窗口"服务等。获得AEO(Authorized Economic Operator)认证的企业可享受简化报关程序、减少实物查验等便利。企业应考虑申请AEO认证，优化供应链合规性，提高通关效率。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>电商/快递/第三方物流服务发展情况</h3>
+                <p>日本物流服务业高度发达，电商物流增长迅速：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本电商物流市场规模(2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="logisticsChart"></canvas></div>
+                </div>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">快递服务</div>
+                            <p>日本快递市场由佐川急便、日本邮政(JP Post)、大和运输(Yamato)三大巨头主导，市场份额合计超过80%。服务特点是准时性强、损坏率低、配送范围广，但价格相对较高。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">电商物流</div>
+                            <p>电商物流增长迅速，2023年市场规模约<span class="data-marker">420亿美元</span>，年增长率<span class="data-marker">9.5%</span>。主要特点包括同日/次日送达服务广泛、便利店自提点覆盖密集、冷链物流发达等。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">第三方物流</div>
+                            <p>日本3PL市场规模约<span class="data-marker">280亿美元</span>，主要参与者包括日立物流、三菱物流、日通(Nippon Express)等。服务整合度高，定制化能力强，但创新速度相对国际巨头较慢。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">新兴物流模式</div>
+                            <p>共享物流、众包配送、无人机配送等新模式在日本逐步推广。大型电商平台如乐天、亚马逊日本等投资建设自有物流网络，推动行业技术升级。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">跨境电商物流</div>
+                    <p>日本跨境电商物流发展迅速，主要服务提供商包括国际快递巨头(DHL、UPS、FedEx)和本土综合物流企业。通过保税仓模式或直邮模式进入日本市场的跨境电商企业不断增加。选择合适的物流合作伙伴对跨境电商成功至关重要，企业应考虑服务覆盖范围、时效性、追踪系统和退货处理能力等因素。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="finance" class="section">
+            <h2>金融与资本市场</h2>
+            
+            <div class="card">
+                <h3>主要银行体系与融资可得性</h3>
+                <p>日本拥有健全的银行体系，为全球第三大银行市场，主要由以下几类金融机构组成：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">大型商业银行</div>
+                            <p>三大金融集团（三菱UFJ、三井住友、瑞穗）主导市场，合计资产超过<span class="data-marker">6万亿美元</span>，提供全面的公司和零售银行服务。国际业务广泛，是外资企业主要融资渠道。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">地方银行</div>
+                            <p>约100家地方银行和第二地方银行，主要服务中小企业和当地居民。在各自地区有强大的网络和影响力，成为地区性企业重要的融资来源。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">政策性金融机构</div>
+                            <p>包括日本政策投资银行(DBJ)、日本国际协力银行(JBIC)等，提供长期融资支持、海外投资保险和政策导向型贷款，支持战略产业发展。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">外资银行</div>
+                            <p>花旗、汇丰、德意志等国际银行在日本设有分支机构，主要提供跨境金融服务、外汇业务和国际贸易融资，是外资企业在日本的重要金融合作伙伴。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">融资可得性评估</div>
+                    <p>日本融资环境具有以下特点：</p>
+                    <ul class="bullet-list">
+                        <li><span class="accent">低利率环境：</span>尽管结束负利率政策，但总体融资成本仍处于低位</li>
+                        <li><span class="accent">融资渠道多样：</span>银行贷款、债券市场、租赁、政策性贷款等选择丰富</li>
+                        <li><span class="accent">审批标准严格：</span>银行对企业财务状况、经营历史和信用记录要求高</li>
+                        <li><span class="accent">担保要求：</span>对中小企业和外资企业通常要求提供资产担保或第三方担保</li>
+                        <li><span class="accent">关系导向：</span>长期稳定的银企关系对获取优惠条件和融资便利至关重要</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>风投/PE/创投生态</h3>
+                <p>日本风险投资市场近年发展迅速，但规模仍小于美国和中国：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日本风险投资规模变化(2018-2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="vcChart"></canvas></div>
+                </div>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">风险投资市场规模</div>
+                        <div class="stat-number">74亿</div>
+                        <div class="stat-title">美元(2023年)</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">私募股权投资规模</div>
+                        <div class="stat-number">115亿</div>
+                        <div class="stat-title">美元(2023年)</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">初创企业数量</div>
+                        <div class="stat-number">1.2万</div>
+                        <div class="stat-title">活跃初创企业</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">创投基金数量</div>
+                        <div class="stat-number">220+</div>
+                        <div class="stat-title">活跃风投机构</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">主要风投/PE机构</div>
+                    <p>代表性风投机构包括软银愿景基金、JAFCO、大和企业投资、Global Brain、DCM等。企业风投活跃，如丰田创投、松下创投、瑞穗创投等大型企业设立的CVC基金在特定领域投资积极。</p>
+                </div>
+                
+                <p>日本创投生态近年来呈现积极变化：</p>
+                <ul class="bullet-list">
+                    <li>政府通过"创业日本"计划大力支持创业生态系统发展</li>
+                    <li>大学创业支持体系不断完善，东京大学、京都大学等设立创业中心</li>
+                    <li>企业加速器项目增多，如500 Startups Japan、Plug and Play Japan等</li>
+                    <li>越来越多国际风投进入日本市场，投资本土科技创新企业</li>
+                    <li>风投退出渠道多元化，除IPO外，并购退出日益常见</li>
+                </ul>
+                
+                <p>重点关注领域包括人工智能、机器人、医疗健康科技、金融科技和绿色技术等。创投生态仍面临挑战，包括风险规避文化、专业人才缺乏和跨境合作有限等。</p>
+            </div>
+            
+            <div class="card">
+                <h3>汇率制度与资本流动限制</h3>
+                <p>日本实行<span class="accent">浮动汇率制度</span>，日元汇率主要由市场供求决定，但中央银行在必要时进行干预：</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">日元兑美元汇率历史走势(2014-2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="exchangeRateChart"></canvas></div>
+                </div>
+                
+                <p>近年来，日元呈现总体贬值趋势，2022-2024年日元兑美元汇率降至<span class="data-marker">30年</span>来最低水平，这一趋势有多重影响：</p>
+                <ul class="bullet-list">
+                    <li>对出口企业有利，提升国际竞争力</li>
+                    <li>提高进口成本，尤其是能源和原材料</li>
+                    <li>吸引国际游客，促进旅游业发展</li>
+                    <li>吸引外国直接投资，降低并购和设厂成本</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">资本流动管理</div>
+                    <p>日本对资本流动的限制相对宽松：</p>
+                    <ul class="bullet-list">
+                        <li>无外汇管制，资金可自由进出</li>
+                        <li>对外国投资者的利润、股息和资本汇出无限制</li>
+                        <li>对涉及国家安全的行业投资需事先审批</li>
+                        <li>《外汇法》要求大额跨境交易进行申报，但不限制交易本身</li>
+                        <li>金融机构需遵守严格的反洗钱规定，对大额交易进行审查</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>金融科技发展现状</h3>
+                <p>日本金融科技发展起步相对较晚，但近年来发展加速：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">移动支付</div>
+                            <p>移动支付普及率从2018年的<span class="data-marker">20%</span>上升至2023年的<span class="data-marker">49%</span>，主要服务商包括PayPay、LINE Pay、楽天ペイ等。现金使用仍然广泛，但数字支付快速增长。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">在线银行</div>
+                            <p>在线银行服务发展迅速，如SBI住信网银、乐天银行等纯线上银行提供低成本金融服务。传统银行也积极开发数字银行业务，提升用户体验。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">数字货币</div>
+                            <p>日本是全球首个建立加密资产监管框架的主要经济体，约有<span class="data-marker">400万</span>加密资产投资者。央行数字货币(CBDC)试点项目正在进行中。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">保险科技</div>
+                            <p>AI和大数据在保险领域应用增加，线上保险产品和服务增长，如Justincase、Finatext等初创企业推动行业创新。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">金融科技监管环境</div>
+                    <p>日本金融厅(FSA)采取积极支持的监管态度，推出金融科技监管沙盒，鼓励创新同时确保风险可控。2017年修订《银行法》，允许银行收购金融科技公司，推动传统金融与科技融合。数据共享和开放银行(Open Banking)政策支持金融生态系统发展。</p>
+                </div>
+                
+                <p>未来发展趋势包括：人工智能在风险评估和客户服务中的应用扩大；区块链技术在跨境支付和供应链金融中的应用增加；ESG金融科技解决方案需求上升；与非金融领域的融合创新增多。</p>
+            </div>
+            
+            <div class="card">
+                <h3>对外汇管制/跨境收付限制</h3>
+                <p>日本是全球资本流动最自由的国家之一，跨境收付便利：</p>
+                
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">资本账户开放度</div>
+                        <div class="stat-number">0.94</div>
+                        <div class="stat-title">满分为1(IMF评估)</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">跨境交易报告门槛</div>
+                        <div class="stat-number">3000万</div>
+                        <div class="stat-title">日元(约20万美元)</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">外币账户限制</div>
+                        <div class="stat-number">无</div>
+                        <div class="stat-title">企业可自由开立</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-title">利润汇出限制</div>
+                        <div class="stat-number">无</div>
+                        <div class="stat-title">满足税务要求即可</div>
+                    </div>
+                </div>
+                
+                <p>尽管没有实质性限制，企业在进行跨境交易时需注意以下要求：</p>
+                <ul class="bullet-list">
+                    <li>超过3000万日元的跨境交易需向日本银行(BOJ)申报</li>
+                    <li>特定国家(如朝鲜、伊朗等受制裁国家)的交易受限</li>
+                    <li>银行需进行严格的反洗钱和了解客户(KYC)程序</li>
+                    <li>跨境大额现金携带(超过100万日元)需向海关申报</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">外资企业跨境收付建议</div>
+                    <p>外资企业在日本设立业务时，建议选择具有丰富跨境业务经验的银行，如三菱UFJ、三井住友或国际银行。提前了解各项合规要求，建立完善的财务文档系统，以便及时提供交易背景证明。对于大额或频繁的跨境交易，考虑使用银行提供的贸易融资产品优化流动性管理。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="talent" class="section">
+            <h2>人才与劳动力市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-users-cog"></i>结构性挑战与机遇</h3>
+                <p>日本劳动力市场面临深刻的结构性挑战，即<span class="highlight">人口迅速老龄化</span>和<span class="highlight">劳动力人口持续萎缩</span>。总劳动力人口约为<span class="data-marker">6,700万</span>，但预计到2040年将减少超过1,000万。这导致了许多行业普遍存在劳动力短缺问题。失业率长期处于<span class="data-marker">2.5%</span>左右的极低水平，反映了劳动力市场的紧张状况。</p>
+                <div class="chart-container">
+                    <div class="chart-title">日本劳动力人口变化趋势(2010-2040)</div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="laborForceChart"></canvas>
+                    </div>
+                </div>
+                <p>为应对这一挑战，日本政府积极推动<span class="accent">女性和老年人</span>进入劳动力市场，并扩大引进<span class="accent">外国特定技能工人</span>。这为自动化、机器人技术和提高劳动效率的解决方案提供了巨大市场。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-award"></i>人才优势与技能水平</h3>
+                <p>日本劳动者以其<span class="accent">高度的敬业精神、严谨的工作态度和强大的团队合作能力</span>而闻名。在制造业、工程、研发和精密制造领域，拥有大量世界一流的工程师和技术工人。此外，日本在材料科学、机器人技术和光学等领域拥有深厚的人才储备。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">关键人才领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">工程与制造：</span>汽车、电子、机械等领域拥有世界顶级的工程师团队。</li>
+                        <li><span class="accent">研发(R&D)：</span>企业研发投入占GDP比重高，研发人员素质优秀。</li>
+                        <li><span class="accent">医疗健康：</span>拥有先进的医疗技术和经验丰富的医护人员。</li>
+                        <li><span class="accent">创意产业：</span>在游戏、动漫、设计等领域拥有全球影响力的人才。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-magnifying-glass-chart"></i>人才短缺与热门技能</h3>
+                <p>劳动力短缺最为严重的领域包括<span class="highlight">IT/软件开发、护理、建筑和运输</span>。随着数字化转型的加速，对具备以下技能的人才需求激增：</p>
+                <div class="chart-container" style="height: 500px;">
+                    <div class="chart-title">日本热门技能需求指数 (2025)</div>
+                    <canvas id="hotSkillsChart"></canvas>
+                </div>
+                <ul class="bullet-list">
+                    <li><b>数据科学与人工智能：</b>能够处理和分析大数据的专业人才。</li>
+                    <li><b>网络安全：</b>保护企业免受网络攻击的专家。</li>
+                    <li><b>软件工程：</b>特别是具备云计算(AWS, Azure)和SaaS开发经验的工程师。</li>
+                    <li><b>数字化营销：</b>能够帮助企业在线上获取客户的专业人士。</li>
+                    <li><b>项目管理：</b>具备国际视野和跨文化沟通能力的项目经理。</li>
+                </ul>
+                <p>为了应对人才短缺，日本政府正积极放宽对外国专业技术人才的签证政策。</p>
+            </div>
+        </section>
+
+        <section id="technology" class="section">
+             <h2>科技与创新生态</h2>
+             <div class="grid">
+                 <div class="stat-box">
+                    <i class="fas fa-brain fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">人工智能与大数据</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">日本政府将AI定为核心科技战略，大力投资研发和应用，预计到2030年市场规模将达到310亿美元。</p>
+                </div>
+                 <div class="stat-box">
+                    <i class="fas fa-robot fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">机器人与自动化</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">日本是全球机器人技术领导者，工业机器人密度全球第三。服务机器人、护理机器人需求强劲增长。</p>
+                </div>
+                 <div class="stat-box">
+                    <i class="fas fa-heart-pulse fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">医疗健康科技</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">老龄化社会背景下，医疗设备、远程医疗、生物制药等领域增长迅速，数字医疗投资活跃。</p>
+                </div>
+                 <div class="stat-box">
+                    <i class="fas fa-leaf fa-3x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <div class="stat-title" style="font-size: 1.3rem; color: var(--text-color);">清洁能源</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">致力于2050年实现碳中和，对太阳能、氢能、能源存储和智能电网技术投资巨大。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section">
+            <h2>商业文化与社会习俗</h2>
+            <div class="card">
+                <h3><i class="fas fa-users"></i>核心价值观</h3>
+                <p>日本的商业文化深受其社会价值观影响，核心在于<span class="highlight">"和" (Wa - 和谐)</span>、集体主义和对细节的极致追求。商业决策通常需要通过<span class="highlight">"根回し" (Nemawashi)</span>，即在正式会议前进行非正式的沟通以达成共识。这种方式虽然耗时，但确保了决策一旦做出就能得到高效执行。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-comments"></i>沟通方式</h3>
+                <p>沟通偏向<span class="accent">含蓄和非直接</span>。阅读"空气" (空気を読む - Kuuki o Yomu)，即理解字面意思之外的潜在含义，是至关重要的社交技能。商务会议中，沉默是思考的表现，而非反对。直接的拒绝或批评被认为是不礼貌的。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-handshake"></i>商务礼仪</h3>
+                <ul class="bullet-list">
+                    <li><b>名片交换 (名刺交換):</b> 极为重要的仪式。需站立、双手递送和接收，并仔细阅读对方名片。</li>
+                    <li><b>守时:</b> 极度重要，迟到被视为非常不尊重。商务会议应至少提前10分钟到达。</li>
+                    <li><b>着装:</b> 商务场合要求穿着保守、正式的西装。</li>
+                    <li><b>赠礼:</b> 是维持商业关系的重要一环，礼物的包装和递送方式与礼物本身同样重要。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-sitemap"></i>等级制度与决策</h3>
+                <p>日本公司内部等级森严，尊重长者和上级是基本要求。决策过程是自下而上的，由中层管理者起草方案，层层上传审批，最终由高层拍板。虽然决策缓慢，但有助于凝聚共识，降低执行风险。</p>
+            </div>
+        </section>
+
+        <section id="risk" class="section">
+            <h2>风险与挑战</h2>
+            <div class="grid">
+                <div class="stat-box">
+                    <i class="fas fa-user-clock fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">人口老龄化</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">65岁及以上人口占比高达29.9%，对社会保障和经济增长构成压力。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-users-slash fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">劳动力减少</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">预计到2040年将减少超过1000万劳动力，导致多行业短缺。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-baby fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">少子化问题</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">总和生育率仅为1.23，加剧了人口结构危机。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-arrow-trend-down fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">经济增长缓慢</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">长期处于低增长区间，面临内部结构性和外部不确定性双重挑战。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-microchip fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">技术变革压力</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">传统优势产业需不断创新以应对全球技术革命。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-globe-americas fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">激烈国际竞争</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">在汽车、电子等关键领域面临来自中、韩、美等国的激烈竞争。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategy" class="section">
+            <h2>市场进入策略</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-hands-helping fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">建立本地合作关系</div>
+                        <p class="grid-item-description">通过合资、合作或战略联盟，利用本地渠道和网络，是进入日本市场的关键。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-map-marked-alt fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">本地化产品与服务</div>
+                        <p class="grid-item-description">必须对产品和服务进行精细调整，以满足日本消费者对高质量和细节的严苛要求。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-bullhorn fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">利用数字化营销</div>
+                        <p class="grid-item-description">通过社交媒体、SEO和内容营销等数字化手段，有效触达庞大的互联网用户群体。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-industry fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">参加行业展会</div>
+                        <p class="grid-item-description">参加专业展会是展示产品、建立联系和了解市场动态的高效途径。</p>
+                    </div>
+                </div>
+                 <div class="grid-item">
+                    <div class="grid-item-content">
+                        <i class="fas fa-hourglass-half fa-2x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <div class="grid-item-title">耐心与长期承诺</div>
+                        <p class="grid-item-description">建立信任和商业关系需要时间，不能期望一蹴而就。持续投入是成功的基石。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2>结论与建议</h2>
+            <div class="card">
+                <h3><i class="fas fa-flag-checkered"></i>核心结论</h3>
+                <p>日本是一个<span class="highlight">高度成熟、稳定且复杂</span>的市场。其优势在于庞大的高净值消费者基础、世界一流的科技创新能力、对品质的极致追求以及可预测的商业环境。然而，<span class="accent">严峻的人口老龄化和劳动力萎缩</span>是其最根本的长期挑战，这导致了保守的商业文化和缓慢的决策过程。对于外国投资者而言，日本市场并非蓝海，而是需要通过<span class="highlight">耐心、尊重和深度本地化</span>来攻克的堡垒。成功者往往是那些能够提供真正创新技术、满足特定社会需求（如数字化转型、银发经济、绿色能源），并致力于建立长期信任关系的参与者。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-compass"></i>战略建议</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">对于技术与数字化转型(DX)服务商：</span>日本企业的DX需求强烈但进展缓慢。提供易于集成、能解决具体行业痛点（如制造业的效率提升、零售业的客户管理）的SaaS解决方案是关键。重点关注金融、医疗和中小企业的数字化。</li>
+                    <li><span class="accent">对于消费品品牌：</span>聚焦<span class="highlight">高品质、独特性和故事性</span>。主打利基市场而非大众市场。针对"银发经济"开发易用、健康、安全的产品。利用线上渠道和社交媒体建立品牌，但必须结合线下体验店以建立信任。</li>
+                    <li><span class="accent">对于绿色科技与能源企业：</span>紧密对接日本的"绿色增长战略"。在海上风电、氢能产业链、电池技术和循环经济解决方案等领域存在巨大机遇。与日本大型商社或能源公司合作是进入该领域的有效途径。</li>
+                    <li><span class="accent">对于医疗健康领域：</span>关注<span class="highlight">远程医疗、护理机器人、再生医学和个性化药物</span>。日本对创新医疗技术审批严格但路径清晰，与本地研究机构合作可加速产品上市。</li>
+                    <li><span class="accent">通用建议：</span><span class="highlight">建立信任是第一要务。</span>寻找一个可靠的本地合作伙伴（经销商、顾问、合资方）至关重要。必须尊重本地商业礼仪和等级制度，做好决策周期长的准备。在法律和财务上，聘请精通日本法规的专业人士是必不可少的投资。</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">日本市场综合调研报告2025</h3>
+                <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+                <p>AI赋能精准决策 专业成就全球商机</p>
+                <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+            </div>
+            
+            <div class="sources">
+                <h4 class="sources-title">数据来源</h4>
+                <ul class="sources-list">
+                    <li>日本内阁府 - 《2025年经济展望与政策方向》</li>
+                    <li>日本经济产业省 - 《产业结构报告2024-2025》</li>
+                    <li>日本财务省 - 《贸易统计2025年第一季度报告》</li>
+                    <li>日本银行 - 《金融体系报告2025》</li>
+                    <li>日本总务省统计局 - 《2025年人口动态统计》</li>
+                    <li>日本贸易振兴机构(JETRO) - 《投资环境报告2025》</li>
+                    <li>世界银行 - 《全球营商环境报告2025》</li>
+                    <li>国际货币基金组织 - 《世界经济展望2025》</li>
+                    <li>经济合作与发展组织(OECD) - 《日本经济调查2025》</li>
+                    <li>CB Insights - 《2025年全球风险投资趋势》</li>
+                    <li>麦肯锡全球研究院 - 《数字日本：重塑未来》</li>
+                    <li>普华永道 - 《2025年日本并购市场展望》</li>
+                </ul>
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                    <p>微信视频号公众号： 张小强出海</p>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        // 页面滚动效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navDots = document.querySelectorAll('.nav-dot');
+            const scrollDown = document.querySelector('.scroll-down');
+            
+            // 平滑滚动到下一部分
+            if(scrollDown) {
+                scrollDown.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // 导航点击事件
+            navDots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    let targetId = this.getAttribute('data-section');
+                    let targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    } else if (index === 0) {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 滚动监听，显示当前部分
+            function checkScroll() {
+                let scrollPosition = window.scrollY + window.innerHeight / 2;
+                
+                // 更新导航点状态
+                if (scrollPosition < window.innerHeight) {
+                    updateActiveDot(0);
+                } else {
+                    sections.forEach((section, index) => {
+                        let sectionTop = section.offsetTop;
+                        let sectionBottom = sectionTop + section.offsetHeight;
+                        
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            updateActiveDot(index + 1);
+                        }
+                    });
+                }
+                
+                // 淡入效果
+                sections.forEach(section => {
+                    let sectionTop = section.offsetTop;
+                    let sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (window.scrollY + window.innerHeight * 0.8 >= sectionTop && window.scrollY <= sectionBottom) {
+                        section.classList.add('visible');
+                    }
+                });
+            }
+            
+            function updateActiveDot(index) {
+                navDots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                if (navDots[index]) {
+                    navDots[index].classList.add('active');
+                }
+            }
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+            
+            // 初始化图表
+            createCharts();
+        });
+        
+        // 创建所有图表
+        function createCharts() {
+            // 设置Chart.js全局配置
+            Chart.defaults.font.family = 'Roboto, sans-serif';
+            Chart.defaults.font.size = 12;
+            Chart.defaults.color = '#e6f1ff';
+            Chart.defaults.plugins.legend.labels.color = '#e6f1ff';
+            Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+            Chart.defaults.plugins.tooltip.titleColor = '#00d4ff';
+            Chart.defaults.plugins.tooltip.bodyColor = '#e6f1ff';
+            Chart.defaults.plugins.tooltip.borderColor = 'rgba(0, 212, 255, 0.3)';
+            Chart.defaults.plugins.tooltip.borderWidth = 1;
+            Chart.defaults.plugins.tooltip.padding = 10;
+            
+            // 调整所有图表容器的高度
+            const chartContainers = document.querySelectorAll('.chart-container');
+            chartContainers.forEach(container => {
+                container.style.height = '550px';
+                container.style.padding = '20px 20px 40px 20px';
+                container.style.marginBottom = '60px';
+                
+                // 检查容器中是否有canvas元素
+                const title = container.querySelector('.chart-title');
+                if (title && !container.querySelector('canvas')) {
+                    const chartTitle = title.textContent;
+                    const canvasId = chartTitle.replace(/[^a-zA-Z0-9]/g, '') + 'Chart';
+                    const newCanvas = document.createElement('canvas');
+                    newCanvas.id = canvasId;
+                    container.appendChild(newCanvas);
+                    console.log(`Created canvas with id: ${canvasId} for chart: ${chartTitle}`);
+                }
+            });
+            
+            // 检查缺失的图表
+            const checkAndCreateChart = (chartId, chartType, chartData, chartOptions) => {
+                const chartElement = document.getElementById(chartId);
+                if (chartElement && !Chart.getChart(chartId)) {
+                    new Chart(chartElement, {
+                        type: chartType,
+                        data: chartData,
+                        options: chartOptions,
+                        plugins: chartType === 'pie' || chartType === 'doughnut' || chartType === 'bar' ? [ChartDataLabels] : []
+                    });
+                }
+            };
+            
+            // 人口结构图表
+            const populationChart = document.getElementById('populationChart');
+            if (populationChart) {
+                new Chart(populationChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2000', '2010', '2020', '2025', '2030', '2040', '2050'],
+                        datasets: [
+                            {
+                                label: '总人口(百万)',
+                                data: [126.9, 128.1, 125.5, 122.8, 119.1, 111.8, 105.7],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                tension: 0.3,
+                                fill: true
+                            },
+                            {
+                                label: '65岁以上人口比例(%)',
+                                data: [17.2, 22.5, 28.4, 31.2, 35.3, 38.1],
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 30,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 100,
+                                max: 130,
+                                title: {
+                                    display: true,
+                                    text: '总人口(百万)'
+                                }
+                            },
+                            y1: {
+                                position: 'right',
+                                beginAtZero: true,
+                                max: 40,
+                                title: {
+                                    display: true,
+                                    text: '65岁以上人口比例(%)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // GDP图表
+            const gdpChart = document.getElementById('gdpChart');
+            if (gdpChart) {
+                new Chart(gdpChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            {
+                                label: 'GDP(万亿美元)',
+                                data: [4.4, 4.9, 4.9, 5.0, 5.1, 5.0, 4.9, 4.2, 4.9, 5.2, 5.4],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                tension: 0.3,
+                                fill: true
+                            },
+                            {
+                                label: 'GDP增长率(%)',
+                                data: [1.6, 0.8, 1.7, 0.6, 0.0, -4.5, 2.1, 1.0, 1.2, 1.4, 1.1],
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 30,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: 'GDP(万亿美元)'
+                                }
+                            },
+                            y1: {
+                                position: 'right',
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'GDP增长率(%)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // 产业结构图表
+            const industryChart = document.getElementById('industryChart');
+            if (industryChart) {
+                new Chart(industryChart, {
+                    type: 'pie',
+                    data: {
+                        labels: ['服务业', '制造业', '建筑业', '农业', '其他'],
+                        datasets: [{
+                            data: [70, 20, 6, 1, 3],
+                            backgroundColor: [
+                                '#00d4ff', 
+                                '#ff124f', 
+                                '#ffd700', 
+                                '#32cd32', 
+                                '#9370db'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 30,
+                                bottom: 40,
+                                left: 30,
+                                right: 30
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    color: '#e6f1ff'
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw;
+                                        const label = context.label;
+                                        return `${label}: ${value}%`;
+                                    }
+                                }
+                            },
+                            datalabels: {
+                                color: '#ffffff',
+                                font: {
+                                    weight: 'bold',
+                                    size: 12
+                                },
+                                formatter: function(value) {
+                                    return value + '%';
+                                },
+                                display: function(context) {
+                                    return context.dataset.data[context.dataIndex] > 5; // 只显示大于5%的数据标签
+                                }
+                            }
+                        },
+                        plugins: [ChartDataLabels]
+                    }
+                });
+                
+                // 为打印版本添加静态数据
+                const printData = document.createElement('div');
+                printData.className = 'print-only-data';
+                printData.style.marginTop = '20px';
+                printData.style.padding = '10px';
+                printData.style.border = '1px solid rgba(0, 212, 255, 0.3)';
+                printData.style.borderRadius = '5px';
+                printData.style.fontSize = '12px';
+                printData.style.color = '#e6f1ff';
+                printData.style.display = 'none';
+                
+                printData.innerHTML = `
+                    <div style="margin-bottom:10px;font-weight:bold;">日本产业结构数据(2025)：</div>
+                    <ul style="list-style:none;padding-left:10px;margin:0;">
+                        <li>服务业: 70%</li>
+                        <li>制造业: 20%</li>
+                        <li>建筑业: 6%</li>
+                        <li>农业: 1%</li>
+                        <li>其他: 3%</li>
+                    </ul>
+                `;
+                
+                // 将打印数据添加到图表容器后面
+                industryChart.parentNode.parentNode.appendChild(printData);
+            }
+            
+            // 政府支出结构图表
+            const govExpenditureChart = document.getElementById('govExpenditureChart');
+            if (govExpenditureChart) {
+                new Chart(govExpenditureChart, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['社会保障', '公共事业', '国债费用', '地方交付税', '教育与科学', '国防', '其他'],
+                        datasets: [{
+                            data: [33, 16, 22, 15, 5, 5, 4],
+                            backgroundColor: [
+                                '#00d4ff', 
+                                '#ff124f', 
+                                '#ffd700', 
+                                '#32cd32', 
+                                '#9370db',
+                                '#ff6b81',
+                                '#4ecdc4'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '40%',
+                        layout: {
+                            padding: {
+                                top: 30,
+                                bottom: 40,
+                                left: 30,
+                                right: 30
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    color: '#e6f1ff'
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw;
+                                        const label = context.label;
+                                        return `${label}: ${value}%`;
+                                    }
+                                }
+                            },
+                            datalabels: {
+                                color: '#ffffff',
+                                font: {
+                                    weight: 'bold',
+                                    size: 12
+                                },
+                                formatter: function(value) {
+                                    return value + '%';
+                                },
+                                display: function(context) {
+                                    return context.dataset.data[context.dataIndex] > 5; // 只显示大于5%的数据标签
+                                }
+                            }
+                        },
+                        plugins: [ChartDataLabels]
+                    },
+                    plugins: [ChartDataLabels]
+                });
+                
+                // 为打印版本添加静态数据
+                const printData = document.createElement('div');
+                printData.className = 'print-only-data';
+                printData.style.marginTop = '20px';
+                printData.style.padding = '10px';
+                printData.style.border = '1px solid rgba(0, 212, 255, 0.3)';
+                printData.style.borderRadius = '5px';
+                printData.style.fontSize = '12px';
+                printData.style.color = '#e6f1ff';
+                printData.style.display = 'none';
+                
+                printData.innerHTML = `
+                    <div style="margin-bottom:10px;font-weight:bold;">日本政府支出结构数据(2025财年)：</div>
+                    <ul style="list-style:none;padding-left:10px;margin:0;">
+                        <li>社会保障: 33%</li>
+                        <li>公共事业: 16%</li>
+                        <li>国债费用: 22%</li>
+                        <li>地方交付税: 15%</li>
+                        <li>教育与科学: 5%</li>
+                        <li>国防: 5%</li>
+                        <li>其他: 4%</li>
+                    </ul>
+                `;
+                
+                // 将打印数据添加到图表容器后面
+                govExpenditureChart.parentNode.parentNode.appendChild(printData);
+            }
+            
+            // 贸易图表
+            const tradeChart = document.getElementById('tradeChart');
+            if (tradeChart) {
+                new Chart(tradeChart, {
+                    type: 'radar',
+                    data: {
+                        labels: ['汽车/零部件', '机械设备', '电子产品', '化学品', '钢铁', '医疗器械', '能源', '食品'],
+                        datasets: [
+                            {
+                                label: '出口占比(%)',
+                                data: [28.4, 19.7, 15.8, 9.2, 5.3, 3.1, 1.2, 1.5],
+                                backgroundColor: 'rgba(0, 212, 255, 0.2)',
+                                borderColor: '#00d4ff'
+                            },
+                            {
+                                label: '进口占比(%)',
+                                data: [4.5, 12.9, 14.2, 8.8, 2.1, 5.6, 23.5, 8.7],
+                                backgroundColor: 'rgba(255, 18, 79, 0.2)',
+                                borderColor: '#ff124f'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 20,
+                                left: 20,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            r: {
+                                ticks: {
+                                    color: '#a3b1cc'
+                                },
+                                pointLabels: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                angleLines: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // 日本地理位置战略示意图
+            const japanMapChart = document.getElementById('japanMapChart');
+            if (japanMapChart) {
+                // 清除原有的Canvas内容，改用自定义HTML绘制地图
+                const ctx = japanMapChart.getContext('2d');
+                ctx.clearRect(0, 0, japanMapChart.width, japanMapChart.height);
+                
+                // 创建地图容器
+                const mapContainer = document.createElement('div');
+                mapContainer.style.width = '100%';
+                mapContainer.style.height = '400px';
+                mapContainer.style.position = 'relative';
+                mapContainer.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Japan_location_map_with_side_map_of_the_Ryukyu_Islands.svg/800px-Japan_location_map_with_side_map_of_the_Ryukyu_Islands.svg.png')";
+                mapContainer.style.backgroundSize = 'contain';
+                mapContainer.style.backgroundPosition = 'center';
+                mapContainer.style.backgroundRepeat = 'no-repeat';
+                mapContainer.style.backgroundColor = 'rgba(9, 19, 83, 0.7)';
+                mapContainer.style.borderRadius = '10px';
+                mapContainer.style.padding = '10px';
+                
+                // 添加城市标记
+                const cities = [
+                    {name: '东京', x: 68, y: 50, size: 15, type: 'city', desc: '政治经济中心，人口3700万'},
+                    {name: '大阪', x: 58, y: 60, size: 12, type: 'city', desc: '工商业中心，人口1900万'},
+                    {name: '名古屋', x: 63, y: 57, size: 10, type: 'city', desc: '制造业基地，人口900万'},
+                    {name: '札幌', x: 70, y: 25, size: 9, type: 'city', desc: '北海道中心，人口190万'},
+                    {name: '福冈', x: 45, y: 65, size: 9, type: 'city', desc: '九州地区中心，人口150万'}
+                ];
+                
+                // 添加贸易伙伴标记
+                const partners = [
+                    {name: '中国', x: 25, y: 45, size: 14, type: 'partner', desc: '最大贸易伙伴，贸易额3800亿美元'},
+                    {name: '美国', x: 90, y: 45, size: 14, type: 'partner', desc: '第二大贸易伙伴，贸易额2200亿美元'},
+                    {name: '韩国', x: 35, y: 40, size: 10, type: 'partner', desc: '重要邻国，贸易额900亿美元'},
+                    {name: '东南亚', x: 40, y: 75, size: 12, type: 'partner', desc: '战略投资区域，贸易额1500亿美元'},
+                    {name: '欧盟', x: 15, y: 20, size: 12, type: 'partner', desc: '重要经济伙伴，贸易额1200亿美元'}
+                ];
+                
+                // 创建图例
+                const legend = document.createElement('div');
+                legend.style.position = 'absolute';
+                legend.style.bottom = '10px';
+                legend.style.left = '10px';
+                legend.style.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+                legend.style.padding = '10px';
+                legend.style.borderRadius = '5px';
+                legend.style.color = '#e6f1ff';
+                legend.style.fontSize = '12px';
+                legend.style.zIndex = '100';
+                
+                const cityLegend = document.createElement('div');
+                cityLegend.innerHTML = '<span style="display:inline-block;width:12px;height:12px;background-color:rgba(0, 212, 255, 0.7);border-radius:50%;margin-right:5px;"></span>主要城市';
+                
+                const partnerLegend = document.createElement('div');
+                partnerLegend.innerHTML = '<span style="display:inline-block;width:12px;height:12px;background-color:rgba(255, 18, 79, 0.7);border-radius:50%;margin-right:5px;margin-top:5px;"></span>主要贸易伙伴';
+                
+                legend.appendChild(cityLegend);
+                legend.appendChild(partnerLegend);
+                mapContainer.appendChild(legend);
+                
+                // 添加标题
+                const title = document.createElement('div');
+                title.textContent = '日本地理位置战略示意图 (2025)';
+                title.style.position = 'absolute';
+                title.style.top = '10px';
+                title.style.left = '10px';
+                title.style.color = '#e6f1ff';
+                title.style.fontSize = '16px';
+                title.style.fontWeight = 'bold';
+                title.style.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+                title.style.padding = '5px 10px';
+                title.style.borderRadius = '5px';
+                mapContainer.appendChild(title);
+                
+                // 添加所有标记
+                [...cities, ...partners].forEach(point => {
+                    const marker = document.createElement('div');
+                    marker.style.position = 'absolute';
+                    marker.style.left = `${point.x}%`;
+                    marker.style.top = `${point.y}%`;
+                    marker.style.width = `${point.size}px`;
+                    marker.style.height = `${point.size}px`;
+                    marker.style.backgroundColor = point.type === 'city' ? 'rgba(0, 212, 255, 0.7)' : 'rgba(255, 18, 79, 0.7)';
+                    marker.style.borderRadius = '50%';
+                    marker.style.transform = 'translate(-50%, -50%)';
+                    marker.style.boxShadow = point.type === 'city' ? '0 0 10px rgba(0, 212, 255, 0.7)' : '0 0 10px rgba(255, 18, 79, 0.7)';
+                    marker.style.cursor = 'pointer';
+                    marker.style.zIndex = '10';
+                    
+                    // 标记标签
+                    const label = document.createElement('div');
+                    label.textContent = point.name;
+                    label.style.position = 'absolute';
+                    label.style.left = '50%';
+                    label.style.bottom = '100%';
+                    label.style.transform = 'translateX(-50%)';
+                    label.style.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+                    label.style.color = '#e6f1ff';
+                    label.style.padding = '3px 6px';
+                    label.style.borderRadius = '3px';
+                    label.style.fontSize = '12px';
+                    label.style.whiteSpace = 'nowrap';
+                    label.style.marginBottom = '5px';
+                    label.style.zIndex = '20';
+                    
+                    // 描述信息
+                    const description = document.createElement('div');
+                    description.textContent = point.desc;
+                    description.style.position = 'absolute';
+                    description.style.left = '50%';
+                    description.style.top = '100%';
+                    description.style.transform = 'translateX(-50%)';
+                    description.style.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+                    description.style.color = '#e6f1ff';
+                    description.style.padding = '3px 6px';
+                    description.style.borderRadius = '3px';
+                    description.style.fontSize = '10px';
+                    description.style.whiteSpace = 'nowrap';
+                    description.style.marginTop = '5px';
+                    description.style.zIndex = '20';
+                    description.style.visibility = 'hidden';
+                    
+                    // 鼠标悬停显示描述
+                    marker.addEventListener('mouseenter', () => {
+                        description.style.visibility = 'visible';
+                    });
+                    marker.addEventListener('mouseleave', () => {
+                        description.style.visibility = 'hidden';
+                    });
+                    
+                    marker.appendChild(label);
+                    marker.appendChild(description);
+                    mapContainer.appendChild(marker);
+                });
+                
+                // 替换Canvas元素
+                japanMapChart.parentNode.replaceChild(mapContainer, japanMapChart);
+                
+                // 为打印版本添加静态数据
+                const printData = document.createElement('div');
+                printData.className = 'print-only-data';
+                printData.style.marginTop = '20px';
+                printData.style.padding = '10px';
+                printData.style.border = '1px solid rgba(0, 212, 255, 0.3)';
+                printData.style.borderRadius = '5px';
+                printData.style.fontSize = '12px';
+                printData.style.color = '#e6f1ff';
+                printData.style.display = 'none';
+                
+                printData.innerHTML = `
+                    <div style="margin-bottom:10px;font-weight:bold;">日本主要城市数据：</div>
+                    <ul style="list-style:none;padding-left:10px;margin:0;">
+                        <li>东京: 政治经济中心，人口3700万，GDP占全国30%</li>
+                        <li>大阪: 工商业中心，人口1900万，制造业和服务业发达</li>
+                        <li>名古屋: 制造业基地，人口900万，汽车产业集群</li>
+                        <li>札幌: 北海道中心，人口190万，旅游和食品产业</li>
+                        <li>福冈: 九州地区中心，人口150万，对亚洲贸易枢纽</li>
+                    </ul>
+                    <div style="margin:10px 0;font-weight:bold;">主要贸易伙伴数据(2025)：</div>
+                    <ul style="list-style:none;padding-left:10px;margin:0;">
+                        <li>中国: 最大贸易伙伴，贸易额3800亿美元，占日本外贸总额21%</li>
+                        <li>美国: 第二大贸易伙伴，贸易额2200亿美元，占日本外贸总额15%</li>
+                        <li>韩国: 重要邻国，贸易额900亿美元，占日本外贸总额6%</li>
+                        <li>东南亚: 战略投资区域，贸易额1500亿美元，占日本外贸总额9%</li>
+                        <li>欧盟: 重要经济伙伴，贸易额1200亿美元，占日本外贸总额8%</li>
+                    </ul>
+                `;
+                
+                // 添加打印媒体查询样式
+                const printStyle = document.createElement('style');
+                printStyle.textContent = `
+                    @media print {
+                        .print-only-data {
+                            display: block !important;
+                        }
+                    }
+                `;
+                document.head.appendChild(printStyle);
+                
+                // 将打印数据添加到地图容器后面
+                mapContainer.parentNode.insertBefore(printData, mapContainer.nextSibling);
+            }
+            
+            // 高增长行业市场规模预测图表
+            const growthIndustriesChart = document.getElementById('growthIndustriesChart');
+            if (growthIndustriesChart) {
+                new Chart(growthIndustriesChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['医疗健康', '数字经济', '清洁能源', '机器人自动化', '人工智能', '老年护理'],
+                        datasets: [
+                            {
+                                label: '2025年市场规模(亿美元)',
+                                data: [7200, 9800, 4500, 3100, 2200, 1800],
+                                backgroundColor: 'rgba(0, 212, 255, 0.7)',
+                                borderColor: '#00d4ff',
+                                borderWidth: 1
+                            },
+                            {
+                                label: '2030年市场规模(亿美元)',
+                                data: [9100, 13500, 6800, 4900, 3800, 2700],
+                                backgroundColor: 'rgba(255, 18, 79, 0.7)',
+                                borderColor: '#ff124f',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 30,
+                                bottom: 40,
+                                left: 20,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                title: {
+                                    display: true,
+                                    text: '市场规模(亿美元)',
+                                    color: '#e6f1ff'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    color: '#e6f1ff'
+                                }
+                            },
+                            datalabels: {
+                                color: '#ffffff',
+                                font: {
+                                    weight: 'bold',
+                                    size: 10
+                                },
+                                formatter: function(value) {
+                                    return value;
+                                }
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+                
+                // 为打印版本添加静态数据
+                const printData = document.createElement('div');
+                printData.className = 'print-only-data';
+                printData.style.marginTop = '20px';
+                printData.style.padding = '10px';
+                printData.style.border = '1px solid rgba(0, 212, 255, 0.3)';
+                printData.style.borderRadius = '5px';
+                printData.style.fontSize = '12px';
+                printData.style.color = '#e6f1ff';
+                printData.style.display = 'none';
+                
+                printData.innerHTML = `
+                    <div style="margin-bottom:10px;font-weight:bold;">日本高增长行业市场规模预测(2025-2030)：</div>
+                    <table style="width:100%;border-collapse:collapse;">
+                        <tr style="border-bottom:1px solid rgba(0, 212, 255, 0.3);">
+                            <th style="text-align:left;padding:5px;">行业</th>
+                            <th style="text-align:right;padding:5px;">2025年(亿美元)</th>
+                            <th style="text-align:right;padding:5px;">2030年(亿美元)</th>
+                            <th style="text-align:right;padding:5px;">年均增长率(%)</th>
+                        </tr>
+                        <tr><td style="padding:5px;">医疗健康</td><td style="text-align:right;padding:5px;">7200</td><td style="text-align:right;padding:5px;">9100</td><td style="text-align:right;padding:5px;">4.8</td></tr>
+                        <tr><td style="padding:5px;">数字经济</td><td style="text-align:right;padding:5px;">9800</td><td style="text-align:right;padding:5px;">13500</td><td style="text-align:right;padding:5px;">6.6</td></tr>
+                        <tr><td style="padding:5px;">清洁能源</td><td style="text-align:right;padding:5px;">4500</td><td style="text-align:right;padding:5px;">6800</td><td style="text-align:right;padding:5px;">8.6</td></tr>
+                        <tr><td style="padding:5px;">机器人自动化</td><td style="text-align:right;padding:5px;">3100</td><td style="text-align:right;padding:5px;">4900</td><td style="text-align:right;padding:5px;">9.6</td></tr>
+                        <tr><td style="padding:5px;">人工智能</td><td style="text-align:right;padding:5px;">2200</td><td style="text-align:right;padding:5px;">3800</td><td style="text-align:right;padding:5px;">11.5</td></tr>
+                        <tr><td style="padding:5px;">老年护理</td><td style="text-align:right;padding:5px;">1800</td><td style="text-align:right;padding:5px;">2700</td><td style="text-align:right;padding:5px;">8.5</td></tr>
+                    </table>
+                `;
+                
+                // 将打印数据添加到图表容器后面
+                growthIndustriesChart.parentNode.parentNode.appendChild(printData);
+            }
+            
+            // 电子商务市场规模图表
+            const ecommerceChart = document.getElementById('ecommerceChart');
+            if (ecommerceChart) {
+                new Chart(ecommerceChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            {
+                                label: '电子商务市场规模(万亿日元)',
+                                data: [18.0, 19.4, 23.9, 26.1, 28.5, 30.2, 32.1, 34.5],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                tension: 0.3,
+                                fill: true
+                            },
+                            {
+                                label: '电子商务渗透率(%)',
+                                data: [18.5, 20.2, 25.7, 27.9, 30.5, 32.8, 34.6, 36.4],
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 30,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: '市场规模(万亿日元)',
+                                    color: '#e6f1ff'
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y1: {
+                                position: 'right',
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '渗透率(%)',
+                                    color: '#e6f1ff'
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#e6f1ff'
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const datasetIndex = context.datasetIndex;
+                                        const value = context.raw;
+                                        if (datasetIndex === 0) {
+                                            return `市场规模: ${value}万亿日元`;
+                                        } else {
+                                            return `渗透率: ${value}%`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // 外资准入政策概览图表
+            const investmentChart = document.getElementById('investmentChart');
+            if (investmentChart) {
+                new Chart(investmentChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['完全开放', '部分限制', '严格限制', '禁止外资'],
+                        datasets: [{
+                            label: '行业数量',
+                            data: [62, 23, 11, 4],
+                            backgroundColor: [
+                                'rgba(0, 212, 255, 0.7)',
+                                'rgba(255, 215, 0, 0.7)',
+                                'rgba(255, 107, 129, 0.7)',
+                                'rgba(255, 18, 79, 0.7)'
+                            ],
+                            borderColor: [
+                                '#00d4ff',
+                                '#ffd700',
+                                '#ff6b81',
+                                '#ff124f'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 20,
+                                left: 10,
+                                right: 30
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '行业数量',
+                                    color: '#e6f1ff'
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw;
+                                        return `行业数量: ${value}`;
+                                    },
+                                    afterLabel: function(context) {
+                                        const label = context.label;
+                                        const examples = {
+                                            '完全开放': '零售、IT服务、大部分制造业',
+                                            '部分限制': '电信、运输、金融服务',
+                                            '严格限制': '广播电视、航空、能源',
+                                            '禁止外资': '武器制造、核燃料、邮政服务'
+                                        };
+                                        return `例如: ${examples[label]}`;
+                                    }
+                                }
+                            },
+                            datalabels: {
+                                color: '#ffffff',
+                                anchor: 'end',
+                                align: 'right',
+                                formatter: function(value) {
+                                    return value;
+                                }
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+            
+            // 汇率走势图
+            const exchangeRateChart = document.getElementById('exchangeRateChart');
+            if (exchangeRateChart) {
+                new Chart(exchangeRateChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            label: '日元/美元汇率',
+                            data: [105.8, 121.0, 108.8, 112.2, 110.4, 109.0, 106.8, 110.2, 131.4, 143.8, 154.5],
+                            borderColor: '#00d4ff',
+                            backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 30,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#e6f1ff'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // 税率图表
+            const taxRateChart = document.getElementById('taxRateChart');
+            if (taxRateChart) {
+                new Chart(taxRateChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['企业所得税(有效税率)', '消费税(标准)', '消费税(优惠)', '个人所得税(最高)', '个人所得税(最低)', '预提所得税(股息/利息)', '固定资产税'],
+                        datasets: [{
+                            label: '税率(%)',
+                            data: [29.74, 10, 8, 45, 5, 20.42, 1.4],
+                            backgroundColor: [
+                                'rgba(0, 212, 255, 0.7)',
+                                'rgba(255, 18, 79, 0.7)',
+                                'rgba(255, 18, 79, 0.4)',
+                                'rgba(255, 215, 0, 0.7)',
+                                'rgba(255, 215, 0, 0.4)',
+                                'rgba(147, 112, 219, 0.7)',
+                                'rgba(76, 187, 23, 0.7)'
+                            ],
+                            borderColor: [
+                                '#00d4ff',
+                                '#ff124f',
+                                '#ff124f',
+                                '#ffd700',
+                                '#ffd700',
+                                '#9370db',
+                                '#4cbb17'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 40,
+                                left: 10,
+                                right: 10
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '税率(%)',
+                                    color: '#e6f1ff'
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff',
+                                    maxRotation: 45,
+                                    minRotation: 45
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw;
+                                        return `税率: ${value}%`;
+                                    },
+                                    afterLabel: function(context) {
+                                        const label = context.label;
+                                        const notes = {
+                                            '企业所得税(有效税率)': '包括国税和地方税',
+                                            '消费税(标准)': '适用于大多数商品和服务',
+                                            '消费税(优惠)': '适用于食品和报纸等',
+                                            '个人所得税(最高)': '年收入超过4500万日元',
+                                            '个人所得税(最低)': '年收入低于195万日元',
+                                            '预提所得税(股息/利息)': '包括复兴特别税',
+                                            '固定资产税': '按资产评估值征收'
+                                        };
+                                        return notes[label];
+                                    }
+                                }
+                            },
+                            datalabels: {
+                                color: '#ffffff',
+                                font: {
+                                    weight: 'bold'
+                                },
+                                formatter: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+                
+                // 为打印版本添加静态数据
+                const printData = document.createElement('div');
+                printData.className = 'print-only-data';
+                printData.style.marginTop = '20px';
+                printData.style.padding = '10px';
+                printData.style.border = '1px solid rgba(0, 212, 255, 0.3)';
+                printData.style.borderRadius = '5px';
+                printData.style.fontSize = '12px';
+                printData.style.color = '#e6f1ff';
+                printData.style.display = 'none';
+                
+                printData.innerHTML = `
+                    <div style="margin-bottom:10px;font-weight:bold;">日本主要税种税率(2025)：</div>
+                    <table style="width:100%;border-collapse:collapse;">
+                        <tr style="border-bottom:1px solid rgba(0, 212, 255, 0.3);">
+                            <th style="text-align:left;padding:5px;">税种</th>
+                            <th style="text-align:right;padding:5px;">税率(%)</th>
+                            <th style="text-align:left;padding:5px;">备注</th>
+                        </tr>
+                        <tr><td style="padding:5px;">企业所得税(有效税率)</td><td style="text-align:right;padding:5px;">29.74</td><td style="padding:5px;">包括国税和地方税</td></tr>
+                        <tr><td style="padding:5px;">消费税(标准)</td><td style="text-align:right;padding:5px;">10</td><td style="padding:5px;">适用于大多数商品和服务</td></tr>
+                        <tr><td style="padding:5px;">消费税(优惠)</td><td style="text-align:right;padding:5px;">8</td><td style="padding:5px;">适用于食品和报纸等</td></tr>
+                        <tr><td style="padding:5px;">个人所得税(最高)</td><td style="text-align:right;padding:5px;">45</td><td style="padding:5px;">年收入超过4500万日元</td></tr>
+                        <tr><td style="padding:5px;">个人所得税(最低)</td><td style="text-align:right;padding:5px;">5</td><td style="padding:5px;">年收入低于195万日元</td></tr>
+                        <tr><td style="padding:5px;">预提所得税(股息/利息)</td><td style="text-align:right;padding:5px;">20.42</td><td style="padding:5px;">包括复兴特别税</td></tr>
+                        <tr><td style="padding:5px;">固定资产税</td><td style="text-align:right;padding:5px;">1.4</td><td style="padding:5px;">按资产评估值征收</td></tr>
+                    </table>
+                `;
+                
+                // 将打印数据添加到图表容器后面
+                taxRateChart.parentNode.parentNode.appendChild(printData);
+            }
+            
+            // 日本FTA覆盖率变化图表
+            const ftaChart = document.getElementById('ftaChart');
+            if (ftaChart) {
+                new Chart(ftaChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2000', '2005', '2010', '2015', '2020', '2025'],
+                        datasets: [{
+                            label: 'FTA覆盖率(%)',
+                            data: [5.2, 12.8, 18.6, 28.7, 79.2, 86.5],
+                            borderColor: '#00d4ff',
+                            backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                            tension: 0.3,
+                            fill: true,
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 40,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: '覆盖率(%)',
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `覆盖率: ${context.raw}%`;
+                                    },
+                                    afterLabel: function(context) {
+                                        const year = context.label;
+                                        const agreements = {
+                                            '2000': 'Singapore',
+                                            '2005': 'Mexico, Malaysia',
+                                            '2010': 'ASEAN, India, Vietnam',
+                                            '2015': 'Australia, Mongolia, TPP协商',
+                                            '2020': 'EU, UK, RCEP',
+                                            '2025': 'CPTPP扩大, 非洲FTA'
+                                        };
+                                        return `主要协定: ${agreements[year]}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                console.log('FTA覆盖率图表已创建');
+            } else {
+                console.error('未找到FTA覆盖率图表的canvas元素');
+            }
+            
+            // 日本电商物流市场规模图表
+            const logisticsChart = document.getElementById('logisticsChart');
+            if (logisticsChart) {
+                new Chart(logisticsChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [
+                            {
+                                label: '物流市场规模(万亿日元)',
+                                data: [2.8, 3.0, 3.9, 4.3, 4.7, 5.1, 5.5, 6.0],
+                                backgroundColor: 'rgba(0, 212, 255, 0.7)',
+                                borderColor: '#00d4ff',
+                                borderWidth: 1
+                            },
+                            {
+                                label: '同比增长率(%)',
+                                data: [5.2, 7.1, 30.0, 10.3, 9.3, 8.5, 7.8, 9.1],
+                                type: 'line',
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3,
+                                fill: false,
+                                borderWidth: 3,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 40,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '市场规模(万亿日元)',
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y1: {
+                                position: 'right',
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '增长率(%)',
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const datasetIndex = context.datasetIndex;
+                                        const value = context.raw;
+                                        if (datasetIndex === 0) {
+                                            return `市场规模: ${value}万亿日元`;
+                                        } else {
+                                            return `增长率: ${value}%`;
+                                        }
+                                    }
+                                }
+                            },
+                            datalabels: {
+                                color: '#ffffff',
+                                anchor: 'end',
+                                align: 'top',
+                                formatter: function(value, context) {
+                                    if (context.datasetIndex === 0) {
+                                        return value;
+                                    } else {
+                                        return null;
+                                    }
+                                },
+                                display: function(context) {
+                                    return context.datasetIndex === 0;
+                                }
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+                console.log('电商物流市场规模图表已创建');
+            } else {
+                console.error('未找到电商物流市场规模图表的canvas元素');
+            }
+            
+            // 日本风险投资规模变化图表
+            const vcChart = document.getElementById('vcChart');
+            if (vcChart) {
+                new Chart(vcChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        datasets: [
+                            {
+                                label: '风险投资规模(亿美元)',
+                                data: [35.8, 42.3, 48.7, 63.2, 75.8, 82.4, 94.6],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                borderWidth: 3
+                            },
+                            {
+                                label: '投资案例数量',
+                                data: [1250, 1380, 1520, 1890, 2150, 2340, 2580],
+                                borderColor: '#ff124f',
+                                backgroundColor: 'rgba(255, 18, 79, 0.1)',
+                                tension: 0.3,
+                                fill: false,
+                                borderWidth: 3,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 40,
+                                left: 10,
+                                right: 20
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: '投资规模(亿美元)',
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y1: {
+                                position: 'right',
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '案例数量',
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                },
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#e6f1ff'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#e6f1ff',
+                                    font: {
+                                        size: 14
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const datasetIndex = context.datasetIndex;
+                                        const value = context.raw;
+                                        if (datasetIndex === 0) {
+                                            return `投资规模: ${value}亿美元`;
+                                        } else {
+                                            return `案例数量: ${value}`;
+                                        }
+                                    },
+                                    afterLabel: function(context) {
+                                        if (context.datasetIndex === 0) {
+                                            const year = context.label;
+                                            const hotSectors = {
+                                                '2018': 'AI、医疗健康',
+                                                '2019': 'AI、金融科技',
+                                                '2020': '远程办公、医疗科技',
+                                                '2021': '元宇宙、电商',
+                                                '2022': '绿色科技、Web3',
+                                                '2023': '生成式AI、气候科技',
+                                                '2024': '生成式AI、量子计算'
+                                            };
+                                            return `热门领域: ${hotSectors[year]}`;
+                                        }
+                                        return null;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                console.log('风险投资规模变化图表已创建');
+            } else {
+                console.error('未找到风险投资规模变化图表的canvas元素');
+            }
+            
+            // 劳动力人口图表
+            const laborForceChartEl = document.getElementById('laborForceChart');
+            if (laborForceChartEl) {
+                new Chart(laborForceChartEl, {
+                    type: 'line',
+                    data: {
+                        labels: ['2010', '2020', '2025', '2030', '2040'],
+                        datasets: [
+                            {
+                                label: '总劳动力人口(百万)',
+                                data: [66.59, 64.29, 62.5, 60.1, 55.6],
+                                borderColor: '#ff6384',
+                                backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                                tension: 0.3,
+                                fill: true,
+                                yAxisID: 'y'
+                            },
+                            {
+                                label: '65岁以上劳动力占比(%)',
+                                data: [10.2, 13.5, 15.1, 17.8, 20.5],
+                                borderColor: '#36a2eb',
+                                backgroundColor: 'rgba(54, 162, 235, 0.1)',
+                                tension: 0.3,
+                                fill: false,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: { top: 20, bottom: 40, left: 10, right: 20 }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                position: 'left',
+                                title: {
+                                    display: true,
+                                    text: '总劳动力人口(百万)',
+                                    color: '#e6f1ff',
+                                    font: { size: 14 }
+                                },
+                                ticks: { color: '#e6f1ff' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            },
+                            y1: {
+                                beginAtZero: false,
+                                position: 'right',
+                                title: {
+                                    display: true,
+                                    text: '65岁以上劳动力占比(%)',
+                                    color: '#e6f1ff',
+                                    font: { size: 14 }
+                                },
+                                ticks: { color: '#e6f1ff' },
+                                grid: { drawOnChartArea: false }
+                            },
+                            x: {
+                                ticks: { color: '#e6f1ff' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#e6f1ff',
+                                    font: { size: 14 }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        if (context.dataset.yAxisID === 'y') {
+                                            return ` 总劳动力人口: ${context.formattedValue} 百万`;
+                                        }
+                                        return ` 65岁以上占比: ${context.formattedValue}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                console.log('劳动力人口变化趋势图表已创建');
+            } else {
+                 console.error('未找到劳动力人口变化趋势图表的canvas元素');
+            }
+
+            // 新增：热门技能需求图表
+            const hotSkillsChart = document.getElementById('hotSkillsChart');
+            if (hotSkillsChart) {
+                new Chart(hotSkillsChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['IT/软件开发', '护理/医疗', '建筑/工程', '运输/物流', '数据科学/AI', '数字营销'],
+                        datasets: [{
+                            label: '人才需求指数',
+                            data: [95, 88, 82, 75, 92, 78],
+                            backgroundColor: 'rgba(0, 212, 255, 0.7)',
+                            borderColor: '#00d4ff',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            },
+                             y: {
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            datalabels: {
+                                color: '#ffffff',
+                                anchor: 'end',
+                                align: 'right',
+                                font: { weight: 'bold' }
+                            }
+                        }
+                    },
+                    plugins: [ChartDataLabels]
+                });
+            }
+        }
+        
+        // 检查缺失的图表并创建
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查并创建所有图表容器中的canvas元素
+            const chartContainers = document.querySelectorAll('.chart-container');
+            chartContainers.forEach(container => {
+                const title = container.querySelector('.chart-title');
+                if (title) {
+                    const chartTitle = title.textContent;
+                    let canvasId;
+                    
+                    // 根据标题内容确定canvas ID
+                    if (chartTitle.includes('FTA覆盖率')) {
+                        canvasId = 'ftaChart';
+                    } else if (chartTitle.includes('电商物流')) {
+                        canvasId = 'logisticsChart';
+                    } else if (chartTitle.includes('风险投资')) {
+                        canvasId = 'vcChart';
+                    } else {
+                        // 为其他图表生成ID
+                        canvasId = chartTitle.replace(/[^a-zA-Z0-9]/g, '') + 'Chart';
+                    }
+                    
+                    // 检查是否已存在canvas
+                    let canvas = container.querySelector('canvas');
+                    if (!canvas) {
+                        canvas = document.createElement('canvas');
+                        canvas.id = canvasId;
+                        container.appendChild(canvas);
+                        console.log(`Created canvas with id: ${canvasId} for chart: ${chartTitle}`);
+                    } else if (!canvas.id) {
+                        canvas.id = canvasId;
+                        console.log(`Assigned id: ${canvasId} to existing canvas for chart: ${chartTitle}`);
+                    }
+                }
+            });
+            
+            // 初始化图表
+            setTimeout(createCharts, 100);
+            
+            // 在窗口调整大小时重新渲染图表
+            window.addEventListener('resize', function() {
+                // 销毁现有图表
+                Chart.helpers.each(Chart.instances, function(instance) {
+                    instance.destroy();
+                });
+                // 重新创建图表
+                setTimeout(createCharts, 200);
+            });
+        });
+    </script>
+</body>
+</html> 

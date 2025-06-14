@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美国市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="report/css/style.css">
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="country-overview"></div>
+        <div class="nav-dot" data-section="economy"></div>
+        <div class="nav-dot" data-section="market"></div>
+        <div class="nav-dot" data-section="legal"></div>
+        <div class="nav-dot" data-section="trade"></div>
+        <div class="nav-dot" data-section="finance"></div>
+        <div class="nav-dot" data-section="talent"></div>
+        <div class="nav-dot" data-section="technology"></div>
+        <div class="nav-dot" data-section="culture"></div>
+        <div class="nav-dot" data-section="risk"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+        <div class="nav-dot" data-section="conclusion"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>US</span>
+            </div>
+            <h1>美国市场综合调研报告</h1>
+            <p class="subtitle">深度洞察全球第一大经济体的商业图景与未来机遇 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="country-overview" class="section">
+            <h2><i class="fas fa-flag-usa"></i> 国家/地区概况</h2>
+            <div class="card">
+                <h3><i class="fas fa-map-marked-alt"></i> 地理位置与战略重要性</h3>
+                <p>美国位于北美洲中部，东临大西洋，西濒太平洋，北接加拿大，南靠墨西哥及墨西哥湾。总面积约983万平方公里，是世界第四大国。其独特的地理位置、丰富的自然资源和强大的经济实力，使其在全球政治、经济、军事和文化领域拥有无可匹敌的影响力。美国是连接欧洲与亚洲的重要桥梁，其市场动向对全球经济格局有决定性作用。</p>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">国土面积</div>
+                    <div class="stat-number">983万</div>
+                    <div class="stat-title">平方公里</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">人口总数</div>
+                    <div class="stat-number">3.38亿</div>
+                    <div class="stat-title">人口规模全球第3位</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">移民人口比例</div>
+                    <div class="stat-number">15.3%</div>
+                    <div class="stat-title">全球最多元化的社会之一</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">经济体量</div>
+                    <div class="stat-number">第1</div>
+                    <div class="stat-title">全球经济体排名</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-landmark"></i> 政治体制与外交政策</h3>
+                <p>美国实行<span class="accent">联邦总统制共和制</span>，三权分立是其政治核心。总统为国家元首和政府首脑。政治格局由民主党和共和党两党主导，呈现高度竞争态势。外交上，美国致力于维护其全球领导地位，通过联盟体系（如北约、美日韩同盟）和多边组织（如联合国、G7）施加影响。当前外交政策重点包括与中国的战略竞争、应对气候变化以及维护全球贸易秩序。</p>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-users"></i> 社会结构与人口特征</h3>
+                <p>美国社会以其<span class="highlight">文化多样性</span>、<span class="highlight">高度的个人主义</span>和<span class="highlight">社会流动性</span>为特征。人口约<span class="data-marker">3.38亿</span>，是发达国家中人口增长最快的国家之一，主要得益于持续的移民流入。然而，社会也面临收入不平等加剧、政治极化和社会分裂等挑战。人口结构相对年轻，但老龄化趋势也在加速，预计到2034年，65岁以上老年人口将首次超过18岁以下儿童人口。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国人口结构变化趋势 (2000-2050)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="populationChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="economy" class="section">
+            <h2><i class="fas fa-chart-line"></i> 宏观经济分析</h2>
+            <div class="card">
+                <h3><i class="fas fa-dollar-sign"></i> GDP总量与增长前景</h3>
+                <p>2025年，美国名义GDP预计将超过<span class="data-marker">29万亿美元</span>，继续保持全球第一大经济体的地位。在经历了后疫情时代的高通胀和货币紧缩周期后，美国经济展现出强大的韧性。预计2025年实际GDP增长率将维持在<span class="data-marker">2.0%</span>左右的温和水平。劳动力市场保持强劲，但消费者支出和企业投资的增长速度可能放缓。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国GDP总量与增长率 (2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="gdpChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-industry"></i> 产业结构</h3>
+                <p>美国经济高度依赖<span class="accent">服务业</span>，其占GDP比重接近<span class="data-marker">80%</span>。其中，金融、房地产、专业服务和医疗保健是核心支柱产业。制造业虽然占比约<span class="data-marker">11%</span>，但在高科技制造（如半导体、航空航天）和汽车等领域仍具有全球竞争力。<span class="accent">农业</span>占比虽不足<span class="data-marker">1%</span>，但美国是全球最大的农产品出口国。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国产业结构构成 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="industryChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market" class="section">
+            <h2><i class="fas fa-shopping-cart"></i> 市场环境与行业机会</h2>
+            <div class="card">
+                <h3><i class="fas fa-users"></i> 消费趋势与行为</h3>
+                <p>美国消费者行为呈现多元化和快速变化的特点。2025年的主要趋势包括：</p>
+                <ul class="bullet-list">
+                    <li><span class="accent">价值与便利性并重：</span>消费者在寻求高性价比的同时，对配送速度和购物便利性的要求也越来越高。</li>
+                    <li><span class="accent">可持续与道德消费：</span>环保、社会责任和品牌价值观成为影响购买决策的重要因素，尤其在年轻一代中。</li>
+                    <li><span class="accent">健康与保健意识：</span>对健康食品、健身服务和心理健康产品的需求持续增长。</li>
+                    <li><span class="accent">体验式消费：</span>消费者愿意为独特的体验（如旅行、餐饮、娱乐）付费，而非仅仅拥有商品。</li>
+                    <li><span class="accent">数字化与个性化：</span>超过<span class="data-marker">85%</span>的消费者希望获得个性化的购物体验，数据驱动的营销至关重要。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-lightbulb"></i> 高增长潜力行业</h3>
+                <div class="chart-container">
+                    <div class="chart-title">美国高增长行业市场规模预测 (2025-2030)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="growthIndustriesChart"></canvas></div>
+                </div>
+                 <div class="highlight-box">
+                    <div class="highlight-box-title">优先关注领域</div>
+                    <ul class="bullet-list">
+                        <li><span class="highlight">人工智能(AI)：</span>特别是生成式AI在各行各业的应用，预计年复合增长率超过30%。</li>
+                        <li><span class="highlight">清洁能源与技术：</span>受《通胀削减法案》推动，太阳能、风能、储能和电动汽车产业链将迎来爆发式增长。</li>
+                        <li><span class="highlight">生物技术与生命科学：</span>基因编辑、个性化医疗和创新药物研发是投资热点。</li>
+                        <li><span class="highlight">金融科技(FinTech)：</span>数字支付、嵌入式金融和财富管理科技等领域持续创新。</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="card">
+                <h3><i class="fas-fa-chart-pie"></i> 电子商务与数字渠道</h3>
+                 <p>美国是全球第二大电子商务市场，预计2025年市场规模将超过<span class="data-marker">1.3万亿美元</span>。移动购物是主要驱动力，占线上销售总额的近<span class="data-marker">50%</span>。社交电商、直播带货等新模式正在快速兴起。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国电子商务市场规模 (2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="ecommerceChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legal" class="section">
+            <h2><i class="fas fa-gavel"></i> 法律与监管环境</h2>
+             <div class="card">
+                <h3><i class="fas fa-building"></i> 公司设立与主体类型</h3>
+                 <p>在美国设立商业实体，最常见的形式包括：</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>公司类型</th>
+                            <th>特点</th>
+                            <th>税务责任</th>
+                            <th>适用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>有限责任公司 (LLC)</td>
+                            <td>兼具公司的有限责任和合伙企业的税务灵活性。</td>
+                            <td>穿透税收实体，利润和亏损传导至所有者层面。</td>
+                            <td>初创企业、中小型企业、房地产投资。</td>
+                        </tr>
+                        <tr>
+                            <td>C类公司 (C-Corp)</td>
+                            <td>独立的法律和税务实体，股东责任有限。</td>
+                            <td>公司层面和股东层面双重征税。</td>
+                            <td>计划吸引风险投资、未来上市的大型企业。</td>
+                        </tr>
+                         <tr>
+                            <td>S类公司 (S-Corp)</td>
+                            <td>类似C-Corp但可避免双重征税，股东数量和类型受限。</td>
+                            <td>穿透税收实体，但需满足严格的IRS要求。</td>
+                            <td>符合条件的美国本土小型企业。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> 外资审查与数据隐私</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">CFIUS审查：</span>美国外国投资委员会(CFIUS)对可能影响国家安全的外资交易进行审查，尤其关注科技、基础设施和国防领域。</li>
+                    <li><span class="accent">数据隐私：</span>美国没有统一的联邦隐私法，而是由各州立法，如加州的CCPA/CPRA。企业必须遵守其业务所在州的特定数据保护法规。</li>
+                    <li><span class="accent">知识产权保护：</span>美国拥有健全的专利、商标和版权保护体系，但维权成本高昂，企业需提前进行战略布局。</li>
+                </ul>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-money-bill-wave"></i> 税收体系</h3>
+                 <p>美国税收体系复杂，分为联邦、州和地方三个层面。主要税种包括：</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国主要税种税率 (2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="taxRateChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trade" class="section">
+             <h2><i class="fas fa-globe-americas"></i> 跨境贸易与物流</h2>
+             <div class="card">
+                <h3><i class="fas fa-exchange-alt"></i> 主要贸易伙伴与协定</h3>
+                 <p>美国是全球贸易中心，2025年其主要贸易伙伴预计为加拿大、墨西哥、中国和欧盟。主要贸易协定<span class="highlight">《美墨加协定》(USMCA)</span> 深刻影响着北美地区的供应链整合。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国进出口商品结构 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="tradeChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="finance" class="section">
+            <h2><i class="fas fa-university"></i> 金融与资本市场</h2>
+             <div class="card">
+                <h3><i class="fas fa-rocket"></i> 风投/PE/创投生态</h3>
+                 <p>美国拥有全球最发达和最活跃的风险投资生态系统。硅谷、纽约和波士顿是三大核心创投中心。尽管2022-2023年投资活动有所放缓，但2025年市场正逐步回暖，尤其是在AI、气候科技和国防科技等领域。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国风险投资规模变化 (2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="vcChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="talent" class="section">
+             <h2><i class="fas fa-user-tie"></i> 人才与劳动力市场</h2>
+             <div class="card">
+                <h3><i class="fas fa-chart-bar"></i> 劳动力市场趋势</h3>
+                 <p>美国劳动力市场在2025年呈现"紧张"和"转型"两大特征。一方面，许多行业面临劳动力短缺和技能错配问题；另一方面，远程办公和零工经济等灵活的用工模式正成为新常态。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国劳动力市场指标 (2010-2040)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="laborForceChart"></canvas></div>
+                </div>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-brain"></i> 人才短缺与热门技能</h3>
+                 <p>技术和医疗保健领域的人才短缺最为严重。对具备数字化、数据分析和绿色技能的人才需求持续高涨。</p>
+                <div class="chart-container">
+                    <div class="chart-title">美国热门技能需求增长预测 (2025-2030)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="hotSkillsChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="technology" class="section">
+            <h2><i class="fas fa-cogs"></i> 科技与创新生态</h2>
+             <div class="card">
+                <h3><i class="fas fa-map-marker-alt"></i> 主要科技创新中心</h3>
+                <p>虽然硅谷仍是全球科技创新的灯塔，但美国的科技生态系统正变得越来越分散。奥斯汀、迈阿密、西雅图和丹佛等新兴科技中心正在崛起，各自在金融科技、生命科学、云计算等领域形成了独特的优势。</p>
+            </div>
+        </section>
+
+        <section id="culture" class="section">
+            <h2><i class="fas fa-handshake"></i> 商业文化与社会习俗</h2>
+            <div class="card">
+                <h3><i class="fas fa-comments"></i> 沟通方式与商务礼仪</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">直接与效率：</span>商务沟通通常开门见山，注重效率和结果。</li>
+                    <li><span class="accent">数据驱动：</span>决策高度依赖数据和事实依据。</li>
+                    <li><span class="accent">非正式化：</span>与许多亚洲和欧洲国家相比，商务氛围相对轻松，但仍需保持专业。</li>
+                    <li><span class="accent">网络文化：</span>建立人际网络(Networking)对于商业成功至关重要。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="risk" class="section">
+            <h2><i class="fas fa-exclamation-triangle"></i> 风险与挑战</h2>
+            <div class="grid">
+                 <div class="stat-box">
+                    <div class="stat-title">政治极化</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">两党分歧可能导致政策不稳定和监管环境的突然变化。</p>
+                </div>
+                 <div class="stat-box">
+                    <div class="stat-title">通胀与利率</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">美联储的货币政策走向是影响经济和资本成本的最大不确定性。</p>
+                </div>
+                 <div class="stat-box">
+                    <div class="stat-title">供应链韧性</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">地缘政治紧张局势和极端天气事件对供应链构成持续威胁。</p>
+                </div>
+                 <div class="stat-box">
+                    <div class="stat-title">监管复杂性</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">联邦和州层面不断变化的法规（尤其在科技和环保领域）增加了合规成本。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="strategy" class="section">
+            <h2><i class="fas fa-chess-knight"></i> 市场进入策略</h2>
+             <div class="card">
+                 <p>针对美国市场的复杂性，建议采取分阶段、聚焦化的进入策略。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心策略建议</div>
+                    <ul class="bullet-list">
+                        <li><span class="highlight">选择试点市场：</span>不要试图一次性覆盖整个美国，而是选择一个或几个州作为试点，测试产品、渠道和营销策略。</li>
+                        <li><span class="highlight">建立本地团队或合作伙伴：</span>聘请了解本地市场的法律、营销和销售人才是成功的关键。</li>
+                        <li><span class="highlight">强化数字营销能力：</span>精准的线上广告、内容营销和社交媒体运营是触达美国消费者的最有效方式。</li>
+                        <li><span class="highlight">注重合规与风险管理：</span>在业务启动初期就建立完善的法律和财务合规体系。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2><i class="fas fa-flag-checkered"></i> 结论与建议</h2>
+            <div class="card">
+                <p>美国在2025年依然是全球最具活力和机遇的市场，但其复杂性和竞争激烈程度也首屈一指。成功进入美国市场需要企业具备<span class="highlight">卓越的产品力、深刻的本地化洞察、强大的数字营销能力和稳健的合规风控体系</span>。对于中国企业而言，理解并适应其独特的商业文化、法律环境和消费者行为，是克服挑战、抓住机遇的根本所在。</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">美国市场综合调研报告2025</h3>
+                <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+                <p>AI赋能精准决策 专业成就全球商机</p>
+                <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+            </div>
+            
+            <div class="sources">
+                <h4 class="sources-title">数据来源</h4>
+                <ul class="sources-list">
+                    <li>美国经济分析局 (BEA) - 《国民经济核算数据》</li>
+                    <li>美国人口普查局 (U.S. Census Bureau) - 《美国社区调查》</li>
+                    <li>美国劳工统计局 (BLS) - 《就业形势报告》</li>
+                    <li>美联储 (Federal Reserve) - 《经济预测摘要》</li>
+                    <li>世界银行 - 《全球营商环境报告2025》</li>
+                    <li>国际货币基金组织(IMF) - 《世界经济展望》</li>
+                    <li>PitchBook & NVCA - 《Venture Monitor》</li>
+                    <li>eMarketer - 《美国电子商务预测2025》</li>
+                </ul>
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                </p>
+                 <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem;">
+                    微信视频号公众号： 张小强出海
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="report/js/script.js"></script>
+</body>
+</html>
+ 

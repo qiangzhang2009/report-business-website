@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美国加州市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0b1f3a; /* 深海军蓝 */
+            --secondary-color: #1a3a6b; /* 较浅的蓝色 */
+            --accent-color: #ffc400; /* 金色，代表加州的阳光和机遇 */
+            --text-color: #f0f4f8;
+            --text-secondary: #c0c8d4;
+            --highlight: #ff3b30; /* 鲜红色，用于强调 */
+            --card-bg: rgba(26, 58, 107, 0.6);
+            --gradient-start: #0b1f3a;
+            --gradient-end: #122a4d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 196, 0, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 59, 48, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('usa.jpg') center/cover no-repeat;
+            filter: brightness(0.4) saturate(1.1);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(11, 31, 58, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 196, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 196, 0, 0.2);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 196, 0, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 196, 0, 0.2);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 196, 0, 0.2);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0 4rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 196, 0, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .chart-canvas-wrapper {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .chart-canvas-wrapper canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 196, 0, 0.2);
+        }
+        
+        th {
+            background-color: rgba(255, 196, 0, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 196, 0, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f101";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 196, 0, 0.1), rgba(255, 59, 48, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), #ff8c00);
+            color: var(--primary-color);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(255, 196, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 196, 0, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+
+        .nav-dot .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: var(--card-bg);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            right: 150%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .nav-dot:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+            .sources-list { columns: 1; }
+        }
+        
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(255, 196, 0, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(255, 196, 0, 0.3);
+        }
+        
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(255, 196, 0, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 196, 0, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 196, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 196, 0, 0);
+            }
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: -webkit-linear-gradient(45deg, var(--accent-color), #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"><span class="tooltip">报告头</span></div>
+        <div class="nav-dot" data-section="overview"><span class="tooltip">概况</span></div>
+        <div class="nav-dot" data-section="macro-economy"><span class="tooltip">宏观经济</span></div>
+        <div class="nav-dot" data-section="market-opportunity"><span class="tooltip">市场机会</span></div>
+        <div class="nav-dot" data-section="legal-environment"><span class="tooltip">法律环境</span></div>
+        <div class="nav-dot" data-section="trade-logistics"><span class="tooltip">贸易物流</span></div>
+        <div class="nav-dot" data-section="finance-capital"><span class="tooltip">金融资本</span></div>
+        <div class="nav-dot" data-section="talent-labor"><span class="tooltip">人才市场</span></div>
+        <div class="nav-dot" data-section="tech-innovation"><span class="tooltip">科技创新</span></div>
+        <div class="nav-dot" data-section="business-culture"><span class="tooltip">商业文化</span></div>
+        <div class="nav-dot" data-section="hot-topics"><span class="tooltip">热点分析</span></div>
+        <div class="nav-dot" data-section="risk-challenge"><span class="tooltip">风险挑战</span></div>
+        <div class="nav-dot" data-section="strategy"><span class="tooltip">市场策略</span></div>
+        <div class="nav-dot" data-section="conclusion"><span class="tooltip">结论建议</span></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>CA</span>
+            </div>
+            <h1>美国加州市场综合调研报告</h1>
+            <p class="subtitle">全面解析美国第一大州的市场机遇与全球创新引擎 | 2025年版</p>
+            <button class="btn" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'});"><p>© 上海张小强企业咨询事务所</p><p>本报告由『智探GlobalAI』市场分析系统全自动编制</p></button>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="overview">
+            <h2><i class="fas fa-globe-americas"></i> 概览</h2>
+            <div class="card">
+                <h3><i class="fas fa-map-marked-alt"></i> 地理位置与战略地位</h3>
+                <p>加利福尼亚州位于美国西海岸，南接墨西哥，东临内华达州和亚利桑那州，北靠俄勒冈州，西濒太平洋。总面积约42.4万平方公里，是美国第三大州。作为美国人口第一大州和经济第一大州，加州不仅是通往亚太地区的门户，更是全球科技、娱乐、农业和创新的中心，其经济和文化影响力辐射全球。</p>
+                <div class="chart-container">
+                    <div class="chart-title">加州地理位置与核心经济区示意图</div>
+                    <div class="chart-canvas-wrapper"><canvas id="californiaMapChart"></canvas></div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">经济体量 (GDP)</div>
+                    <div class="stat-number">$4.1 T</div>
+                    <div class="stat-title">全球第四大经济体 (2024)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">人口总数</div>
+                    <div class="stat-number">3,920万</div>
+                    <div class="stat-title">全美第一</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">人均GDP</div>
+                    <div class="stat-number">$96,975</div>
+                    <div class="stat-title">远超全美平均</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">世界500强企业</div>
+                    <div class="stat-number">57家</div>
+                    <div class="stat-title">全美第一</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-landmark"></i> 政治体制与政策导向</h3>
+                <p>加州实行三权分立的共和制，州长为行政首长。政治上，加州是民主党的传统"蓝州"，政策导向具有强烈的自由主义和进步主义色彩。州政府在<span class="accent">环境保护、气候变化、数据隐私和劳工权益</span>等领域的立法常走在全美乃至全球前列。这些前瞻性的政策既为相关产业（如清洁能源、合规科技）创造了巨大机遇，也对企业提出了更高的运营要求。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-users"></i> 社会结构与人口特征</h3>
+                <p>加州是美国<span class="highlight">种族最多元化</span>的州，没有一个族裔占多数。拉丁裔人口已超过白人成为第一大族裔，亚裔人口占比也高达<span class="data-marker">17%</span>。这种多元文化为市场带来了丰富的消费需求和创新活力。然而，加州也面临<span class="highlight">贫富差距悬殊、无家可归问题和高昂生活成本</span>等严峻的社会挑战。人口增长放缓，近年来甚至出现净流出，这对劳动力市场和未来发展构成了一定影响。</p>
+                <div class="chart-container">
+                    <div class="chart-title">加州人口族裔构成 (2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="populationChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="macro-economy">
+            <h2><i class="fas fa-chart-area"></i> 宏观经济分析</h2>
+            <div class="card">
+                <h3><i class="fas fa-dollar-sign"></i> GDP总量与增长率</h3>
+                <p>根据2025年4月发布的最新数据，加州2024年名义GDP已达到<span class="data-marker">4.1万亿美元</span>，如果作为一个独立国家，其经济体量已超过日本，位居世界第四。尽管面临全球经济放缓和高利率环境的压力，加州经济依然表现出强大的韧性。根据加州财政部的预测，继2024年约<span class="accent">5.1%</span>的实际GDP增长后，预计2025年将维持在<span class="accent">2.0% - 2.5%</span>的温和增长区间。增长主要由技术服务、医疗保健、专业服务及强劲的个人消费所驱动。</p>
+                <div class="chart-container">
+                    <div class="chart-title">加州GDP总量与增长率 (2018-2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="gdpChart"></canvas></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-industry"></i> 产业结构</h3>
+                <p>加州的产业结构高度现代化且多元化。<span class="accent">金融、保险和房地产业</span>是最大的经济部门，其次是<span class="accent">专业和商业服务</span>以及<span class="accent">信息技术</span>产业。其独特的优势在于，它不仅拥有以硅谷为代表的高科技产业，还有好莱坞的娱乐媒体、中央谷地的现代农业以及强大的制造业和物流业。这种多元化的经济结构增强了其抵御单一行业波动的能力。</p>
+                <div class="chart-container">
+                    <div class="chart-title">加州产业结构构成 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="industryChart"></canvas></div>
+                </div>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-balance-scale"></i> 核心经济指标</h3>
+                 <p>加州经济的主要指标反映了其在后疫情时代的机遇与挑战：</p>
+                 <ul class="bullet-list">
+                    <li><span class="accent">通货膨胀率 (CPI):</span> 2024年预计为<span class="data-marker">3.3%</span>，高于美联储2%的目标，但已从高点回落。预计2025年将进一步放缓至<span class="data-marker">2.7%</span>左右。</li>
+                    <li><span class="accent">失业率:</span> 2024年维持在<span class="data-marker">5.2%</span>左右，高于全美平均水平，反映了科技行业裁员和经济结构调整的影响。</li>
+                    <li><span class="accent">利率环境:</span> 受美联储加息周期影响，融资成本和抵押贷款利率处于高位，对房地产和部分投资活动构成压力。市场普遍预期2024年底或2025年将开启降息周期。</li>
+                    <li><span class="accent">财政状况:</span> 加州政府面临从巨额财政盈余到潜在赤字的转变，可能影响未来的政府支出和公共项目。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="market-opportunity">
+            <h2><i class="fas fa-lightbulb"></i> 市场环境与行业机会</h2>
+            <div class="card">
+                <h3><i class="fas fa-rocket"></i> 重点行业分析</h3>
+                <p>加州经济的活力源于其强大的、不断创新的核心产业集群：</p>
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">科技行业 (硅谷)</div>
+                            <p class="grid-item-description">全球科技创新的绝对中心。在<span class="highlight">人工智能(AI)、云计算、SaaS、生物科技</span>等领域领导全球。尽管经历周期性调整，但其作为全球VC投资中心和顶尖人才磁石的地位无可动摇。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">娱乐与媒体 (好莱坞)</div>
+                            <p class="grid-item-description">全球最大的电影、电视和流媒体内容生产基地。行业正经历深刻变革，流媒体平台（Netflix, Disney+）与传统制片厂竞争激烈，内容创作和数字分发是核心战场。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">现代农业 (中央谷地)</div>
+                            <p class="grid-item-description">全美第一的农业大州，生产超过400种农产品。农业科技（AgriTech）应用广泛，在节水灌溉、自动化采摘和可持续农业方面处于领先地位。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">清洁能源与绿色科技</div>
+                            <p class="grid-item-description">在州政府激进的气候目标驱动下，<span class="highlight">太阳能、储能技术、电动汽车（EV）及其充电网络</span>等领域发展迅猛，市场规模和投资机会巨大。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-users-cog"></i> 消费趋势与行为</h3>
+                <p>加州消费者呈现出<span class="accent">多元、前卫、注重健康和环保</span>的特点：</p>
+                <ul class="bullet-list">
+                    <li><span class="highlight">健康与有机:</span> 对有机食品、植物基产品和健康生活方式的追求远超全美平均水平。</li>
+                    <li><span class="highlight">可持续消费:</span> 环保意识强，愿意为使用可回收材料、碳中和的"绿色"产品支付溢价。</li>
+                    <li><span class="highlight">体验至上:</span> 相比拥有物质，更看重独特的体验，如旅行、餐饮、健身和娱乐活动。</li>
+                    <li><span class="highlight">数字化与便利性:</span> 电商、移动支付、即时配送等数字化服务高度普及，对无缝的线上线下（O2O）体验要求高。</li>
+                    <li><span class="highlight">身份认同与价值观消费:</span> 消费者倾向于购买能够代表其价值观和身份认同（如支持多元化、环保、本地品牌）的产品。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="legal-environment">
+            <h2><i class="fas fa-gavel"></i> 法律与监管环境</h2>
+            <div class="card">
+                <h3><i class="fas fa-file-contract"></i> 核心法规概览</h3>
+                <p>进入加州市场必须高度关注其独特且严格的法律体系，尤其是在以下几个方面：</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>法规领域</th>
+                            <th>核心法规</th>
+                            <th>关键合规要求</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>数据隐私</td>
+                            <td>CCPA/CPRA</td>
+                            <td>赋予消费者知情权、删除权、选择退出权；对"个人信息"定义宽泛；企业需提供清晰的隐私政策和数据处理说明。</td>
+                        </tr>
+                        <tr>
+                            <td>劳动法</td>
+                            <td>-</td>
+                            <td>全美最高的最低时薪之一；严格的加班、休息和用餐时间规定；对独立承包商（Gig Worker）有严格的"ABC测试"来界定。</td>
+                        </tr>
+                        <tr>
+                            <td>环境法</td>
+                            <td>CEQA / Proposition 65</td>
+                            <td>严格的环境影响评估要求；对产品中的有害化学物质有严格的警示标签规定（Prop 65）。</td>
+                        </tr>
+                        <tr>
+                            <td>消费者保护</td>
+                            <td>-</td>
+                            <td>对广告、产品安全和自动续费服务有严格的法律规定，集体诉讼风险高。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-building"></i> 公司设立与税收</h3>
+                <p>在加州设立公司的主要形式包括<span class="accent">LLC（有限责任公司）</span>和<span class="accent">C-Corp（C型股份有限公司）</span>。LLC结构简单，适合中小型企业；C-Corp更适合需要吸引风险投资的初创公司。</p>
+                <p>加州的税收体系以高税率著称：</p>
+                <ul class="bullet-list">
+                    <li><b>企业所得税：</b>统一税率为<span class="data-marker">8.84%</span>。</li>
+                    <li><b>个人所得税：</b>采用累进税率，最高边际税率达<span class="data-marker">13.3%</span>，为全美最高。</li>
+                    <li><b>销售税：</b>州销售税为<span class="data-marker">7.25%</span>，但各市县会额外征收，导致总销售税率通常在8%到10%之间。</li>
+                </ul>
+                <p>尽管税负较高，但加州也为研发活动、清洁能源投资等提供了一定的税收抵免优惠。</p>
+            </div>
+        </section>
+
+        <section id="trade-logistics">
+            <h2><i class="fas fa-truck-loading"></i> 跨境贸易与物流体系</h2>
+            <div class="card">
+                <h3><i class="fas fa-ship"></i> 贸易门户与主要伙伴</h3>
+                <p>加州是美国的贸易门户，其洛杉矶港和长滩港是西半球最繁忙的集装箱港口综合体，处理了美国约<span class="data-marker">40%</span>的进口集装箱货物。加州的主要贸易伙伴包括<span class="accent">墨西哥、加拿大、中国、日本和韩国</span>，体现了其在环太平洋贸易中的核心地位。</p>
+                 <div class="chart-container">
+                    <div class="chart-title">加州主要贸易伙伴 (2024年出口额)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="tradePartnersChart"></canvas></div>
+                </div>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-dolly-flatbed"></i> 物流与供应链</h3>
+                <p>加州拥有高度发达的物流基础设施。洛杉矶国际机场（LAX）和旧金山国际机场（SFO）是连接亚洲与北美的关键航空货运枢纽。内陆帝国（Inland Empire）地区是美国最大的仓储和配送中心，拥有先进的自动化仓库和完善的公路、铁路网络，为电子商务和国际贸易提供了高效支持。然而，港口拥堵、卡车司机短缺和高昂的仓储成本是当前供应链面临的主要挑战。</p>
+            </div>
+        </section>
+
+        <section id="finance-capital">
+            <h2><i class="fas fa-university"></i> 金融与资本市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-seedling"></i> 风险投资(VC)与私募股权(PE)</h3>
+                <p>硅谷是无可争议的全球风险投资中心。加州吸引了全美超过<span class="data-marker">50%</span>的风险投资，是创新企业最重要的资金来源。尽管2023年以来全球VC投资有所放缓，但加州在<span class="highlight">人工智能、生命科学和气候科技</span>等前沿领域的投资依然活跃。顶级VC（如Sequoia Capital, Andreessen Horowitz）和大量企业风险投资（CVC）共同构成了活跃的投融资生态。</p>
+                <div class="chart-container">
+                    <div class="chart-title">加州风险投资趋势 (2018-2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="vcChart"></canvas></div>
+                </div>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-mobile-alt"></i> 金融科技(FinTech)</h3>
+                <p>加州也是美国金融科技创新的重镇，诞生了如PayPal, Block (Square), SoFi等众多知名金融科技公司。创新领域涵盖<span class="accent">数字支付、在线借贷、个人理财（Robo-Advisors）和区块链应用</span>。旧金山和洛杉矶已形成活跃的金融科技社区，吸引了大量人才和投资。</p>
+            </div>
+        </section>
+
+        <section id="talent-labor">
+            <h2><i class="fas fa-user-tie"></i> 人才与劳动力市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-brain"></i> 人才储备与高校体系</h3>
+                <p>加州拥有世界顶级的公立和私立大学体系，是其创新能力的基石。以<span class="accent">斯坦福大学、加州大学伯克利分校、加州理工学院</span>为代表的研究型大学，源源不断地为高科技产业输送顶尖人才和前沿科研成果。加州大学（UC）和加州州立大学（CSU）系统共同构成了庞大的人才培养网络。</p>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-user-cog"></i> 技能需求与挑战</h3>
+                <p>尽管人才储备雄厚，但加州在高科技领域依然面临激烈的人才竞争。需求最旺盛的技能集中在<span class="highlight">软件开发（特别是AI/ML）、数据科学、网络安全和生物技术</span>领域。<span class="highlight">高昂的生活成本</span>是吸引和留住人才的最大挑战，导致部分科技公司和人才向德克萨斯州、佛罗里达州等低成本地区转移。此外，非科技行业的劳动力短缺问题也日益突出，尤其是在农业、酒店和建筑业。</p>
+                 <div class="chart-container">
+                    <div class="chart-title">加州热门技能需求指数 (2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="hotSkillsChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hot-topics">
+            <h2><i class="fas fa-fire-alt"></i> 近期热点事件与潜在影响分析</h2>
+            <div class="card">
+                <h3><i class="fas fa-gavel"></i> 核心事件：洛杉矶移民执法骚乱与州/联邦权力对峙 (2025年6月)</h3>
+                <p>2025年6月上旬，联邦移民与海关执法局（ICE）在洛杉矶地区针对无证移民采取了一系列大规模突击搜查和逮捕行动。此举迅速引发了大规模街头抗议。随着示威活动升级，部分区域出现了暴力冲突、商业破坏和针对执法人员的攻击。作为回应，联邦政府史无前例地在未经州长请求的情况下，直接动员并部署了国民警卫队乃至海军陆战队进入洛杉矶，理由是"保护联邦人员与财产"。</p>
+                <p>这一举动立即引发了加州政府的激烈反弹。州长纽森公开谴责联邦行为是"滥用权力"和"蓄意煽动"，并正式向法院提起诉讼，试图阻止联邦对州国民警卫队的直接控制。这起事件从一个地区性执法行动，迅速演变为一场关于州权与联邦权力的、备受全美关注的严重政治和法律对峙。</p>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-box-title">对商业环境的潜在影响分析</div>
+                <ul class="bullet-list">
+                    <li><b>政策与法律风险急剧升高:</b> 州与联邦政府在执法权上的公开冲突，为在加州运营的企业带来了巨大的不确定性。企业（尤其是雇佣大量移民的行业，如农业、餐饮、制造业）可能陷入遵守州法律与联邦法律的两难境地。未来政策可能突然转向，合规成本和法律风险显著增加。</li>
+                    <li><b>劳动力市场动荡:</b> 大规模执法行动直接冲击了本地劳动力供给，尤其对依赖非正式劳动力的行业构成威胁。工会领袖的被捕进一步激化了劳资关系的紧张氛围。企业需为劳动力短缺和用工成本上升做好准备。</li>
+                    <li><b>供应链与商业运营中断:</b> 抗议和骚乱导致的封路、宵禁等措施，直接中断了洛杉矶市中心——这一重要商业和物流枢纽的正常运营。依赖该地区进行分销、仓储和零售的企业面临直接损失。事件也暴露了社会高度紧张状态下，城市核心商业区运营的脆弱性。</li>
+                    <li><b>消费者信心与市场情绪波动:</b> 严重的社会对立和频繁的暴力事件会损害消费者信心，尤其在受影响区域。人们可能减少外出消费，对旅游、零售和娱乐业造成短期冲击。同时，企业自身的政治立场（或被感知的立场）可能成为消费者选择的依据，带来品牌声誉风险。</li>
+                    <li><b>安全成本增加:</b> 企业需要投入更多资源用于安保、保险以及应对潜在的财产损失，这直接增加了运营成本。保险公司也可能因此次事件重新评估加州（特别是洛杉矶地区）的风险等级，导致未来保费上涨。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2><i class="fas fa-flag-checkered"></i> 结论与建议</h2>
+            <div class="card">
+                <h3><i class="fas fa-crosshairs"></i> 核心结论</h3>
+                <p>加州是一个<span class="highlight">充满机遇但又极具挑战</span>的复杂市场。其无与伦比的创新生态、庞大的市场规模和多元的文化是其核心吸引力。然而，<span class="accent">高昂的运营成本、严格的法规和激烈的竞争</span>构成了极高的进入壁垒。在这里，成功不属于投机者，而属于那些拥有<span class="highlight">核心技术优势、深刻理解本地文化、并能适应其快节奏和高标准</span>的长期主义者。加州不仅是一个地区市场，更是影响全球趋势的"风向标"。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-compass"></i> 战略建议</h3>
+                <ul class="bullet-list">
+                    <li><b>拥抱合规：</b>将法律合规（特别是数据隐私和劳工法）作为最高优先级，投资于专业的法律顾问。</li>
+                    <li><b>技术驱动：</b>利用加州的创新生态，提供具有颠覆性技术或解决特定痛点的产品/服务，避免同质化竞争。</li>
+                    <li><b>人才为本：</b>制定有竞争力的人才吸引和保留策略，可考虑采用更灵活的远程或混合工作模式。</li>
+                    <li><b>本地化营销：</b>针对多元化的族裔群体制定差异化的营销策略，利用网红和社交媒体触达目标客户。</li>
+                    <li><b>关注可持续发展：</b>将ESG（环境、社会和治理）理念融入商业模式，以契合加州主流的价值观。</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-title">美国加州市场综合调研报告2025</h3>
+            <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+            <p>AI赋能精准决策 专业成就全球商机</p>
+            <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+        </div>
+        
+        <div class="sources">
+            <h4 class="sources-title">数据来源</h4>
+            <ul class="sources-list">
+                <li>California Department of Finance (DOF) - Economic Outlook</li>
+                <li>U.S. Bureau of Economic Analysis (BEA)</li>
+                <li>U.S. Census Bureau - California QuickFacts</li>
+                <li>California Governor's Office of Business and Economic Development (GO-Biz)</li>
+                <li>PitchBook & CB Insights - Venture Capital Reports</li>
+                <li>Brookings Institution - Metro Area Economic Data</li>
+                <li>Public Policy Institute of California (PPIC)</li>
+                <li>U.S. Bureau of Labor Statistics (BLS) - California Economy</li>
+                <li>Port of Los Angeles & Port of Long Beach - Trade Statistics</li>
+                <li>World Bank & IMF - Global Economic Outlook</li>
+                <li>McKinsey & BCG - Industry Reports</li>
+                <li>Stanford & UC Berkeley - Research Publications</li>
+            </ul>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+            </p>
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
+                微信视频号公众号： 张小强出海
+            </p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = Array.from(document.querySelectorAll('section'));
+            const header = document.querySelector('header');
+            const allSections = [header, ...sections];
+
+            const navDots = document.querySelectorAll('.nav-dot');
+            const scrollDown = document.querySelector('.scroll-down');
+            
+            let chartInstances = {};
+
+            if(scrollDown) {
+                scrollDown.addEventListener('click', function() {
+                    document.querySelector('main > section:first-of-type').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            navDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-section');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        const canvases = entry.target.querySelectorAll('canvas');
+                        canvases.forEach(canvas => {
+                            if (canvas && !chartInstances[canvas.id]) {
+                                createChart(canvas.id);
+                            }
+                        });
+
+                        const dot = document.querySelector(`.nav-dot[data-section="${entry.target.id}"]`);
+                        if(dot) {
+                             navDots.forEach(d => d.classList.remove('active'));
+                             dot.classList.add('active');
+                        }
+                    } else {
+                        // Optional: remove 'visible' class when element scrolls out of view
+                        // entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            allSections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            function createChart(canvasId) {
+                const ctx = document.getElementById(canvasId);
+                if (!ctx) return;
+                
+                Chart.defaults.font.family = 'Roboto, sans-serif';
+                Chart.defaults.color = '#f0f4f8';
+                Chart.defaults.plugins.legend.labels.color = '#f0f4f8';
+                Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(11, 31, 58, 0.9)';
+                Chart.defaults.plugins.tooltip.titleColor = '#ffc400';
+                Chart.defaults.plugins.tooltip.bodyColor = '#f0f4f8';
+                Chart.defaults.plugins.tooltip.borderColor = 'rgba(255, 196, 0, 0.5)';
+                Chart.defaults.plugins.tooltip.borderWidth = 1;
+                Chart.defaults.plugins.tooltip.padding = 10;
+                
+                let chartConfig;
+
+                switch(canvasId) {
+                    case 'californiaMapChart':
+                        chartConfig = {
+                            type: 'scatter',
+                            data: {
+                                datasets: [
+                                    {
+                                        label: '核心经济区',
+                                        data: [
+                                            {x: 25, y: 75, name: '旧金山湾区 (硅谷)'},
+                                            {x: 22, y: 35, name: '大洛杉矶地区 (好莱坞)'},
+                                            {x: 28, y: 25, name: '圣地亚哥 (生物科技)'}
+                                        ],
+                                        backgroundColor: 'rgba(255, 196, 0, 0.8)',
+                                        radius: 15, hoverRadius: 20
+                                    },
+                                    {
+                                        label: '主要贸易枢纽',
+                                        data: [
+                                            {x: 80, y: 80, name: '墨西哥'},
+                                            {x: 70, y: 15, name: '中国'},
+                                            {x: 50, y: 95, name: '加拿大'}
+                                        ],
+                                        backgroundColor: 'rgba(255, 59, 48, 0.8)',
+                                        pointStyle: 'rectRot',
+                                        radius: 10, hoverRadius: 15
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true, maintainAspectRatio: false,
+                                scales: { x: { display: false, min: 0, max: 100 }, y: { display: false, min: 0, max: 100 } },
+                                plugins: {
+                                    datalabels: {
+                                        color: '#fff', font: { weight: 'bold' },
+                                        formatter: (value) => value.name,
+                                        align: 'top'
+                                    },
+                                    legend: { position: 'bottom' }
+                                }
+                            },
+                            plugins: [ChartDataLabels]
+                        };
+                        break;
+                    
+                    case 'populationChart':
+                        chartConfig = {
+                             type: 'doughnut',
+                             data: {
+                                 labels: ['拉丁裔', '白人', '亚裔', '非裔', '其他'],
+                                 datasets: [{
+                                     data: [39.4, 34.7, 17.0, 6.5, 2.4],
+                                     backgroundColor: ['#ffc400', '#1a3a6b', '#ff3b30', '#c0c8d4', '#0b1f3a'],
+                                     borderColor: '#0b1f3a', borderWidth: 2
+                                 }]
+                             },
+                             options: {
+                                 responsive: true, maintainAspectRatio: false, cutout: '40%',
+                                 plugins: {
+                                     legend: { position: 'right' },
+                                     datalabels: {
+                                         color: '#fff',
+                                         formatter: (value) => value + '%',
+                                         font: { weight: 'bold' }
+                                     }
+                                 }
+                             },
+                             plugins: [ChartDataLabels]
+                        };
+                        break;
+                    
+                    case 'gdpChart':
+                        chartConfig = {
+                            type: 'line',
+                            data: {
+                                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024 (E)', '2025 (F)'],
+                                datasets: [
+                                    {
+                                        label: 'GDP (万亿美元)',
+                                        data: [3.01, 3.14, 3.12, 3.37, 3.60, 3.90, 4.10, 4.20],
+                                        borderColor: '#ffc400', tension: 0.3, yAxisID: 'y'
+                                    },
+                                    {
+                                        label: '实际增长率 (%)',
+                                        data: [3.3, 2.5, -1.9, 7.9, 2.8, 8.3, 5.1, 2.4],
+                                        borderColor: '#ff3b30', type: 'bar', yAxisID: 'y1', backgroundColor: 'rgba(255, 59, 48, 0.5)'
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true, maintainAspectRatio: false,
+                                scales: {
+                                    y: { position: 'left', title: { display: true, text: 'GDP (万亿美元)' } },
+                                    y1: { position: 'right', title: { display: true, text: '增长率 (%)' }, grid: { drawOnChartArea: false } }
+                                }
+                            }
+                        };
+                        break;
+
+                    case 'industryChart':
+                        chartConfig = {
+                            type: 'pie',
+                            data: {
+                                labels: ['金融与房地产', '专业与商业服务', '信息技术', '制造业', '政府', '教育与医疗'],
+                                datasets: [{
+                                    data: [21.5, 15.1, 12.8, 10.5, 11.2, 9.8],
+                                    backgroundColor: ['#ffc400', '#1a3a6b', '#ff3b30', '#c0c8d4', '#0b1f3a', '#ff8c00']
+                                }]
+                            },
+                            options: {
+                                responsive: true, maintainAspectRatio: false,
+                                plugins: {
+                                    legend: { position: 'right' },
+                                    datalabels: { color: '#fff', formatter: (value) => value + '%', font: { weight: 'bold' } }
+                                }
+                            },
+                            plugins: [ChartDataLabels]
+                        };
+                        break;
+                    
+                    case 'tradePartnersChart':
+                        chartConfig = {
+                            type: 'bar',
+                            data: {
+                                labels: ['墨西哥', '加拿大', '中国', '日本', '韩国', '中国台湾'],
+                                datasets: [{
+                                    label: '2024年出口额 (亿美元)',
+                                    data: [335, 184, 151, 145, 95, 88],
+                                    backgroundColor: 'rgba(255, 196, 0, 0.7)',
+                                    borderColor: '#ffc400',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                                plugins: {
+                                    legend: { display: false },
+                                    datalabels: { anchor: 'end', align: 'right', color: '#fff', font: { weight: 'bold'} }
+                                }
+                            },
+                             plugins: [ChartDataLabels]
+                        };
+                        break;
+                    
+                    case 'vcChart':
+                         chartConfig = {
+                            type: 'bar',
+                            data: {
+                                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024 (E)'],
+                                datasets: [{
+                                    label: '风险投资额 (亿美元)',
+                                    data: [1009, 913, 1070, 2308, 1431, 778, 853],
+                                    backgroundColor: 'rgba(255, 59, 48, 0.7)',
+                                    borderColor: '#ff3b30',
+                                }]
+                            },
+                            options: {
+                                responsive: true, maintainAspectRatio: false,
+                                plugins: {
+                                    legend: { display: false },
+                                    datalabels: { anchor: 'center', align: 'center', color: '#fff', font: { weight: 'bold'} }
+                                },
+                                scales: { y: { title: { display: true, text: '亿美元'}}}
+                            },
+                            plugins: [ChartDataLabels]
+                         };
+                         break;
+                    
+                    case 'hotSkillsChart':
+                        chartConfig = {
+                            type: 'radar',
+                            data: {
+                                labels: ['AI/ML', '软件开发', '数据科学', '网络安全', '生物技术', '项目管理'],
+                                datasets: [{
+                                    label: '需求指数',
+                                    data: [9.8, 9.5, 9.2, 8.8, 8.5, 8.0],
+                                    backgroundColor: 'rgba(255, 196, 0, 0.2)',
+                                    borderColor: '#ffc400',
+                                    pointBackgroundColor: '#ffc400'
+                                }]
+                            },
+                            options: {
+                                responsive: true, maintainAspectRatio: false,
+                                scales: { r: { beginAtZero: true, max: 10 } },
+                                plugins: { legend: { display: false } }
+                            }
+                        };
+                        break;
+                }
+                
+                if (chartConfig) {
+                    chartInstances[canvasId] = new Chart(ctx, chartConfig);
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙特市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #040c22; /* 深蓝黑 */
+            --secondary-color: #0b183c; /* 较浅的蓝黑 */
+            --accent-color: #00c7b1; /* 绿色，沙特国旗色调 */
+            --text-color: #FFFFFF; /* 纯白，提高对比度 */
+            --text-secondary: #d0d8e8; /* 更亮的次要文本颜色 */
+            --highlight: #f39c12; /* 金色，代表财富与沙漠 */
+            --card-bg: rgba(11, 24, 60, 0.75); /* 稍微增加卡片不透明度 */
+            --gradient-start: #040c22;
+            --gradient-end: #0b183c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 199, 177, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(243, 156, 18, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/8/88/Kingdom_Tower_at_night.JPG') center/cover no-repeat;
+            filter: brightness(0.4) saturate(1.2);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(4, 12, 34, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 199, 177, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 199, 177, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 199, 177, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 199, 177, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 199, 177, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 199, 177, 0.1);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0 4rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 199, 177, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .chart-canvas-wrapper {
+            flex-grow: 1;
+            position: relative;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 199, 177, 0.1);
+        }
+        
+        th {
+            background-color: rgba(0, 199, 177, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(0, 199, 177, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f101";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 199, 177, 0.1), rgba(243, 156, 18, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 199, 177, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 199, 177, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+        }
+        
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(0, 199, 177, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(0, 199, 177, 0.3);
+        }
+
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(0, 199, 177, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 199, 177, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 199, 177, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 199, 177, 0);
+            }
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: -webkit-linear-gradient(45deg, var(--accent-color), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="country-overview"></div>
+        <div class="nav-dot" data-section="economy"></div>
+        <div class="nav-dot" data-section="market"></div>
+        <div class="nav-dot" data-section="legal"></div>
+        <div class="nav-dot" data-section="trade"></div>
+        <div class="nav-dot" data-section="finance"></div>
+        <div class="nav-dot" data-section="talent"></div>
+        <div class="nav-dot" data-section="technology"></div>
+        <div class="nav-dot" data-section="culture"></div>
+        <div class="nav-dot" data-section="risk"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+        <div class="nav-dot" data-section="conclusion"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>SA</span>
+            </div>
+            <h1>沙特市场综合调研报告</h1>
+            <p class="subtitle">拥抱"2030愿景"，探索中东经济巨人的转型机遇 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            ⌄
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="country-overview" class="section">
+            <h2>国家/地区概况</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-map-marked-alt"></i>地理位置与战略地位</h3>
+                <p>沙特阿拉伯，位于阿拉伯半岛，是中东地区面积最大的国家，拥有约<span class="data-marker">215万平方公里</span>的广阔疆域。西临红海，东濒波斯湾，独特的地理位置使其成为连接亚、非、欧三大洲的关键枢纽。作为世界最大的石油出口国和G20成员国，沙特在全球能源市场和地缘政治格局中拥有举足轻重的战略地位。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">沙特地理位置与"2030愿景"重点项目示意图</div>
+                    <div class="chart-canvas-wrapper"><canvas id="saudiMapChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">国土面积</div>
+                    <div class="stat-number">215万</div>
+                    <div class="stat-title">平方公里</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">人口总数 (2025)</div>
+                    <div class="stat-number">3,780万</div>
+                    <div class="stat-title">其中约40%为外籍人士</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">青年人口比例</div>
+                    <div class="stat-number">~63%</div>
+                    <div class="stat-title">30岁以下人口占比</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">经济体量</div>
+                    <div class="stat-number">G20</div>
+                    <div class="stat-title">成员国</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-landmark"></i>政治体制与"2030愿景"</h3>
+                <p>沙特是<span class="accent">君主专制国家</span>，由沙特家族统治，国王是国家元首和政府首脑。《古兰经》和"圣行"是国家的宪法。自2016年王储穆罕默德·本·萨勒曼推出<span class="highlight">"2030愿景" (Vision 2030)</span>以来，国家正经历一场前所未有的深刻变革。该蓝图旨在摆脱对石油的依赖，实现经济多元化，并推动社会全面开放。</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">"2030愿景"三大支柱</div>
+                    <ul class="bullet-list">
+                        <li><b>充满活力的社会：</b>提升生活质量，发展文娱体育产业，增强国民认同感。</li>
+                        <li><b>繁荣的经济：</b>推动经济多元化，发展私营部门，吸引外国投资，创造就业。</li>
+                        <li><b>雄心勃勃的国家：</b>打造高效、透明、负责任的政府，成为全球投资强国。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-users"></i>社会结构与人口特征</h3>
+                <p>沙特社会最显著的特征是其<span class="highlight">极端年轻的人口结构</span>。全国约<span class="data-marker">3,780万</span>人口中，30岁以下的年轻人占总人口的<span class="data-marker">63%</span>以上，为消费市场和劳动力市场带来巨大活力和潜力。近年来，社会改革步伐加快，女性驾车、进入体育场馆和就业的限制被解除，女性劳动参与率从2017年的<span class="data-marker">17%</span>提升至2024年的<span class="data-marker">36%</span>。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">沙特阿拉伯人口金字塔 (2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="populationChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="economy" class="section">
+            <h2>宏观经济分析</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-chart-line"></i>GDP总量与增长动力</h3>
+                <p>2025年，沙特GDP预计将达到<span class="data-marker">1.15万亿美元</span>，是中东地区最大的经济体。在"2030愿景"推动下，经济增长动力正从传统的石油部门转向<span class="highlight">非石油部门</span>。2025年非石油部门增长率预计为<span class="data-marker">5.2%</span>，远超石油部门，成为经济增长的主要引擎。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">沙特GDP增长趋势 (2020-2026)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="gdpChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-industry"></i>产业结构转型</h3>
+                <p>沙特经济结构正在经历深刻转型。石油和天然气行业仍是经济基石，约占GDP的<span class="data-marker">40%</span>。然而，非石油私营部门的贡献率已提升至<span class="data-marker">51%</span>，首次超过政府部门。政府正大力投资发展<span class="accent">旅游、娱乐、矿业、金融服务和物流</span>等新兴产业。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">沙特产业结构构成 (2025)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="industryChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-title">通胀率 (2025)</div>
+                    <div class="stat-number">2.1%</div>
+                    <div class="stat-title">温和可控</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">政策利率 (2025)</div>
+                    <div class="stat-number">~5.5%</div>
+                    <div class="stat-title">紧随美联储</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">失业率 (公民)</div>
+                    <div class="stat-number">7.5%</div>
+                    <div class="stat-title">持续下降</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-title">汇率 (SAR/USD)</div>
+                    <div class="stat-number">3.75</div>
+                    <div class="stat-title">长期挂钩美元</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-landmark-dome"></i>主权财富基金与政府财政</h3>
+                <p>沙特主权财富基金（PIF）是"2030愿景"的核心执行者。截至2025年，PIF管理的资产规模已超过<span class="data-marker">9,000亿美元</span>，目标是在2030年达到<span class="data-marker">2万亿美元</span>。PIF正以前所未有的规模投资于国内外项目，特别是在NEOM、Qiddiya等超级项目（Giga-projects）以及科技、可再生能源和娱乐等领域。</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">沙特政府支出结构 (2025财年)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="govExpenditureChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="market" class="section">
+            <h2>市场环境与行业机会</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-rocket"></i>高增长潜力行业</h3>
+                <p>在"2030愿景"的推动下，沙特市场涌现出众多高增长机遇，特别是在以下几个领域：</p>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">娱乐与旅游</div>
+                            <div class="grid-item-value">+25%</div>
+                            <div class="grid-item-description">年均增长率</div>
+                            <p>目标是到2030年吸引1亿游客。电影院、主题公园、音乐节等娱乐业态从无到有，增长迅猛。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">信息与通信技术(ICT)</div>
+                            <div class="grid-item-value">+15%</div>
+                            <div class="grid-item-description">年均增长率</div>
+                            <p>市场规模预计2025年达450亿美元。云计算、物联网、AI和网络安全是主要增长点。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">建筑与基础设施</div>
+                            <div class="grid-item-value">+8%</div>
+                            <div class="grid-item-description">年均增长率</div>
+                            <p>NEOM、红海项目等超级项目带来数万亿美元的投资，推动建筑业持续繁荣。</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-content">
+                            <div class="grid-item-title">可再生能源</div>
+                            <div class="grid-item-value">+30%</div>
+                            <div class="grid-item-description">年均增长率</div>
+                            <p>目标是2030年实现50%电力来自可再生能源。太阳能和绿氢项目是投资重点。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-shopping-cart"></i>消费趋势与行为</h3>
+                <p>沙特的消费市场正由其年轻、精通科技的人口所塑造：</p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-box-title">核心消费趋势</div>
+                    <ul class="bullet-list">
+                        <li><span class="accent">数字化消费：</span>电子商务渗透率达<span class="data-marker">85%</span>，社交电商和"先买后付"(BNPL) 模式流行。</li>
+                        <li><span class="accent">体验式消费：</span>对餐饮、娱乐、旅游和体育等体验的支出快速增长。</li>
+                        <li><span class="accent">健康与保健：</span>对健康食品、健身房和有机产品的需求日益增加。</li>
+                        <li><span class="accent">品牌与奢侈品：</span>年轻消费者对国际品牌和奢侈品有强烈偏好，是全球最高的人均奢侈品消费市场之一。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="legal" class="section">
+            <h2>法律与监管环境</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-balance-scale"></i>外资准入与公司设立</h3>
+                <p>沙特投资部（MISA）是负责促进和管理外国投资的主要机构。近年来，沙特大幅放宽了外资准入，允许外资在绝大多数领域拥有<span class="data-marker">100%</span>的所有权。设立公司的主要形式是<span class="accent">有限责任公司（LLC）</span>和<span class="accent">分公司</span>。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">区域总部计划 (RHQ Program)</div>
+                    <p>自2024年1月1日起，未在沙特设立区域总部的外国公司将无法获得政府合同。该计划旨在吸引跨国公司将其中东区域中心迁至沙特，为符合条件的公司提供税收优惠和"沙化率"豁免等激励措施。</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-file-invoice-dollar"></i>税收体系</h3>
+                <p>沙特的主要税种相对简单，对外国投资者具有吸引力：</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>税种</th>
+                            <th>税率</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>企业所得税 (CIT)</td>
+                            <td>20%</td>
+                            <td>仅适用于非沙特/非GCC股东的利润份额。</td>
+                        </tr>
+                        <tr>
+                            <td>增值税 (VAT)</td>
+                            <td>15%</td>
+                            <td>适用于大部分商品和服务。</td>
+                        </tr>
+                        <tr>
+                            <td>预提税 (WHT)</td>
+                            <td>5% - 20%</td>
+                            <td>适用于向非居民支付的特定款项，如股息、利息、特许权使用费。</td>
+                        </tr>
+                        <tr>
+                            <td>天课 (Zakat)</td>
+                            <td>2.5%</td>
+                            <td>适用于沙特/GCC股东的资产净值。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-users-cog"></i>劳工法与"沙化"政策</h3>
+                <p>沙特劳工法旨在保护雇员权利，并大力推行<span class="highlight">"沙化" (Saudization/Nitaqat)</span>政策，即要求私营企业雇佣一定比例的沙特公民。该比例因行业和公司规模而异，是企业在沙特运营必须满足的关键合规要求。</p>
+                <ul class="bullet-list">
+                    <li><b>Nitaqat计划：</b>将公司按"沙化率"分为白金、高绿、中绿、低绿、黄、红等不同等级，并据此给予或限制签证等权利。</li>
+                    <li><b>技能要求：</b>政府正推动针对特定职业和技能水平的"沙化"，如会计、IT、人力资源等岗位。</li>
+                    <li><b>工资保护体系 (WPS)：</b>要求雇主必须通过银行系统支付工资，以确保透明和及时支付。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="trade" class="section">
+            <h2>跨境贸易与物流体系</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-exchange-alt"></i>主要出口/进口商品结构</h3>
+                <p>沙特的贸易结构以能源出口为主，但非石油出口正快速增长。</p>
+                <div class="chart-container">
+                    <div class="chart-title">沙特进出口商品结构 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="tradeChart"></canvas></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-globe-americas"></i>物流基础设施</h3>
+                <p>作为连接东西方的枢纽，沙特正斥巨资打造世界级的物流网络。国家运输和物流战略（NTLS）的目标是到2030年将沙特打造成全球物流中心。</p>
+                <div class="grid">
+                    <div class="stat-box">
+                        <div class="stat-title">港口吞吐能力</div>
+                        <div class="stat-number">>1300万</div>
+                        <div class="stat-title">TEU/年</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">航空货运能力</div>
+                        <div class="stat-number">目标450万吨</div>
+                        <div class="stat-title">到2030年</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">主要枢纽港</div>
+                        <div class="stat-number">5</div>
+                        <div class="stat-title">吉达、阿卜杜拉国王港等</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-title">物流绩效指数</div>
+                        <div class="stat-number">排名38</div>
+                        <div class="stat-title">目标进入前10</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="finance" class="section">
+            <h2>金融与资本市场</h2>
+            
+            <div class="card">
+                <h3><i class="fas fa-landmark"></i>银行体系与金融科技</h3>
+                <p>沙特拥有中东地区最稳定和资本最雄厚的银行体系之一，由沙特中央银行（SAMA）严格监管。近年来，<span class="highlight">金融科技（Fintech）</span>生态系统蓬勃发展，在数字支付、在线借贷和"先买后付"（BNPL）领域涌现出众多初创公司，如STC Pay和Tamara。</p>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-chart-pie"></i>资本市场与风投生态</h3>
+                <p>沙特证券交易所（Tadawul）是中东最大的股票市场，总市值超过<span class="data-marker">2.8万亿美元</span>。沙特的<span class="accent">风险投资（VC）</span>生态也正经历爆炸式增长，2023年投资总额达到<span class="data-marker">14亿美元</span>，位居中东和北非地区首位，主要由政府支持的基金（如SVC和Jada）推动。</p>
+                <div class="chart-container">
+                    <div class="chart-title">沙特风险投资规模变化 (2018-2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="vcChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="talent" class="section">
+            <h2>人才与劳动力市场</h2>
+            <div class="card">
+                <h3><i class="fas fa-user-tie"></i>人才结构与挑战</h3>
+                <p>沙特拥有大量年轻、受过良好教育的本国劳动力，这是其最宝贵的资产之一。然而，私营部门仍面临<span class="highlight">技能错配</span>的挑战，特别是在高科技和专业服务领域。政府通过大规模的职业培训和教育改革项目，致力于提升本国人才的技能水平以满足市场需求。</p>
+            </div>
+        </section>
+
+        <section id="technology" class="section">
+            <h2>科技与创新生态</h2>
+             <div class="card">
+                <h3><i class="fas fa-brain"></i>国家级科技战略</h3>
+                <p>沙特将科技创新置于国家发展的核心地位。国家数据和人工智能管理局（SDAIA）负责推动AI在全国范围内的应用。投资<span class="data-marker">超过200亿美元</span>的"国家科技发展与创新战略"旨在使沙特成为全球技术领导者。</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">重点科技领域</div>
+                    <ul class="bullet-list">
+                        <li><b>人工智能：</b>重点应用于智慧城市、医疗保健和能源领域。</li>
+                        <li><b>智慧城市：</b>以NEOM项目为代表，打造全球最先进的未来城市样板。</li>
+                        <li><b>游戏与电竞：</b>目标是成为全球游戏和电竞中心，已投资超过<span class="data-marker">380亿美元</span>。</li>
+                        <li><b>空间技术：</b>成立沙特航天局，积极发展卫星和太空探索项目。</li>
+                    </ul>
+                </div>
+             </div>
+        </section>
+
+        <section id="culture" class="section">
+            <h2>商业文化与社会习俗</h2>
+            <div class="card">
+                <h3><i class="fas fa-handshake"></i>核心商业文化</h3>
+                <p>沙特的商业文化深受伊斯兰教和部落传统影响。建立<span class="highlight">个人关系和信任 (Wasta)</span>是商业成功的基石，这往往比合同条款本身更重要。商业决策过程可能较长，需要耐心和尊重。</p>
+                <ul class="bullet-list">
+                    <li><b>人际关系：</b>花时间建立私人关系至关重要，首次会议通常用于相互了解而非直接谈生意。</li>
+                    <li><b>等级与尊重：</b>社会和商业中存在严格的等级制度，尊重长者和高位者是基本礼仪。</li>
+                    <li><b>谈判风格：</b>谈判过程可能漫长且非线性，口头承诺被视为非常重要。</li>
+                    <li><b>时间观念：</b>虽然守时被欣赏，但会议安排可能不如西方国家严格，灵活性很重要。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="risk" class="section">
+            <h2>风险与挑战</h2>
+            <div class="grid">
+                <div class="stat-box">
+                    <i class="fas fa-oil-well fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">经济对油价的敏感性</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">尽管努力多元化，但油价波动仍对政府财政和经济信心有重大影响。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-globe-middle-east fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">地缘政治风险</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">中东地区的不稳定局势可能对商业环境构成潜在威胁。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-gavel fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">监管不确定性</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">法律和监管框架在快速变化中，可能给企业带来合规挑战。</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas-solid fa-user-check fa-2x" style="margin-bottom: 1rem; color: var(--highlight);"></i>
+                    <div class="stat-title">"沙化"政策压力</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">满足日益严格的本地化雇佣要求对某些行业构成挑战。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategy" class="section">
+            <h2>市场进入策略</h2>
+            <div class="card">
+                <h3><i class="fas-solid fa-key"></i>成功的关键</h3>
+                <ul class="bullet-list">
+                    <li><span class="accent">寻找强大的本地合作伙伴：</span>无论是代理商、分销商还是合资伙伴，一个可靠的本地伙伴是 navigating 市场和文化的关键。</li>
+                    <li><span class="accent">遵守区域总部（RHQ）规定：</span>对于计划与政府合作的公司，设立区域总部是强制性要求。</li>
+                    <li><span class="accent">投资于本地人才：</span>积极招聘、培训和发展沙特员工，不仅是满足合规要求，更是融入本地市场的长远之计。</li>
+                    <li><span class="accent">展现长期承诺：</span>沙特市场重视长期关系，投资者需要展现出与国家共同成长的耐心和承诺。</li>
+                    <li><span class="accent">利用政府激励措施：</span>充分研究并利用MISA、PIF等机构为特定行业和投资提供的资金、税收和监管优惠。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2>结论与建议</h2>
+            <div class="card">
+                <h3><i class="fas fa-flag-checkered"></i>核心结论</h3>
+                <p>沙特阿拉伯正处在一个历史性的转型关口。在"2030愿景"的驱动下，它不再仅仅是一个石油王国，而是一个充满活力、雄心勃勃的新兴市场，为全球投资者提供了前所未有的机遇。其<span class="accent">年轻的人口、巨大的政府投资、快速的社会改革和战略性的地理位置</span>共同构成了强大的吸引力。然而，进入这个市场也需要深刻理解其<span class="highlight">独特的商业文化、复杂的监管环境和持续的地缘政治风险</span>。成功属于那些能够将全球视野与深度本地化相结合，拥抱变革，并致力于建立长期信任关系的战略投资者。</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">沙特市场综合调研报告2025</h3>
+                <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+                <p>AI赋能精准决策 专业成就全球商机</p>
+                <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+            </div>
+            
+            <div class="sources">
+                <h4 class="sources-title">数据来源</h4>
+                <ul class="sources-list">
+                    <li>沙特投资部 (MISA) - 《2025投资环境报告》</li>
+                    <li>沙特统计总局 (GASTAT) - 《2025年宏观经济指标》</li>
+                    <li>沙特中央银行 (SAMA) - 《年度金融稳定报告》</li>
+                    <li>沙特公共投资基金 (PIF) - 《年度报告2024》</li>
+                    <li>国际货币基金组织 (IMF) - 《沙特阿拉伯第四条款磋商报告2025》</li>
+                    <li>世界银行 - 《全球营商环境报告2025》</li>
+                    <li>MAGNiTT - 《2024年中东风险投资报告》</li>
+                    <li>各大咨询公司（McKinsey, BCG, PwC）关于沙特"2030愿景"的分析报告</li>
+                </ul>
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                    <p>微信视频号公众号： 张小强出海</p>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navDots = document.querySelectorAll('.nav-dot');
+            const scrollDown = document.querySelector('.scroll-down');
+            
+            if(scrollDown) {
+                scrollDown.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            navDots.forEach((dot) => {
+                dot.addEventListener('click', function() {
+                    let targetId = this.getAttribute('data-section');
+                    let targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            function checkScroll() {
+                let scrollPosition = window.scrollY + window.innerHeight / 2;
+                
+                let activeIndex = 0;
+                if (scrollPosition < window.innerHeight) {
+                    activeIndex = 0;
+                } else {
+                    sections.forEach((section, index) => {
+                        if (scrollPosition >= section.offsetTop) {
+                            activeIndex = index + 1;
+                        }
+                    });
+                }
+                updateActiveDot(activeIndex);
+                
+                sections.forEach(section => {
+                    if (window.scrollY + window.innerHeight * 0.8 >= section.offsetTop) {
+                        section.classList.add('visible');
+                    }
+                });
+            }
+            
+            function updateActiveDot(index) {
+                navDots.forEach(dot => dot.classList.remove('active'));
+                if (navDots[index]) {
+                    navDots[index].classList.add('active');
+                }
+            }
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+            
+            // 初始化图表
+            createCharts();
+        });
+        
+        function createCharts() {
+            Chart.defaults.font.family = 'Roboto, sans-serif';
+            Chart.defaults.color = '#FFFFFF'; // Updated for better contrast
+            Chart.defaults.plugins.legend.labels.color = '#FFFFFF'; // Updated
+            Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(5, 10, 48, 0.8)';
+            Chart.defaults.plugins.tooltip.titleColor = '#00c7b1';
+            Chart.defaults.plugins.tooltip.bodyColor = '#FFFFFF'; // Updated
+            Chart.defaults.plugins.tooltip.borderColor = 'rgba(0, 199, 177, 0.3)';
+            Chart.defaults.plugins.tooltip.borderWidth = 1;
+            Chart.defaults.plugins.tooltip.padding = 10;
+            
+            const commonChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: { padding: { top: 20, bottom: 40, left: 10, right: 20 } },
+                scales: {
+                    x: {
+                        ticks: { color: '#FFFFFF' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: '#FFFFFF' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#FFFFFF' } }
+                }
+            };
+
+            // 1. 地理位置示意图
+            const saudiMapChart = document.getElementById('saudiMapChart');
+            if (saudiMapChart) {
+                const mapWrapper = saudiMapChart.parentElement;
+                mapWrapper.style.position = 'relative';
+                mapWrapper.innerHTML = ''; // Clear canvas
+                mapWrapper.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Saudi_Arabia_map.svg/1024px-Saudi_Arabia_map.svg.png')";
+                mapWrapper.style.backgroundSize = 'contain';
+                mapWrapper.style.backgroundPosition = 'center';
+                mapWrapper.style.backgroundRepeat = 'no-repeat';
+
+                const locations = [
+                    { name: '利雅得 (首都)', x: '55%', y: '60%', type: 'city' },
+                    { name: '吉达 (港口)', x: '25%', y: '75%', type: 'city' },
+                    { name: 'NEOM (新城)', x: '15%', y: '30%', type: 'giga' },
+                    { name: '达曼 (油气中心)', x: '75%', y: '50%', type: 'city' },
+                    { name: '红海项目', x: '20%', y: '55%', type: 'giga' },
+                    { name: 'Qiddiya (娱乐城)', x: '52%', y: '63%', type: 'giga' },
+                ];
+
+                locations.forEach(loc => {
+                    const marker = document.createElement('div');
+                    marker.style.position = 'absolute';
+                    marker.style.left = loc.x;
+                    marker.style.top = loc.y;
+                    marker.style.width = '12px';
+                    marker.style.height = '12px';
+                    marker.style.borderRadius = '50%';
+                    marker.style.transform = 'translate(-50%, -50%)';
+                    marker.style.cursor = 'pointer';
+                    marker.style.backgroundColor = loc.type === 'city' ? 'var(--accent-color)' : 'var(--highlight)';
+                    marker.style.boxShadow = `0 0 8px ${loc.type === 'city' ? 'var(--accent-color)' : 'var(--highlight)'}`;
+                    
+                    const label = document.createElement('span');
+                    label.textContent = loc.name;
+                    label.style.position = 'absolute';
+                    label.style.bottom = '15px';
+                    label.style.left = '50%';
+                    label.style.transform = 'translateX(-50%)';
+                    label.style.backgroundColor = 'rgba(4, 12, 34, 0.8)';
+                    label.style.padding = '2px 5px';
+                    label.style.borderRadius = '3px';
+                    label.style.fontSize = '12px';
+                    label.style.whiteSpace = 'nowrap';
+                    marker.appendChild(label);
+                    
+                    mapWrapper.appendChild(marker);
+                });
+            }
+
+            // 2. 人口金字塔
+            const populationChart = document.getElementById('populationChart');
+            if (populationChart) {
+                new Chart(populationChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['0-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65+'],
+                        datasets: [
+                            {
+                                label: '男性',
+                                data: [-8.8, -8.5, -8.2, -7.9, -8.1, -9.0, -9.5, -9.2, -7.5, -5.5, -4.0, -2.8, -1.8, -2.5].map(v => v * -1),
+                                backgroundColor: 'rgba(0, 199, 177, 0.7)',
+                                borderColor: 'var(--accent-color)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: '女性',
+                                data: [-8.5, -8.2, -7.9, -7.6, -7.5, -7.8, -8.0, -7.5, -6.0, -4.5, -3.2, -2.2, -1.4, -2.0],
+                                backgroundColor: 'rgba(243, 156, 18, 0.7)',
+                                borderColor: 'var(--highlight)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                ticks: {
+                                    callback: function(value) {
+                                        return Math.abs(value) + '%';
+                                    },
+                                    color: '#FFFFFF'
+                                },
+                                stacked: true,
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                stacked: true,
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                ticks: { color: '#FFFFFF' }
+                            }
+                        },
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: ${Math.abs(context.raw).toFixed(1)}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // 3. GDP图表
+            const gdpChart = document.getElementById('gdpChart');
+            if(gdpChart) {
+                new Chart(gdpChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023', '2024(E)', '2025(F)', '2026(F)'],
+                        datasets: [
+                            {
+                                label: '石油部门增长率 (%)',
+                                data: [-8.6, -0.9, 15.4, -9.2, -1.8, 3.1, 2.9],
+                                backgroundColor: 'rgba(243, 156, 18, 0.7)',
+                            },
+                            {
+                                label: '非石油部门增长率 (%)',
+                                data: [-0.6, 6.6, 5.4, 4.6, 3.9, 5.1, 5.5],
+                                backgroundColor: 'rgba(0, 199, 177, 0.7)',
+                            },
+                            {
+                                label: '总体GDP增长率 (%)',
+                                data: [-4.1, 3.9, 8.7, -0.8, 1.9, 4.5, 4.2],
+                                type: 'line',
+                                borderColor: '#FFFFFF',
+                                tension: 0.1,
+                                fill: false,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        scales: {
+                            x: { stacked: true, ...commonChartOptions.scales.x },
+                            y: { 
+                                stacked: true, 
+                                ...commonChartOptions.scales.y,
+                                title: { display: true, text: '增长率 (%)', color: '#FFFFFF' }
+                            },
+                            y1: {
+                                position: 'right',
+                                grid: { drawOnChartArea: false },
+                                ticks: { color: '#FFFFFF' }
+                            }
+                        },
+                    }
+                });
+            }
+
+            // 4. 产业结构图
+            const industryChart = document.getElementById('industryChart');
+            if (industryChart) {
+                new Chart(industryChart, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['石油与天然气', '非石油私营部门', '政府服务'],
+                        datasets: [{
+                            data: [40, 51, 9],
+                            backgroundColor: ['var(--highlight)', 'var(--accent-color)', 'var(--text-secondary)']
+                        }]
+                    },
+                    options: { ...commonChartOptions, plugins: { ...commonChartOptions.plugins, datalabels: { color: '#040c22', font: {weight: 'bold'}, formatter: (value) => value + '%' } } },
+                    plugins: [ChartDataLabels]
+                });
+            }
+
+            // 5. 政府支出图
+            const govExpenditureChart = document.getElementById('govExpenditureChart');
+            if(govExpenditureChart) {
+                new Chart(govExpenditureChart, {
+                    type: 'pie',
+                    data: {
+                        labels: ['军事', '教育', '健康与社会发展', '经济资源与项目', '公共管理', '基础设施', '其他'],
+                        datasets: [{
+                            data: [25, 16, 19, 14, 8, 5, 13],
+                            backgroundColor: ['#f39c12', '#00c7b1', '#3498db', '#9b59b6', '#e74c3c', '#1abc9c', '#bdc3c7']
+                        }]
+                    },
+                    options: { ...commonChartOptions, plugins: { ...commonChartOptions.plugins, datalabels: { color: '#040c22', font: {weight: 'bold'}, formatter: (value) => value + '%' } } },
+                    plugins: [ChartDataLabels]
+                });
+            }
+
+            // 6. 贸易结构图
+            const tradeChart = document.getElementById('tradeChart');
+            if (tradeChart) {
+                new Chart(tradeChart, {
+                    type: 'bar',
+                    data: {
+                        labels: ['原油', '化工产品', '塑料', '机械设备', '汽车', '食品'],
+                        datasets: [
+                            {
+                                label: '出口 (亿美元)',
+                                data: [2200, 350, 200, 30, 5, 10],
+                                backgroundColor: 'rgba(0, 199, 177, 0.7)',
+                            },
+                            {
+                                label: '进口 (亿美元)',
+                                data: [10, 80, 50, 450, 400, 250],
+                                backgroundColor: 'rgba(243, 156, 18, 0.7)',
+                            }
+                        ]
+                    },
+                    options: { ...commonChartOptions, indexAxis: 'y' }
+                });
+            }
+            
+            // 7. 风险投资图
+            const vcChart = document.getElementById('vcChart');
+            if (vcChart) {
+                new Chart(vcChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024(F)'],
+                        datasets: [{
+                            label: 'VC投资额 (百万美元)',
+                            data: [55, 95, 152, 584, 987, 1420, 1500],
+                            borderColor: 'var(--accent-color)',
+                            backgroundColor: 'rgba(0, 199, 177, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        scales: {
+                            ...commonChartOptions.scales,
+                            y: { ...commonChartOptions.scales.y, title: { display: true, text: '百万美元', color: '#FFFFFF' } }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

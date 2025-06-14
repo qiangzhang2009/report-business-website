@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿联酋市场综合调研报告2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #050a30;
+            --secondary-color: #091353;
+            --accent-color: #00d4ff;
+            --text-color: #e6f1ff;
+            --text-secondary: #a3b1cc;
+            --highlight: #ff124f;
+            --card-bg: rgba(9, 19, 83, 0.7);
+            --gradient-start: #050a30;
+            --gradient-end: #091353;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 18, 79, 0.1) 0%, transparent 20%),
+                linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('UAEDuBai.jpg') center/cover no-repeat;
+            filter: brightness(0.3) saturate(1.2);
+            z-index: -1;
+        }
+        
+        .header-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 10, 48, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .logo span {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            position: relative;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .accent {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight));
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid-item-content {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .grid-item-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .grid-item-value {
+            font-size: 2rem;
+            color: var(--text-color);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .grid-item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .stat-title {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 480px;
+            margin: 2rem 0 4rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .chart-canvas-wrapper {
+            flex-grow: 1;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        th {
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .bullet-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f101"; /* 使用Font Awesome的箭头图标 */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .bullet-list li:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 18, 79, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-box-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--highlight), var(--accent-color));
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .sources {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sources-title {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sources-list {
+            list-style-type: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sources-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent-color), var(--highlight));
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--accent-color);
+            transform: scale(1.4);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--primary-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--accent-color), var(--highlight));
+            border-radius: 5px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-dots { display: none; }
+            .header-content { padding: 1.5rem; max-width: 90%; }
+        }
+        
+        /* 数据标记样式 */
+        .data-marker {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 0 0.3rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        /* 图表标题样式 */
+        .chart-title {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* 脉冲效果 */
+        .pulse {
+            position: relative;
+        }
+        
+        .pulse::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+            }
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: -webkit-linear-gradient(45deg, var(--accent-color), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="header"></div>
+        <div class="nav-dot" data-section="country-overview"></div>
+        <div class="nav-dot" data-section="economy"></div>
+        <div class="nav-dot" data-section="market"></div>
+        <div class="nav-dot" data-section="legal"></div>
+        <div class="nav-dot" data-section="trade"></div>
+        <div class="nav-dot" data-section="finance"></div>
+        <div class="nav-dot" data-section="talent"></div>
+        <div class="nav-dot" data-section="technology"></div>
+        <div class="nav-dot" data-section="culture"></div>
+        <div class="nav-dot" data-section="risk"></div>
+        <div class="nav-dot" data-section="strategy"></div>
+        <div class="nav-dot" data-section="conclusion"></div>
+    </div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo pulse">
+                <span>AE</span>
+            </div>
+            <h1>阿联酋市场综合调研报告</h1>
+            <p class="subtitle">探索中东经济枢纽的增长机遇与战略前景 | 2025年版</p>
+            <button class="btn"><p>© 上海张小强企业咨询事务所</p><p></p>本报告由『智探GlobalAI』市场分析系统全自动编制</p>
+            </button>
+        </div>
+        <div class="scroll-down">
+            ⌄
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="country-overview">
+            <h2><i class="fas fa-globe-asia"></i> 国家/地区概况</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fas fa-map-marked-alt"></i> 地理与战略位置</h3>
+                    <p>阿拉伯联合酋长国位于阿拉伯半岛东部，濒临波斯湾和阿曼湾。其独特的地理位置使其成为连接东西方的海上和空中交通枢纽，紧邻霍尔木兹海峡南口，这是全球石油运输的战略要道。</p>
+                    <ul>
+                        <li><b>国土面积:</b> 约 83,600 平方公里</li>
+                        <li><b>首都:</b> 阿布扎比</li>
+                        <li><b>构成:</b> 由七个酋长国组成：阿布扎比、迪拜、沙迦、阿治曼、乌姆盖万、哈伊马角和富查伊拉。</li>
+                        <li><b>地形:</b> 主要为平坦的沿海平原和广阔的沙漠，东部有哈贾尔山脉。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-landmark"></i> 政治格局与稳定性</h3>
+                    <p>阿联酋是一个联邦君主立宪制国家，由七个酋长国的君主组成的联邦最高委员会拥有最高权力。该国政治环境稳定，长期奉行中立、不结盟的外交政策，致力于维护地区和平与安全，为商业发展提供了可靠的政治保障。</p>
+                    <ul>
+                        <li><b>政体:</b> 联邦君主立宪制</li>
+                        <li><b>国家元首:</b> 总统由联邦最高委员会选举产生，通常由阿布扎比统治者担任。</li>
+                        <li><b>政府首脑:</b> 总理通常由迪拜统治者担任。</li>
+                        <li><b>稳定性:</b> 高度稳定，社会治安良好。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-users"></i> 人口结构与社会特征</h3>
+                    <p>阿联酋最显著的社会特征是其高度国际化的人口结构。本国公民（阿联酋人）仅占总人口的少数（约11.6%），绝大多数居民为来自世界各地的外籍人士，其中南亚裔占比最高。这种多元文化环境使其成为一个开放包容的社会。</p>
+                    <ul>
+                        <li><b>总人口:</b> 约 1,020 万 (2023年估计)</li>
+                        <li><b>人口增长率:</b> 持续增长，主要由外籍劳动力驱动。</li>
+                        <li><b>官方语言:</b> 阿拉伯语 (英语广泛使用)</li>
+                        <li><b>主要宗教:</b> 伊斯兰教 (官方宗教)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-chart-line"></i> 发展阶段与定位</h3>
+                    <p>阿联酋已从一个依赖石油的经济体成功转型为中东地区的金融、贸易、物流和旅游中心。以迪拜和阿布扎比为首，国家正大力投资于高科技、可再生能源和知识经济，致力于在"后石油时代"保持其全球竞争力和区域领导地位。</p>
+                    <ul>
+                        <li><b>经济模式:</b> 高度多元化的市场经济</li>
+                        <li><b>人均GDP:</b> 位居世界前列，与西欧发达国家相当。</li>
+                        <li><b>战略定位:</b> 全球商业枢纽、创新中心和高端旅游目的地。</li>
+                        <li><b>未来方向:</b> 聚焦可持续发展、人工智能和太空探索。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <div class="chart-container">
+                    <div class="chart-title">人口金字塔 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="uae-population-pyramid"></canvas></div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">人均GDP（购买力平价）</div>
+                    <div class="chart-canvas-wrapper"><canvas id="uae-gdp-per-capita"></canvas></div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">族裔构成 (2024)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="uae-ethnic-composition"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy">
+            <h2><i class="fas fa-chart-pie"></i> 宏观经济分析</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fas fa-cogs"></i> 经济结构与多元化</h3>
+                    <p>阿联酋经济成功实现了从依赖石油到多元化发展的战略转型。目前，非石油部门贡献了近75%的实际GDP，成为经济增长的核心驱动力。旅游、金融服务、物流、房地产和科技等行业蓬勃发展，有效增强了经济的韧性和可持续性。</p>
+                    <ul>
+                        <li><b>非石油部门增长:</b> 预计2025年增长4.9%，是主要动力。</li>
+                        <li><b>油气部门:</b> 依然重要，OPEC+配额的增加将为2025年增长提供支持。</li>
+                        <li><b>GDP构成:</b> 服务业占比最大，其次是工业，农业占比较小。</li>
+                        <li><b>未来焦点:</b> 人工智能、可再生能源和金融科技。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-tachometer-alt"></i> 关键经济指标</h3>
+                    <p>阿联酋的宏观经济指标表现稳健，显示出强大的经济活力。得益于强劲的国内需求和非石油部门的扩张，GDP持续增长。同时，政府有效的政策调控使得通货膨胀率保持在温和区间，失业率也维持在较低水平。</p>
+                    <ul>
+                        <li><b>实际GDP增长率:</b> 预计2025年约为 <b>4.6%</b>。</li>
+                        <li><b>通货膨胀率:</b> 预计2025年将维持在 <b>2.2%</b> 左右。</li>
+                        <li><b>失业率:</b> 预计2025年稳定在 <b>2.1%</b> 左右，为全球最低水平之一。</li>
+                        <li><b>消费者信心:</b> 保持高位，推动国内消费增长。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-university"></i> 公共财政与财政健康</h3>
+                    <p>阿联酋拥有非常健康的公共财政状况。政府持续实现财政盈余，主权财富基金规模庞大，提供了强大的财政缓冲。2023年起征收的9%企业所得税及2025年的补充税，进一步拓宽了非石油财政收入来源，降低了对油气收入的依赖。</p>
+                    <ul>
+                        <li><b>财政平衡:</b> 预计2025年实现占GDP <b>4.2%</b> 的财政盈余。</li>
+                        <li><b>公共债务:</b> 占GDP比重较低，约为 <b>30%</b>，风险可控。</li>
+                        <li><b>主权评级:</b> 获得各大评级机构的高投资级别评级（如穆迪Aa2）。</li>
+                        <li><b>税收改革:</b> 企业税的引入是财政多元化的关键一步。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-globe-americas"></i> 贸易与投资展望</h3>
+                    <p>作为全球贸易枢纽，阿联酋积极拓展对外经济联系。通过签订一系列《全面经济伙伴关系协定》(CEPA)，其非石油贸易额持续攀升。政府推出的"我们阿联酋2031"等国家战略，旨在吸引外国直接投资（FDI），推动经济向更高价值链环节迈进。</p>
+                    <ul>
+                        <li><b>贸易地位:</b> 全球重要的转口贸易中心，连接亚洲、欧洲和非洲。</li>
+                        <li><b>外国直接投资 (FDI):</b> 受益于开放的商业环境，FDI流入持续强劲。</li>
+                        <li><b>国家战略:</b> "2031愿景"旨在到2031年将GDP翻一番。</li>
+                        <li><b>区域一体化:</b> 在海湾合作委员会(GCC)中扮演核心角色。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <div class="chart-container">
+                    <div class="chart-title">实际GDP增长率 (%)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="uae-gdp-growth"></canvas></div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">通货膨胀率 (%)</div>
+                    <div class="chart-canvas-wrapper"><canvas id="uae-inflation-rate"></canvas></div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">GDP构成（按部门）</div>
+                    <div class="chart-canvas-wrapper"><canvas id="uae-gdp-composition"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market">
+            <h2><i class="fas fa-industry"></i> 重点产业市场分析</h2>
+            <div class="card">
+                <h3><i class="fas fa-plane-departure"></i> 旅游与酒店业</h3>
+                <p>作为全球顶级旅游目的地，阿联酋的旅游业持续强劲复苏和增长。2024年仅迪拜就接待了超过1700万游客。政府设定了到2031年吸引4000万酒店客人和1000亿迪拉姆旅游投资的目标。这种增长为高端酒店、餐饮服务、娱乐和文化体验提供了巨大市场。对于新西兰等国的优质食品（如乳制品、肉类、海鲜）和高端消费品牌而言，这是一个关键的切入点。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-cash-register"></i> 金融服务业</h3>
+                <p>阿联酋是中东的金融中心，迪拜国际金融中心（DIFC）和阿布扎比全球市场（ADGM）吸引了全球顶级的银行、资产管理公司和金融科技企业。该行业受益于健全的监管框架、资本的自由流动和庞大的主权财富基金。金融科技（FinTech）、伊斯兰金融和可持续金融是当前增长最快的领域，为创新金融解决方案提供了广阔的合作空间。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-dolly-flatbed"></i> 贸易与物流</h3>
+                <p>凭借其战略性的地理位置和世界一流的基础设施（如杰贝阿里港、哈利法港、迪拜国际机场），阿联酋已成为连接亚、欧、非三大洲的核心贸易和物流枢纽。其高效的清关流程、自由贸易区和发达的物流网络，使其成为理想的区域分销和转口中心。对于希望辐射中东及非洲市场的企业，利用阿联酋作为基地极具战略价值。</p>
+            </div>
+             <div class="card">
+                <h3><i class="fas fa-microchip"></i> 科技与创新</h3>
+                <p>阿联酋正大力推动向知识经济转型，目标是成为全球领先的科技和人工智能（AI）中心。政府预计到2030年，AI将为GDP贡献14%（约1740亿新西兰元）。为吸引全球高科技公司，政府推出了NextGen FDI等激励计划。数据中心、云计算、物联网（IoT）和数字转型服务等领域需求旺盛，市场潜力巨大。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-solar-panel"></i> 可再生能源与可持续发展</h3>
+                <p>阿联酋承诺到2050年实现净零排放，并计划到2030年投资超过540亿美元用于清洁能源项目，旨在将可再生能源装机容量提高三倍。太阳能是发展的重点，同时也在探索绿色氢能等前沿技术。这为从事可再生能源技术、能源效率解决方案、可持续建筑材料和碳管理的公司创造了重要的投资和合作机会。</p>
+            </div>
+        </section>
+
+        <section id="legal">
+            <h2><i class="fas fa-gavel"></i> 法律与监管环境</h2>
+            <div class="card">
+                <p>阿联酋致力于打造全球最具吸引力的商业环境之一。其法律框架持续改革，以吸引外国投资和顶尖人才。关键特征包括允许外商100%持股的领域不断扩大、为期5至10年的"黄金签证"制度以及高效的商业注册流程。迪拜国际金融中心（DIFC）和阿布扎比全球市场（ADGM）等金融自由区采用基于英国普通法的独立司法体系，为国际企业提供了熟悉和可靠的法律环境。2023年引入的9%联邦企业税，标志着其财政体系向国际标准进一步靠拢，但税率在全球范围内仍具竞争力。</p>
+            </div>
+        </section>
+
+        <section id="talent">
+            <h2><i class="fas fa-user-tie"></i> 人才与劳动力市场</h2>
+            <div class="card">
+                <p>阿联酋的劳动力市场高度依赖外籍人士，他们构成了私营部门劳动力的绝大多数。为平衡人口结构并为本国公民创造就业机会，政府正在积极推行"酋长国化"（Emiratisation）政策，要求私营企业按比例雇佣阿联酋国民。同时，为了吸引全球顶尖人才，特别是科技、金融和医疗领域的专家，政府推出了"黄金签证"和"绿签"等长期居留计划，并不断优化人才引进政策，以支持其向知识经济的转型。</p>
+            </div>
+        </section>
+
+        <section id="culture">
+            <h2><i class="fas fa-comments-dollar"></i> 文化与消费者偏好</h2>
+            <div class="card">
+                <p>阿联酋的社会文化是伊斯兰传统与来自200多个国家的多元文化的独特融合。这种环境塑造了开放、包容但仍尊重传统价值观的消费市场。阿联酋消费者，特别是中高收入群体，高度重视品牌、质量和奢华体验。近年来，随着健康意识和环保理念的提升，对有机食品、可持续产品和健康生活方式的需求显著增长。对于进入市场的品牌而言，理解并尊重本地文化习俗，同时提供高品质和创新的产品是成功的关键。</p>
+            </div>
+        </section>
+
+        <section id="risk">
+            <h2><i class="fas fa-exclamation-triangle"></i> 风险评估与市场进入策略</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>主要风险</h3>
+                    <ul>
+                        <li><b>地缘政治风险:</b> 中东地区的紧张局势可能对商业情绪和供应链产生间接影响。</li>
+                        <li><b>市场竞争激烈:</b> 作为一个开放的全球市场，各行业都面临来自世界各地企业的激烈竞争。</li>
+                        <li><b>经济波动:</b> 虽然已高度多元化，但全球油价的剧烈波动仍可能对整体经济信心和政府支出产生影响。</li>
+                        <li><b>法规遵从成本:</b> 需要适应并遵守"酋长国化"等本地劳工政策以及不断变化的商业法规。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>市场进入策略</h3>
+                    <ul>
+                        <li><b>利用自由区:</b> 在自由区（如JAFZA, ADGM, DIFC）设立公司，可享受100%外资所有权、零税收和简化的法律程序。</li>
+                        <li><b>寻找本地合作伙伴:</b> 对于进入阿联酋大陆市场，与一个信誉良好、资源丰富的本地伙伴合作至关重要。</li>
+                        <li><b>聚焦高端细分市场:</b> 避免价格战，专注于提供高品质、创新或有独特价值主张的产品和服务。</li>
+                        <li><b>善用转口枢纽地位:</b> 将阿联酋作为进入中东、非洲和南亚市场的战略基地，利用其物流网络进行区域分销。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2><i class="fas fa-flag-checkered"></i> 总结与建议</h2>
+            <div class="card">
+                <h3>结论</h3>
+                <p>阿拉伯联合酋长国是一个充满活力、政治稳定且极具前瞻性的市场。其优越的战略位置、世界一流的基础设施、亲商的政府政策以及向多元化知识经济的坚定转型，共同为全球企业创造了无与伦比的商业机遇。尽管存在一定的区域风险和市场竞争，但其强劲的增长前景和作为全球枢纽的地位使其成为任何寻求国际化发展企业的必争之地。</p>
+                <h3>核心建议</h3>
+                <ul>
+                    <li><b>深入尽职调查:</b> 在进入市场前，对特定行业的法规、竞争格局和消费者行为进行全面研究。</li>
+                    <li><b>文化适应性:</b> 调整营销策略和产品设计，以适应当地多元文化和伊斯兰价值观。</li>
+                    <li><b>建立稳固关系:</b> 投资于建立长期的本地商业和政府关系，这是在当地取得成功的关键。</li>
+                    <li><b>拥抱国家愿景:</b> 将自身业务与阿联酋的国家发展战略（如"2031愿景"、可持续发展、科技创新）相结合，更容易获得支持和机会。</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-title">阿联酋市场综合调研报告2025</h3>
+            <p>「本报告由上海张小强企业咨询事务所自主研发的『智探GlobalAI』市场分析系统自动生成，基于实时数据洞察与策略模拟算法，为您的全球化决策提供科学依据。」</p>
+            <p>AI赋能精准决策 专业成就全球商机</p>
+            <button class="btn">© 2025上海张小强企业咨询事务所 版权所有</button>
+        </div>
+        
+        <div class="sources">
+            <h4 class="sources-title">数据来源</h4>
+            <ul class="sources-list">
+                <li>阿联酋经济部 - 《2025年经济表现报告》</li>
+                <li>阿联酋中央银行 - 《2025年第一季度金融稳定报告》</li>
+                <li>迪拜统计中心 - 《迪拜经济展望2024-2025》</li>
+                <li>阿布扎比经济发展部 - 《年度经济报告2024》</li>
+                <li>世界银行 - 《全球营商环境报告2025》</li>
+                <li>国际货币基金组织 - 《中东及中亚地区经济展望2025》</li>
+                <li>海湾合作委员会(GCC)秘书处 - 《GCC联合经济报告》</li>
+                <li>标普全球 - 《阿联酋主权信用评级报告》</li>
+                <li>惠誉国际 - 《阿联酋银行业展望》</li>
+                <li>安永 - 《中东地区投资吸引力报告》</li>
+                <li>毕马威 - 《阿联酋金融科技展望2025》</li>
+                <li>德勤 - 《中东消费者洞察报告》</li>
+            </ul>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com
+                <p>微信视频号公众号： 张小强出海</p>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function renderUaePopulationPyramid() {
+                const ctx = document.getElementById('uae-population-pyramid');
+                if (!ctx) return;
+                new Chart(ctx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['0-14', '15-24', '25-54', '55-64', '65+'],
+                        datasets: [
+                            {
+                                label: '男性',
+                                data: [-8.5, -10.2, -45.5, -4.8, -1.5], // Negative values for left side
+                                backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1,
+                                stack: 'age',
+                            },
+                            {
+                                label: '女性',
+                                data: [8.0, 9.5, 20.5, 2.5, 1.0], // Positive values for right side
+                                backgroundColor: 'rgba(255, 99, 132, 0.8)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderWidth: 1,
+                                stack: 'age',
+                            }
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: ${Math.abs(context.raw).toFixed(1)}%`;
+                                    }
+                                }
+                            },
+                            legend: {
+                                labels: { color: 'white' }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                ticks: {
+                                    color: 'white',
+                                    callback: function(value) {
+                                        return Math.abs(value) + '%';
+                                    }
+                                },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            },
+                            y: {
+                                ticks: { color: 'white' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function renderUaeGdpPerCapita() {
+                const ctx = document.getElementById('uae-gdp-per-capita');
+                if (!ctx) return;
+                new Chart(ctx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024(E)'],
+                        datasets: [{
+                            label: '人均GDP (PPP, 美元)',
+                            data: [70100, 71800, 67700, 69700, 78200, 88221, 89500],
+                            borderColor: '#00d4ff',
+                            backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#00d4ff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { labels: { color: 'white' } }
+                        },
+                        scales: {
+                            x: { ticks: { color: 'white' }, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
+                            y: { ticks: { color: 'white', callback: function(value) { return '$' + (value / 1000) + 'k'; } }, grid: { color: 'rgba(255, 255, 255, 0.1)' } }
+                        }
+                    }
+                });
+            }
+
+            function renderUaeEthnicComposition() {
+                const ctx = document.getElementById('uae-ethnic-composition');
+                if (!ctx) return;
+                new Chart(ctx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['阿联酋公民', '南亚裔', '埃及裔', '菲律宾裔', '其他'],
+                        datasets: [{
+                            data: [11.6, 59.4, 10.2, 6.1, 12.8],
+                            backgroundColor: ['#ff124f', '#00d4ff', '#ffcf5c', '#4bc0c0', '#9966ff'],
+                            borderColor: '#091353',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom', labels: { color: 'white' } }
+                        }
+                    }
+                });
+            }
+
+            renderUaePopulationPyramid();
+            renderUaeGdpPerCapita();
+            renderUaeEthnicComposition();
+
+            function renderUaeGdpGrowth() {
+                const ctx = document.getElementById('uae-gdp-growth');
+                if (!ctx) return;
+                new Chart(ctx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['2022', '2023', '2024(E)', '2025(F)'],
+                        datasets: [{
+                            label: '实际GDP增长率 (%)',
+                            data: [7.6, 2.9, 3.9, 4.6],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.7)',
+                                'rgba(54, 162, 235, 0.7)',
+                                'rgba(255, 206, 86, 0.7)',
+                                'rgba(75, 192, 192, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, ticks: { color: 'white', callback: function(value) { return value + '%'; } }, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
+                            x: { ticks: { color: 'white' }, grid: { color: 'rgba(255, 255, 255, 0.1)' } }
+                        }
+                    }
+                });
+            }
+
+            function renderUaeInflationRate() {
+                const ctx = document.getElementById('uae-inflation-rate');
+                if (!ctx) return;
+                new Chart(ctx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['2022', '2023', '2024(E)', '2025(F)'],
+                        datasets: [{
+                            label: '通货膨胀率 (%)',
+                            data: [4.8, 1.6, 2.3, 2.2],
+                            borderColor: '#ffcf5c',
+                            backgroundColor: 'rgba(255, 207, 92, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { labels: { color: 'white' } } },
+                        scales: {
+                             y: { beginAtZero: true, ticks: { color: 'white', callback: function(value) { return value + '%'; } }, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
+                             x: { ticks: { color: 'white' }, grid: { color: 'rgba(255, 255, 255, 0.1)' } }
+                        }
+                    }
+                });
+            }
+
+            function renderUaeGdpComposition() {
+                const ctx = document.getElementById('uae-gdp-composition');
+                if (!ctx) return;
+                new Chart(ctx.getContext('2d'), {
+                    type: 'pie',
+                    data: {
+                        labels: ['服务业', '工业', '农业'],
+                        datasets: [{
+                            data: [49.2, 49.8, 1.0], // Data from 2017 est.
+                            backgroundColor: ['#00d4ff', '#ff124f', '#9966ff'],
+                            borderColor: '#091353',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom', labels: { color: 'white' } }
+                        }
+                    }
+                });
+            }
+
+            renderUaeGdpGrowth();
+            renderUaeInflationRate();
+            renderUaeGdpComposition();
+
+            const sections = document.querySelectorAll('.container > section');
+            const dots = document.querySelectorAll('.nav-dot');
+            const header = document.getElementById('header');
+
+            function updateActiveDot(sectionId) {
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (dot.dataset.section === sectionId) {
+                        dot.classList.add('active');
+                    }
+                });
+            }
+
+            function checkScroll() {
+                // Handle section visibility
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    if (window.scrollY + window.innerHeight * 0.8 > sectionTop) {
+                        section.classList.add('active');
+                    }
+                });
+                
+                // Handle nav dot highlighting
+                let currentSectionId = 'header';
+                 if (header.getBoundingClientRect().bottom < 100) {
+                    for (const section of sections) {
+                        const rect = section.getBoundingClientRect();
+                        if (rect.top <= 150 && rect.bottom >= 150) {
+                             currentSectionId = section.id;
+                             break;
+                        }
+                    }
+                }
+                updateActiveDot(currentSectionId);
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            // Run on load to show initial visible sections
+            checkScroll();
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = dot.dataset.section;
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const scrollDown = document.querySelector('.scroll-down');
+            if (scrollDown) {
+                scrollDown.addEventListener('click', () => {
+                    document.querySelector('.container > section:first-of-type')?.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

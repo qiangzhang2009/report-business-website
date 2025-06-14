@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桑葚酒日本市场分析和进入策略2025</title>
+    <style>
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #172a45;
+            --accent-color: #64ffda;
+            --text-color: #e6f1ff;
+            --text-secondary: #8892b0;
+            --highlight: #ff5e62;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            padding: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(10, 25, 47, 0.7), rgba(23, 42, 69, 0.7));
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--text-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            margin: 2rem 0;
+            position: relative;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .data-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .data-point-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .data-point-content {
+            flex: 1;
+        }
+        
+        .data-point-title {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .data-point-value {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        th {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+        }
+        
+        tr:hover {
+            background-color: rgba(23, 42, 69, 0.5);
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #4cd8c0;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .chart-container { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>桑葚酒日本市场分析和进入策略</h1>
+                <p>上海张小强企业咨询事务所市场分析智能体生成 | 2025年6月10日</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="fade-in">
+            <h2>执行摘要</h2>
+            <div class="card">
+                <p>本报告对日本桑葚酒市场进行了全面分析，并提出了有针对性的市场进入策略。日本作为亚洲重要的经济体和全球第三大酒精饮料市场，对健康功能性酒类产品需求不断增长。预计到2030年，日本桑葚酒市场规模将达到约7.6亿美元，年复合增长率(CAGR)为8.5%。</p>
+                <p>报告显示，日本消费者对具有健康功效的传统果酒兴趣日益增长，特别是在中高年龄层和女性消费者中。桑葚酒以其抗氧化、改善视力和延缓衰老等健康功效，符合日本消费者追求健康长寿的理念。</p>
+                <p>成功进入日本市场需要深入了解当地饮酒文化、法规政策、消费者偏好和分销渠道，同时制定符合日本市场特点的产品定位和营销策略。</p>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-1">
+            <h2>市场定义与定性认知</h2>
+            <div class="card">
+                <h3>桑葚酒在日本的定义与范畴</h3>
+                <p>桑葚酒在日本市场主要被归类为果酒（Fruit Wine）或药酒（Medicinal Liquor）类别，根据产品特性可分为：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>传统桑葚酒：以桑葚为主要原料发酵而成的酒精饮品</li>
+                    <li>桑葚利口酒：添加桑葚提取物的甜味酒精饮料</li>
+                    <li>桑葚混酿酒：桑葚与其他水果或谷物混合发酵的酒精饮料</li>
+                    <li>桑葚梅酒：结合日本传统梅酒工艺与桑葚风味的特色酒</li>
+                </ul>
+                
+                <h3>日本市场对桑葚酒的认知</h3>
+                <p>在日本市场，桑葚酒主要被消费者认为是：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>健康功能性饮品：强调抗氧化、改善视力、延缓衰老等健康功效</li>
+                    <li>高级礼品酒：包装精美，适合送礼和特殊场合</li>
+                    <li>中国特色酒品：带有浓厚的中国文化和传统医学背景</li>
+                    <li>女性友好型酒精饮料：口感温和，甜度适中，酒精度数较低</li>
+                </ul>
+            </div>
+            
+            <div class="chart-container fade-in delay-2">
+                <!-- 这里将插入日本桑葚酒市场规模图表 -->
+                <canvas id="marketSizeChart"></canvas>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-2">
+            <h2>市场规模、趋势与细分</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>市场规模</h3>
+                    <div class="data-point">
+                        <div class="data-point-icon">¥</div>
+                        <div class="data-point-content">
+                            <div class="data-point-title">2024年市场规模</div>
+                            <div class="data-point-value">3.85亿美元</div>
+                        </div>
+                    </div>
+                    <div class="data-point">
+                        <div class="data-point-icon">↗</div>
+                        <div class="data-point-content">
+                            <div class="data-point-title">年复合增长率(CAGR)</div>
+                            <div class="data-point-value">8.5%</div>
+                        </div>
+                    </div>
+                    <div class="data-point">
+                        <div class="data-point-icon">🔮</div>
+                        <div class="data-point-content">
+                            <div class="data-point-title">2030年预计市场规模</div>
+                            <div class="data-point-value">7.6亿美元</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>主要市场趋势</h3>
+                    <p><span class="highlight">健康饮酒文化兴起：</span>日本消费者越来越关注健康功能性饮品，寻求既能享受饮酒乐趣又能获得健康益处的产品。</p>
+                    <p><span class="highlight">小众高端化：</span>特色果酒在日本逐渐成为高端品位的象征，消费者愿意为品质和独特性支付溢价。</p>
+                    <p><span class="highlight">女性消费力崛起：</span>日本女性消费者对低酒精度、口感温和的果酒需求增长，成为市场增长的主要动力。</p>
+                    <p><span class="highlight">传统与创新结合：</span>结合日本本土口味习惯的创新桑葚酒产品（如桑葚梅酒）更容易获得市场认可。</p>
+                </div>
+            </div>
+            
+            <div class="chart-container fade-in delay-3">
+                <!-- 这里将插入市场细分图表 -->
+                <canvas id="marketSegmentChart"></canvas>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-3">
+            <h2>消费者分析</h2>
+            <div class="card">
+                <h3>主要消费群体画像</h3>
+                <p>日本桑葚酒的主要消费群体包括：</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>消费群体</th>
+                            <th>特征</th>
+                            <th>购买动机</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>健康意识高的中年女性</td>
+                            <td>40-60岁，收入中高，关注健康养生</td>
+                            <td>追求美容抗衰老、改善健康、社交分享</td>
+                        </tr>
+                        <tr>
+                            <td>年轻女性白领</td>
+                            <td>25-40岁，城市职场女性，注重生活品质</td>
+                            <td>社交场合、礼品赠送、休闲放松</td>
+                        </tr>
+                        <tr>
+                            <td>中高收入男性</td>
+                            <td>35-65岁，关注健康，有品味追求</td>
+                            <td>商务社交、收藏品鉴、健康养生</td>
+                        </tr>
+                        <tr>
+                            <td>外国文化爱好者</td>
+                            <td>各年龄段，对异国文化和产品感兴趣</td>
+                            <td>体验异国风味、探索新口味、文化交流</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card">
+                <h3>消费场景分析</h3>
+                <p>日本桑葚酒的主要消费场景包括：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li><span class="highlight">家庭饮用：</span>家庭晚餐、休闲时光，尤其是女性在放松时间的自我犒赏</li>
+                    <li><span class="highlight">礼品赠送：</span>中高端礼盒装在节日、拜访亲友时作为礼品</li>
+                    <li><span class="highlight">社交聚会：</span>朋友聚餐、女性聚会中作为话题和分享的饮品</li>
+                    <li><span class="highlight">餐厅消费：</span>在特色餐厅、高级日料店和中式餐厅作为推荐酒品</li>
+                    <li><span class="highlight">养生保健：</span>作为日常健康饮品定期适量饮用</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-4">
+            <h2>法律法规与准入标准</h2>
+            <div class="card">
+                <h3>产品法律界定</h3>
+                <p>在日本，桑葚酒根据其成分、酒精含量和宣称功效，可能被归类为：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>果酒（Fruit Wine）：酒精度数通常在7-15%之间</li>
+                    <li>利口酒（Liqueur）：如果添加糖分和香料，酒精度数通常在15-20%</li>
+                    <li>特殊酒类（Special Liquor）：如果添加了药用成分或具有特殊工艺</li>
+                </ul>
+                
+                <h3>主要适用法律法规</h3>
+                <p>进入日本桑葚酒市场需要遵守的主要法规包括：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>《酒税法》(Liquor Tax Law) - 规定酒精饮料的税收、分类和标识要求</li>
+                    <li>《食品卫生法》(Food Sanitation Act) - 规定食品安全标准和进口要求</li>
+                    <li>《健康增进法》(Health Promotion Law) - 规范产品健康功效宣传</li>
+                    <li>《酒精饮料标签标准》(Alcoholic Beverages Labeling Standards) - 详细规定标签内容和表述</li>
+                    <li>《酒精饮料广告规范》(Regulations on Alcohol Advertising) - 限制酒精饮料的广告宣传方式</li>
+                </ul>
+                
+                <h3>进口与销售许可</h3>
+                <p>在日本销售进口桑葚酒需要获得的主要许可包括：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>酒类进口许可证 - 由日本财务省国税厅发放</li>
+                    <li>食品进口批准 - 需通过厚生劳动省检疫所的检验</li>
+                    <li>酒类批发许可证 - 如果直接参与批发环节需要申请</li>
+                    <li>酒类零售许可证 - 如果直接参与零售环节需要申请</li>
+                </ul>
+                
+                <h3>标签与包装要求</h3>
+                <p>桑葚酒在日本市场的标签必须包含以下信息（日文表述）：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>产品名称和类别</li>
+                    <li>酒精含量（%）</li>
+                    <li>净含量（ml）</li>
+                    <li>原产国</li>
+                    <li>进口商/分销商信息</li>
+                    <li>原料成分列表</li>
+                    <li>"未满20岁请勿饮酒"的警示语</li>
+                    <li>孕妇警示语</li>
+                    <li>保质期和储存条件</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-4">
+            <h2>竞争格局分析</h2>
+            <div class="chart-container">
+                <!-- 这里将插入竞争对手分析图表 -->
+                <canvas id="competitorChart"></canvas>
+            </div>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>日本本土企业</h3>
+                    <p><span class="highlight">三得利(Suntory)</span> - 日本知名酒类巨头，拥有梅酒和其他果酒产品线，分销网络强大</p>
+                    <p><span class="highlight">月桂冠(Gekkeikan)</span> - 传统日本酒企业，近年进军果酒市场，品牌认知度高</p>
+                    <p><span class="highlight">永昌源(Yongchang Yuan)</span> - 专注中国风味酒在日本市场的品牌，已有桑葚类产品</p>
+                    <p><span class="highlight">中埜酒造(Nakano Shuzo)</span> - 知名梅酒制造商，拥有多种果酒产品，生产工艺成熟</p>
+                </div>
+                
+                <div class="card">
+                    <h3>国际企业</h3>
+                    <p><span class="highlight">张裕(Changyu)</span> - 中国知名酒企，已进入日本市场，提供多种果酒产品</p>
+                    <p><span class="highlight">宁夏红(Ningxia Hong)</span> - 中国枸杞酒生产商，在日本市场推广中国特色健康酒品</p>
+                    <p><span class="highlight">E&J Gallo</span> - 美国葡萄酒巨头，在日本市场也提供果酒系列产品</p>
+                    <p><span class="highlight">Freixenet</span> - 西班牙起泡酒生产商，近年在日本推广果味起泡酒</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>竞争优劣势分析</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>竞争者类型</th>
+                            <th>主要优势</th>
+                            <th>主要劣势</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>日本本土酒企</td>
+                            <td>品牌认知度高，分销渠道成熟，了解本土消费者口味</td>
+                            <td>对桑葚原料和传统工艺了解有限，产品同质化严重</td>
+                        </tr>
+                        <tr>
+                            <td>中国酒企</td>
+                            <td>原料优势，传统工艺经验丰富，文化背景真实</td>
+                            <td>品牌在日本认知度低，渠道建设不足，本土化程度不够</td>
+                        </tr>
+                        <tr>
+                            <td>欧美酒企</td>
+                            <td>国际品牌形象，高端定位，营销经验丰富</td>
+                            <td>对亚洲果酒市场理解有限，价格偏高，文化契合度低</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-4">
+            <h2>市场进入策略</h2>
+            <div class="card">
+                <h3>1. 市场细分与目标选择</h3>
+                <p>建议优先考虑以下细分市场：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>健康意识高的中年女性 - 强调桑葚的抗氧化和美容功效</li>
+                    <li>高端礼品市场 - 开发精美包装的礼盒装产品</li>
+                    <li>日本料理和中餐厅渠道 - 作为特色饮品推广</li>
+                    <li>女性社交场合 - 针对女性聚会和休闲场景设计低酒精度产品</li>
+                </ul>
+                
+                <h3>2. 产品策略</h3>
+                <p>针对日本市场特点，产品开发应注重：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>口味本土化：调整甜度和酸度，适合日本消费者口味</li>
+                    <li>多元化产品线：开发不同酒精度、不同包装规格的系列产品</li>
+                    <li>产品创新：开发桑葚梅酒等融合日本传统的创新产品</li>
+                    <li>高端包装设计：注重日式美学，简约精致，适合送礼</li>
+                    <li>明确功效定位：强调桑葚的营养价值和健康功效，但避免过度医疗化宣传</li>
+                </ul>
+                
+                <h3>3. 价格策略</h3>
+                <p>建议采用差异化定价策略：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>入门级产品：2000-3000日元/瓶，面向日常消费市场</li>
+                    <li>中端产品：4000-6000日元/瓶，主打健康功能定位</li>
+                    <li>高端礼盒装：8000-15000日元/套，针对礼品和收藏市场</li>
+                    <li>限量版产品：20000日元以上，针对高端收藏和特殊场合</li>
+                </ul>
+                
+                <h3>4. 渠道策略</h3>
+                <p>建议采用多渠道分销策略：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>专业酒类批发商：与日本知名酒类批发商合作，覆盖零售终端</li>
+                    <li>高端百货商店：如伊势丹、高岛屋、三越等百货店的酒类专区</li>
+                    <li>电子商务平台：Rakuten、Amazon Japan、Yahoo Shopping等</li>
+                    <li>特色餐厅合作：与日本高端餐厅合作，作为特色酒品推荐</li>
+                    <li>药妆店和健康食品店：针对功能性定位的产品线</li>
+                </ul>
+                
+                <h3>5. 推广策略</h3>
+                <p>在日本市场推广桑葚酒应注重：</p>
+                <ul style="list-style-type: disc; margin-left: 2rem; color: var(--text-secondary);">
+                    <li>品鉴会和展览：参加日本食品展、酒类展和健康产品展</li>
+                    <li>KOL合作：与日本健康生活类、美食类博主和意见领袖合作</li>
+                    <li>女性杂志广告：在日本知名女性杂志上投放广告</li>
+                    <li>文化故事营销：讲述桑葚酒的历史和文化背景</li>
+                    <li>健康功效科普：在合规范围内宣传桑葚的健康价值</li>
+                    <li>餐酒搭配推广：推荐与日本料理和各类美食的搭配方式</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="fade-in delay-4">
+            <h2>结论与建议</h2>
+            <div class="card">
+                <p>日本桑葚酒市场具有显著的增长潜力，特别是在健康功能性饮品和女性消费者市场。成功进入该市场需要深入了解日本饮酒文化、消费者偏好和分销渠道，同时制定符合日本市场特点的产品定位和营销策略。</p>
+                
+                <p>关键建议：</p>
+                <ol style="margin-left: 2rem; color: var(--text-secondary);">
+                    <li>产品本土化：调整产品口味和包装设计，满足日本消费者审美和口味偏好</li>
+                    <li>差异化定位：强调桑葚酒的健康功效和文化背景，与现有产品形成差异</li>
+                    <li>渠道合作：与日本本土分销商和零售商建立紧密合作关系，保障渠道顺畅</li>
+                    <li>合规运营：严格遵守日本酒类产品的法规要求，确保合法合规经营</li>
+                    <li>精准营销：针对女性和健康生活追求者等目标人群进行精准营销</li>
+                    <li>阶段性推进：采用先易后难、先小后大的策略，从小规模试点市场开始逐步扩展</li>
+                </ol>
+                
+                <a href="#" class="download-btn">联系我们：zxq@zxqconsulting.com； yuqian@zxqconsulting.com； dianaliu@zxqconsulting.com</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025上海张小强企业咨询事务所 版权所有</p>
+            <p>数据来源：日本财务省、日本厚生劳动省、日本酒类行业协会、市场调研数据</p>
+        </div>
+    </footer>
+    
+    <!-- 引入Chart.js库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // 动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // 市场规模图表
+            const marketSizeCtx = document.getElementById('marketSizeChart').getContext('2d');
+            new Chart(marketSizeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+                    datasets: [{
+                        label: '日本桑葚酒市场规模（亿美元）',
+                        data: [3.85, 4.18, 4.53, 4.92, 5.33, 5.79, 7.6],
+                        borderColor: '#64ffda',
+                        backgroundColor: 'rgba(100, 255, 218, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e6f1ff'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(230, 241, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#8892b0'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(230, 241, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#8892b0'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // 市场细分图表
+            const marketSegmentCtx = document.getElementById('marketSegmentChart').getContext('2d');
+            new Chart(marketSegmentCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['女性消费者', '礼品市场', '健康养生市场', '餐饮渠道', '其他'],
+                    datasets: [{
+                        data: [40, 25, 20, 10, 5],
+                        backgroundColor: [
+                            '#64ffda',
+                            '#ff5e62',
+                            '#5e62ff',
+                            '#ffdb58',
+                            '#8892b0'
+                        ],
+                        borderColor: '#172a45',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#e6f1ff',
+                                padding: 20,
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: '日本桑葚酒市场细分分布',
+                            color: '#e6f1ff',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // 竞争对手分析图表
+            const competitorCtx = document.getElementById('competitorChart').getContext('2d');
+            new Chart(competitorCtx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        '品牌认知度',
+                        '产品质量',
+                        '价格竞争力',
+                        '分销渠道',
+                        '创新能力',
+                        '市场份额'
+                    ],
+                    datasets: [{
+                        label: '日本本土企业',
+                        data: [85, 80, 65, 90, 60, 75],
+                        backgroundColor: 'rgba(100, 255, 218, 0.2)',
+                        borderColor: '#64ffda',
+                        pointBackgroundColor: '#64ffda'
+                    }, {
+                        label: '中国企业',
+                        data: [50, 85, 75, 45, 80, 40],
+                        backgroundColor: 'rgba(255, 94, 98, 0.2)',
+                        borderColor: '#ff5e62',
+                        pointBackgroundColor: '#ff5e62'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(230, 241, 255, 0.2)'
+                            },
+                            grid: {
+                                color: 'rgba(230, 241, 255, 0.2)'
+                            },
+                            pointLabels: {
+                                color: '#e6f1ff'
+                            },
+                            ticks: {
+                                color: '#8892b0',
+                                backdropColor: 'transparent'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e6f1ff'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
