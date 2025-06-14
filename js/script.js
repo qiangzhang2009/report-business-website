@@ -96,6 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Flow 2: Paid Report Generation (on services.html) ---
     function openPaidFlow() {
         // This function is ONLY for the paid report buttons (e.g., on services.html)
+        console.log("DEBUG: openPaidFlow() function called.");
+        if (!elements.paymentModal) {
+            console.error("DEBUG CRITICAL: elements.paymentModal is null! Cannot open modal.");
+            return;
+        }
+        console.log("DEBUG: Modal element found, attempting to open.");
         openModal(elements.paymentModal);
     }
 
@@ -142,9 +148,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (elements.freeReportBtn) {
         elements.freeReportBtn.addEventListener('click', handleFreeReport);
     }
+
     if (elements.paidReportBtn) {
+        console.log("DEBUG: Found paidReportBtn. Attaching event listener...");
         elements.paidReportBtn.addEventListener('click', openPaidFlow);
+        console.log("DEBUG: Event listener for paidReportBtn attached.");
+    } else {
+        console.warn("DEBUG: paidReportBtn was not found on this page.");
     }
+
     if (elements.confirmPaymentBtn) {
         elements.confirmPaymentBtn.addEventListener('click', handlePaymentConfirmation);
     }
@@ -172,5 +184,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    console.log("InsightGen AI Script v4 (Production) loaded successfully.");
+    console.log("InsightGen AI Script v5 (Super Debug) loaded successfully.");
 });
