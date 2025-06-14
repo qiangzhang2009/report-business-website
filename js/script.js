@@ -149,7 +149,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Step 2: Fetch chapter list
             const chaptersResponse = await fetch('/api/get-report-chapters');
-            if (!chaptersResponse.ok) throw new Error('无法获取报告章节结构。');
+            if (!chaptersResponse.ok) {
+                reportWindow.document.body.innerHTML = '<h1>报告生成失败</h1><p>错误详情：无法获取报告章节结构。</p>';
+                return;
+            }
             const { chapters } = await chaptersResponse.json();
 
             // Step 3: Build the skeleton of the report in the new window
