@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <meta charset="UTF-8">
                     <title>${topic} - 市场分析报告</title>
                     <script src="https://cdn.jsdelivr.net/npm/chart.js"><\/script>
+                    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"><\/script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"><\/script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"><\/script>
                     <style>
@@ -280,36 +281,53 @@ document.addEventListener('DOMContentLoaded', function() {
                         </footer>
                     </div>
                     <script>
-                        function downloadPDF() {
+                        async function downloadPDF() {
                             const { jsPDF } = window.jspdf;
                             const reportContent = document.getElementById('report-content-to-print');
                             const downloadButton = reportContent.querySelector('.download-btn');
                             
-                            // Hide the button before taking the screenshot
-                            downloadButton.style.display = 'none';
+                            downloadButton.textContent = '正在生成PDF... (0%)';
+                            downloadButton.disabled = true;
 
-                            html2canvas(reportContent, { 
-                                scale: 2, // Higher scale for better quality
-                                useCORS: true,
-                                backgroundColor: '#050a30'
-                            }).then(canvas => {
-                                // Show the button again after screenshot
-                                downloadButton.style.display = 'block';
+                            try {
+                                const pdf = new jsPDF('p', 'pt', 'a4');
+                                const sections = reportContent.querySelectorAll('.cover, .chapter, .data-sources');
+                                const totalSections = sections.length;
+                                
+                                for (let i = 0; i < totalSections; i++) {
+                                    const section = sections[i];
+                                    const canvas = await html2canvas(section, {
+                                        scale: 2,
+                                        useCORS: true,
+                                        allowTaint: true,
+                                        backgroundColor: '#050a30'
+                                    });
+                                    
+                                    const imgData = canvas.toDataURL('image/png');
+                                    const imgProps = pdf.getImageProperties(imgData);
+                                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                                    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                                    
+                                    if (i > 0) {
+                                        pdf.addPage();
+                                    }
+                                    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                                    
+                                    // Update progress
+                                    const progress = Math.round(((i + 1) / totalSections) * 100);
+                                    downloadButton.textContent = \`正在生成PDF... (\${progress}%)\`;
+                                }
 
-                                const imgData = canvas.toDataURL('image/png');
-                                const pdf = new jsPDF({
-                                    orientation: 'p',
-                                    unit: 'px',
-                                    format: [canvas.width, canvas.height]
-                                });
-                                pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-                                pdf.save("${topic} - 分析报告.pdf");
-                            }).catch(err => {
-                                // Ensure button is always visible even if there is an error
-                                downloadButton.style.display = 'block';
+                                pdf.save(\`${topic} - 分析报告.pdf\`);
+
+                            } catch(err) {
                                 console.error("PDF generation error:", err);
-                                alert("抱歉，生成PDF失败。请稍后重试。");
-                            });
+                                alert("抱歉，生成PDF失败。请检查浏览器控制台获取更多信息。");
+                            } finally {
+                                // Restore button
+                                 downloadButton.textContent = '下载PDF报告';
+                                 downloadButton.disabled = false;
+                            }
                         }
                     </script>
                 </body>
@@ -372,11 +390,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({ topic, chartType: chapter.chartType })
                             });
+                            
                             if (!chartResponse.ok) {
                                 throw new Error(`图表服务器错误: ${chartResponse.status}`);
                             }
-                            const chartConfig = await chartResponse.json();
+
+                            // Robust JSON parsing
+                            let responseText = await chartResponse.text();
+                            responseText = responseText.replace(/^```json\s*|```$/g, '').trim();
+                            
+                            const chartConfig = JSON.parse(responseText);
+                            
                             new reportWindow.Chart(chartCanvas, chartConfig);
+
                         } catch (chartError) {
                             console.error('Chart generation error:', chartError);
                             chartContainer.innerHTML = `<div style="color: red; padding: 20px; border: 1px solid red; background: #ffeeee;">
