@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const { chapters } = await chaptersResponse.json();
 
-            // Step 3: Build the skeleton of the report in the new window
+            // Step 3: Dynamically build the report skeleton with new styling and PDF functionality
             const year = new Date().getFullYear();
             const sourcesHTML = sources.map(source => `<li>${source}</li>`).join('');
 
@@ -165,37 +165,104 @@ document.addEventListener('DOMContentLoaded', function() {
                 <head>
                     <meta charset="UTF-8">
                     <title>${topic} - 市场分析报告</title>
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"><\/script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"><\/script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"><\/script>
                     <style>
-                        :root { --primary-color: #0d1a38; --secondary-color: #1a2c58; --accent-color: #00d4ff; --text-color: #e6f1ff; --text-secondary: #a3b1cc; --highlight: #ff124f; --card-bg: rgba(26, 44, 88, 0.7); }
-                        body { background-color: var(--primary-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.8; font-size: 16px; margin: 0;}
+                        :root {
+                            --primary-color: #050a30;
+                            --secondary-color: #091353;
+                            --accent-color: #00d4ff;
+                            --text-color: #e6f1ff;
+                            --text-secondary: #a3b1cc;
+                            --highlight: #ff124f;
+                            --card-bg: rgba(9, 19, 83, 0.7);
+                        }
+                        body {
+                            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: var(--primary-color);
+                            color: var(--text-color);
+                            background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+                            background-attachment: fixed;
+                        }
                         .report-container { max-width: 1200px; margin: auto; }
-                        .cover { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background: radial-gradient(circle, var(--secondary-color) 0%, var(--primary-color) 100%); padding: 2rem; position: relative; }
-                        .cover-logo { position: absolute; top: 40px; left: 40px; font-size: 2.5rem; font-weight: bold; color: var(--accent-color); border: 3px solid var(--accent-color); border-radius: 50%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; }
-                        .cover h1 { font-size: 3.5rem; margin: 0; }
-                        .cover p { font-size: 1.2rem; color: var(--text-secondary); margin: 1rem 0 2rem; }
-                        .cta-button { background-color: var(--accent-color); color: var(--primary-color); border: none; padding: 15px 30px; font-size: 1rem; font-weight: bold; border-radius: 50px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
-                        .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--accent-color); }
-
-                        .chapter { background-color: var(--card-bg); backdrop-filter: blur(10px); border-radius: 12px; padding: 2.5rem; margin: 2.5rem auto; border: 1px solid rgba(0, 212, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); }
-                        .chapter h2 { font-size: 2.2rem; text-align: left; color: var(--accent-color); margin-top: 0; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0, 212, 255, 0.2); padding-bottom: 1rem; }
-                        .content-wrapper { min-height: 50px; overflow-wrap: break-word; }
-                        .chart-container { padding: 1.5rem; margin-top: 2rem; background: rgba(0,0,0,0.2); border-radius: 8px; }
+                        .cover {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            text-align: center;
+                            padding: 2rem;
+                            background: rgba(5, 10, 48, 0.7);
+                            backdrop-filter: blur(10px);
+                            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+                        }
+                        .cover-logo {
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            color: var(--accent-color);
+                            border: 3px solid var(--accent-color);
+                            border-radius: 50%;
+                            width: 80px;
+                            height: 80px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 2rem;
+                            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+                        }
+                        .cover h1 { font-size: 3.5em; margin: 0; color: var(--accent-color); text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);}
+                        .cover p { font-size: 1.5em; margin-top: 10px; color: var(--text-secondary); }
+                        .download-btn {
+                            margin-top: 2rem;
+                            padding: 1rem 2rem;
+                            background-color: var(--accent-color);
+                            color: var(--primary-color);
+                            border: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            text-transform: uppercase;
+                        }
+                        .download-btn:hover { background-color: var(--text-color); box-shadow: 0 0 15px var(--accent-color); }
                         
-                        .data-sources { padding: 4rem 2rem; background-color: #0a142c; text-align: center; }
-                        .data-sources h2 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 2rem; }
-                        .data-sources ul { list-style: none; padding: 0; column-count: 2; column-gap: 2rem; text-align: left; }
-                        .data-sources li { background: var(--primary-color); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--secondary-color); }
+                        .chapter, .data-sources {
+                            padding: 4rem 2rem;
+                            margin: 2rem auto;
+                            background-color: var(--card-bg);
+                            border-radius: 12px;
+                            border: 1px solid rgba(0, 212, 255, 0.1);
+                            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+                            backdrop-filter: blur(10px);
+                        }
+                        
+                        .chapter h2, .data-sources h2 {
+                            font-size: 2.5rem;
+                            color: var(--accent-color);
+                            text-align: center;
+                            margin-bottom: 2rem;
+                        }
+
+                        .content-wrapper { line-height: 1.8; color: var(--text-secondary); font-size: 1.1em; overflow-wrap: break-word; }
+                        .content-wrapper p, .content-wrapper ul { margin-bottom: 1rem; }
+                        .content-wrapper ul { padding-left: 20px; }
+
+                        .chart-container { width: 100%; max-width: 800px; margin: 40px auto; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 8px; }
+                        .data-sources ul { list-style: none; padding: 0; column-count: 2; column-gap: 2rem; }
+                        .data-sources li { background: var(--primary-color); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
                     </style>
                 </head>
                 <body>
-                    <div class="report-container">
+                    <div id="report-content-to-print" class="report-container">
                         <header class="cover">
                             <div class="cover-logo">${logo}</div>
                             <h1>${topic}</h1>
-                            <p>市场综合分析与战略咨询报告 ${year}</p>
-                            <button id="download-pdf" class="cta-button">下载PDF报告</button>
+                            <p>市场综合分析与战略咨询报告 - ${year}版</p>
+                            <button class="download-btn" onclick="downloadPDF()">下载PDF报告</button>
                         </header>
                         <main>
                             ${chapters.map(chapter => `
@@ -213,28 +280,42 @@ document.addEventListener('DOMContentLoaded', function() {
                         </footer>
                     </div>
                     <script>
-                        // PDF Download Logic
-                        const pdfButton = document.getElementById('download-pdf');
-                        pdfButton.addEventListener('click', () => {
-                            pdfButton.textContent = '正在生成PDF...';
-                            pdfButton.disabled = true;
-                            const reportContainer = document.querySelector('.report-container');
-                            const options = {
-                                margin:       0,
-                                filename:     \`\${topic}_${year}_report.pdf\`,
-                                image:        { type: 'jpeg', quality: 0.98 },
-                                html2canvas:  { scale: 2, useCORS: true, logging: false },
-                                jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-                            };
-                            html2pdf().from(reportContainer).set(options).save().then(() => {
-                                pdfButton.textContent = '下载PDF报告';
-                                pdfButton.disabled = false;
+                        function downloadPDF() {
+                            const { jsPDF } = window.jspdf;
+                            const reportContent = document.getElementById('report-content-to-print');
+                            const downloadButton = reportContent.querySelector('.download-btn');
+                            
+                            // Hide the button before taking the screenshot
+                            downloadButton.style.display = 'none';
+
+                            html2canvas(reportContent, { 
+                                scale: 2, // Higher scale for better quality
+                                useCORS: true,
+                                backgroundColor: '#050a30'
+                            }).then(canvas => {
+                                // Show the button again after screenshot
+                                downloadButton.style.display = 'block';
+
+                                const imgData = canvas.toDataURL('image/png');
+                                const pdf = new jsPDF({
+                                    orientation: 'p',
+                                    unit: 'px',
+                                    format: [canvas.width, canvas.height]
+                                });
+                                pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+                                pdf.save("${topic} - 分析报告.pdf");
+                            }).catch(err => {
+                                // Ensure button is always visible even if there is an error
+                                downloadButton.style.display = 'block';
+                                console.error("PDF generation error:", err);
+                                alert("抱歉，生成PDF失败。请稍后重试。");
                             });
-                        });
+                        }
                     </script>
                 </body>
                 </html>
             `;
+
             reportWindow.document.write(reportSkeleton);
             reportWindow.document.close();
             
@@ -292,24 +373,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                 body: JSON.stringify({ topic, chartType: chapter.chartType })
                             });
                             if (!chartResponse.ok) {
-                                throw new Error(`服务器错误: ${chartResponse.status}`);
+                                throw new Error(`图表服务器错误: ${chartResponse.status}`);
                             }
                             const chartConfig = await chartResponse.json();
-                            
-                            try {
-                                new reportWindow.Chart(chartCanvas, chartConfig);
-                            } catch (renderError) {
-                                console.error('Chart.js 渲染错误:', renderError);
-                                console.log('失败的图表配置:', chartConfig);
-                                throw new Error(`图表渲染失败: ${renderError.message}`);
-                            }
-
+                            new reportWindow.Chart(chartCanvas, chartConfig);
                         } catch (chartError) {
-                            console.error('图表生成错误:', chartError);
-                            chartContainer.innerHTML = `<div style="color: #ffb3b3; padding: 20px; border: 1px solid #ff6666; background: #330000;">
+                            console.error('Chart generation error:', chartError);
+                            chartContainer.innerHTML = `<div style="color: red; padding: 20px; border: 1px solid red; background: #ffeeee;">
                                 <strong>图表加载失败</strong><br>
                                 原因: ${chartError.message}<br>
-                                我们正在紧急处理此问题。
+                                我们正在紧急处理此问题，请稍后刷新或查看其他章节。
                             </div>`;
                         }
                     }

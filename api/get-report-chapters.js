@@ -2,6 +2,7 @@
 const chapters = [
     { id: 'introduction', title: '报告引言与核心摘要' },
     { id: 'market_overview', title: '宏观市场概览', hasChart: true, chartType: 'marketSize' },
+    { id: 'market_size', title: '细分市场规模与预测', hasChart: true, chartType: 'marketForecast' },
     { id: 'industry_chain', title: '产业链深度分析' },
     { id: 'swot_analysis', title: 'SWOT综合分析' },
     { id: 'competition', title: '主要竞争对手画像', hasChart: true, chartType: 'marketShare' },
@@ -13,7 +14,7 @@ const chapters = [
     { id: 'risk_assessment', title: '潜在风险评估' },
     { id: 'marketing_strategy', title: '营销与品牌策略' },
     { id: 'success_cases', title: '标杆案例研究' },
-    { id: 'future_outlook', title: '未来5年趋势展望' },
+    { id: 'future_outlook', title: '未来5年趋势展望', hasChart: true, chartType: 'futureTrends' },
     { id: 'conclusion', title: '结论与战略建议' },
 ];
 
