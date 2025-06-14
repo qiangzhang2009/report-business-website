@@ -156,11 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const { chapters } = await chaptersResponse.json();
 
             // Step 3: Build the skeleton of the report in the new window
-            const currentYear = new Date().getFullYear();
-            const reportTitle = `${topic} - 市场综合调研报告`;
-            const subTitle = `全面解析市场机遇与挑战 | ${currentYear}年版`;
-
-            // Dynamically build the report skeleton
+            const year = new Date().getFullYear();
             const sourcesHTML = sources.map(source => `<li>${source}</li>`).join('');
 
             const reportSkeleton = `
@@ -168,139 +164,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 <html lang="zh-CN">
                 <head>
                     <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>${reportTitle}</title>
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.1.0/dist/chartjs-plugin-datalabels.min.js"></script>
+                    <title>${topic} - 市场分析报告</title>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
                     <style>
-                        :root {
-                            --primary-color: #003366;
-                            --secondary-color: #00509E;
-                            --accent-color: #00AEEF;
-                            --text-color-light: #ffffff;
-                            --text-color-dark: #333333;
-                            --bg-color-light: #f8f9fa;
-                            --bg-color-dark: #e9ecef;
-                        }
-                        body {
-                            background-color: var(--bg-color-light);
-                            color: var(--text-color-dark);
-                            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .report-container {
-                            max-width: 1200px;
-                            margin: auto;
-                            background-color: white;
-                            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-                        }
-                        .cover {
-                            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-                            color: var(--text-color-light);
-                            text-align: center;
-                            padding: 80px 40px;
-                            position: relative;
-                            overflow: hidden;
-                        }
-                        .cover-logo {
-                            position: absolute;
-                            top: 20px;
-                            left: 20px;
-                            font-size: 2em;
-                            font-weight: bold;
-                            color: rgba(255, 255, 255, 0.8);
-                            border: 2px solid rgba(255, 255, 255, 0.8);
-                            padding: 5px 10px;
-                            border-radius: 5px;
-                        }
-                        .cover h1 {
-                            font-size: 3.5em;
-                            margin: 0;
-                            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-                        }
-                        .cover p {
-                            font-size: 1.5em;
-                            margin-top: 10px;
-                            opacity: 0.9;
-                        }
-                        
-                        .data-sources {
-                            padding: 40px;
-                            background-color: var(--bg-color-dark);
-                        }
-                        .data-sources h2 {
-                            font-size: 2em;
-                            color: var(--primary-color);
-                            border-bottom: 3px solid var(--primary-color);
-                            padding-bottom: 10px;
-                            margin-bottom: 20px;
-                        }
-                        .data-sources ul {
-                            list-style: none;
-                            padding: 0;
-                            column-count: 2;
-                            column-gap: 2rem;
-                        }
-                        .data-sources li {
-                            background: white;
-                            color: var(--text-color-dark);
-                            padding: 1rem;
-                            border-radius: 8px;
-                            margin-bottom: 1rem;
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-                        }
+                        :root { --primary-color: #0d1a38; --secondary-color: #1a2c58; --accent-color: #00d4ff; --text-color: #e6f1ff; --text-secondary: #a3b1cc; --highlight: #ff124f; --card-bg: rgba(26, 44, 88, 0.7); }
+                        body { background-color: var(--primary-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.8; font-size: 16px; margin: 0;}
+                        .report-container { max-width: 1200px; margin: auto; }
+                        .cover { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background: radial-gradient(circle, var(--secondary-color) 0%, var(--primary-color) 100%); padding: 2rem; position: relative; }
+                        .cover-logo { position: absolute; top: 40px; left: 40px; font-size: 2.5rem; font-weight: bold; color: var(--accent-color); border: 3px solid var(--accent-color); border-radius: 50%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; }
+                        .cover h1 { font-size: 3.5rem; margin: 0; }
+                        .cover p { font-size: 1.2rem; color: var(--text-secondary); margin: 1rem 0 2rem; }
+                        .cta-button { background-color: var(--accent-color); color: var(--primary-color); border: none; padding: 15px 30px; font-size: 1rem; font-weight: bold; border-radius: 50px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+                        .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--accent-color); }
 
-                        .section {
-                            padding: 40px;
-                            border-bottom: 1px solid #e0e0e0;
-                            background-color: #ffffff;
-                        }
-                        .section:nth-child(even) {
-                            background-color: #f8f9fa;
-                        }
-                        .section-title-box {
-                            background-color: var(--primary-color);
-                            padding: 20px;
-                            margin-bottom: 30px;
-                            border-radius: 5px;
-                        }
-                        .section-title-box h2 {
-                            color: var(--text-color-light);
-                            margin: 0;
-                            font-size: 2em;
-                        }
-                        .content-wrapper {
-                            margin-top: 20px;
-                            line-height: 1.8;
-                            color: var(--text-color-dark);
-                            font-size: 1.1em;
-                            overflow-wrap: break-word;
-                        }
-                        .chart-container {
-                            width: 100%;
-                            max-width: 800px;
-                            margin: 40px auto;
-                            padding: 20px;
-                            background: #fff;
-                            border-radius: 8px;
-                            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-                        }
+                        .chapter { background-color: var(--card-bg); backdrop-filter: blur(10px); border-radius: 12px; padding: 2.5rem; margin: 2.5rem auto; border: 1px solid rgba(0, 212, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); }
+                        .chapter h2 { font-size: 2.2rem; text-align: left; color: var(--accent-color); margin-top: 0; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0, 212, 255, 0.2); padding-bottom: 1rem; }
+                        .content-wrapper { min-height: 50px; overflow-wrap: break-word; }
+                        .chart-container { padding: 1.5rem; margin-top: 2rem; background: rgba(0,0,0,0.2); border-radius: 8px; }
+                        
+                        .data-sources { padding: 4rem 2rem; background-color: #0a142c; text-align: center; }
+                        .data-sources h2 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 2rem; }
+                        .data-sources ul { list-style: none; padding: 0; column-count: 2; column-gap: 2rem; text-align: left; }
+                        .data-sources li { background: var(--primary-color); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--secondary-color); }
                     </style>
                 </head>
                 <body>
                     <div class="report-container">
                         <header class="cover">
                             <div class="cover-logo">${logo}</div>
-                            <h1>${reportTitle}</h1>
-                            <p>${subTitle}</p>
+                            <h1>${topic}</h1>
+                            <p>市场综合分析与战略咨询报告 ${year}</p>
+                            <button id="download-pdf" class="cta-button">下载PDF报告</button>
                         </header>
                         <main>
                             ${chapters.map(chapter => `
-                                <section id="chapter-${chapter.id}" class="section">
-                                    <div class="section-title-box">
-                                        <h2>${chapter.title}</h2>
-                                    </div>
+                                <section id="chapter-${chapter.id}" class="chapter">
+                                    <h2>${chapter.title}</h2>
                                     <div class="content-wrapper">
                                         <p>正在生成内容...</p>
                                     </div>
@@ -313,7 +213,24 @@ document.addEventListener('DOMContentLoaded', function() {
                         </footer>
                     </div>
                     <script>
-                        // The script to render charts will be added later
+                        // PDF Download Logic
+                        const pdfButton = document.getElementById('download-pdf');
+                        pdfButton.addEventListener('click', () => {
+                            pdfButton.textContent = '正在生成PDF...';
+                            pdfButton.disabled = true;
+                            const reportContainer = document.querySelector('.report-container');
+                            const options = {
+                                margin:       0,
+                                filename:     \`\${topic}_${year}_report.pdf\`,
+                                image:        { type: 'jpeg', quality: 0.98 },
+                                html2canvas:  { scale: 2, useCORS: true, logging: false },
+                                jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+                            };
+                            html2pdf().from(reportContainer).set(options).save().then(() => {
+                                pdfButton.textContent = '下载PDF报告';
+                                pdfButton.disabled = false;
+                            });
+                        });
                     </script>
                 </body>
                 </html>
@@ -375,16 +292,24 @@ document.addEventListener('DOMContentLoaded', function() {
                                 body: JSON.stringify({ topic, chartType: chapter.chartType })
                             });
                             if (!chartResponse.ok) {
-                                throw new Error(`图表服务器错误: ${chartResponse.status}`);
+                                throw new Error(`服务器错误: ${chartResponse.status}`);
                             }
                             const chartConfig = await chartResponse.json();
-                            new reportWindow.Chart(chartCanvas, chartConfig);
+                            
+                            try {
+                                new reportWindow.Chart(chartCanvas, chartConfig);
+                            } catch (renderError) {
+                                console.error('Chart.js 渲染错误:', renderError);
+                                console.log('失败的图表配置:', chartConfig);
+                                throw new Error(`图表渲染失败: ${renderError.message}`);
+                            }
+
                         } catch (chartError) {
-                            console.error('Chart generation error:', chartError);
-                            chartContainer.innerHTML = `<div style="color: red; padding: 20px; border: 1px solid red; background: #ffeeee;">
+                            console.error('图表生成错误:', chartError);
+                            chartContainer.innerHTML = `<div style="color: #ffb3b3; padding: 20px; border: 1px solid #ff6666; background: #330000;">
                                 <strong>图表加载失败</strong><br>
                                 原因: ${chartError.message}<br>
-                                我们正在紧急处理此问题，请稍后刷新或查看其他章节。
+                                我们正在紧急处理此问题。
                             </div>`;
                         }
                     }

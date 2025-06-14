@@ -6,28 +6,29 @@ export const config = {
 
 function buildPrompt(topic, chapter) {
     const chapterPrompts = {
-        introduction: `为关于 "${topic}" 市场的报告生成“报告引言与核心摘要”章节的分析文本。`,
-        market_overview: `为关于 "${topic}" 市场的报告生成“宏观市场概览”章节的分析文本。`,
-        market_size: `为关于 "${topic}" 市场的报告生成“细分市场规模与预测”章节的分析文本。`,
-        industry_chain: `为关于 "${topic}" 市场的报告生成“产业链深度分析”章节的分析文本。`,
-        swot_analysis: `为关于 "${topic}" 市场的报告生成“SWOT综合分析”章节的分析文本。`,
-        competition: `为关于 "${topic}" 市场的报告生成“主要竞争对手画像”章节的分析文本。`,
-        consumer_profile: `为关于 "${topic}" 市场的报告生成“目标消费者画像”章节的分析文本。`,
-        channel_strategy: `为关于 "${topic}" 市场的报告生成“市场渠道与分销策略”章节的分析文本。`,
-        tech_trends: `为关于 "${topic}" 市场的报告生成“技术与创新趋势”章节的分析文本。`,
-        policy_legal: `为关于 "${topic}" 市场的报告生成“政策法规环境”章节的分析文本。`,
-        investment_hotspots: `为关于 "${topic}" 市场的报告生成“投资热点与机会”章节的分析文本。`,
-        risk_assessment: `为关于 "${topic}" 市场的报告生成“潜在风险评估”章节的分析文本。`,
-        marketing_strategy: `为关于 "${topic}" 市场的报告生成“营销与品牌策略”章节的分析文本。`,
-        success_cases: `为关于 "${topic}" 市场的报告生成“标杆案例研究”章节的分析文本。`,
-        future_outlook: `为关于 "${topic}" 市场的报告生成“未来5年趋势展望”章节的分析文本。`,
-        conclusion: `为关于 "${topic}" 市场的报告生成“结论与战略建议”章节的分析文本。`,
+        introduction: `为关于 "${topic}" 市场的报告生成"报告引言与核心摘要"章节的分析文本。`,
+        market_overview: `为关于 "${topic}" 市场的报告生成"宏观市场概览"章节的分析文本。`,
+        market_size: `为关于 "${topic}" 市场的报告生成"细分市场规模与预测"章节的分析文本。`,
+        industry_chain: `为关于 "${topic}" 市场的报告生成"产业链深度分析"章节的分析文本。`,
+        swot_analysis: `为关于 "${topic}" 市场的报告生成"SWOT综合分析"章节的分析文本。`,
+        competition: `为关于 "${topic}" 市场的报告生成"主要竞争对手画像"章节的分析文本。`,
+        consumer_profile: `为关于 "${topic}" 市场的报告生成"目标消费者画像"章节的分析文本。`,
+        channel_strategy: `为关于 "${topic}" 市场的报告生成"市场渠道与分销策略"章节的分析文本。`,
+        tech_trends: `为关于 "${topic}" 市场的报告生成"技术与创新趋势"章节的分析文本。`,
+        policy_legal: `为关于 "${topic}" 市场的报告生成"政策法规环境"章节的分析文本。`,
+        investment_hotspots: `为关于 "${topic}" 市场的报告生成"投资热点与机会"章节的分析文本。`,
+        risk_assessment: `为关于 "${topic}" 市场的报告生成"潜在风险评估"章节的分析文本。`,
+        marketing_strategy: `为关于 "${topic}" 市场的报告生成"营销与品牌策略"章节的分析文本。`,
+        success_cases: `为关于 "${topic}" 市场的报告生成"标杆案例研究"章节的分析文本。`,
+        future_outlook: `为关于 "${topic}" 市场的报告生成"未来5年趋势展望"章节的分析文本。`,
+        conclusion: `为关于 "${topic}" 市场的报告生成"结论与战略建议"章节的分析文本。`,
     };
 
-    const specificPrompt = chapterPrompts[chapter.id] || `请为关于“${chapter.title}”的章节生成详细的HTML内容。`;
+    const specificPrompt = chapterPrompts[chapter.id] || `请为关于"${chapter.title}"的章节生成详细的HTML内容。`;
 
     return `
-        你是一个世界顶级的市场分析师。你的任务是为一份关于 "${topic}" 市场的深度分析报告，生成其中一个章节的HTML内容。
+        你是一个来自顶级咨询公司（如麦肯锡、BCG）的资深市场分析师。你的任务是为一份关于 "${topic}" 市场的深度分析报告，生成其中一个章节的HTML内容。
+        你的分析必须基于对 ${topic} 市场的深刻理解，引用可信的、真实的数据点和行业洞察。
 
         **天条级规则(必须严格遵守):**
         1.  **强制中文:** 所有输出的文本内容，无一例外，必须全部使用简体中文。
