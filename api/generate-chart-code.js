@@ -4,10 +4,10 @@ export const config = {
 
 function buildChartPrompt(topic, chartType) {
     const chartPrompts = {
-        marketShare: `为关于"${topic}"的市场份额分析，生成一个"甜甜圈图"(Doughnut Chart)的Chart.js JSON配置。图表需包含数据标签，显示各部分百分比。`,
+        marketShare: `为关于"${topic}"的市场份额分析，生成一个"甜甜圈图"(Doughnut Chart)的Chart.js JSON配置。使用专业、和谐的商业色彩。`,
         marketSize: `为关于"${topic}"的市场规模，生成一个从2020年到2029年规模与增长率预测的"复合图表"(Bar and Line Chart)的Chart.js JSON配置。`,
         techAdoptionCurve: `为关于"${topic}"市场的关键技术，生成一个"技术采纳曲线(散点图)"(Scatter Chart)的Chart.js JSON配置。`,
-        consumerDemographics: `为关于"${topic}"市场的消费者年龄或类型分布，生成一个"甜甜圈图"(Doughnut Chart)的Chart.js JSON配置。图表需包含数据标签，显示各部分百分比。`,
+        consumerDemographics: `为关于"${topic}"市场的消费者年龄或类型分布，生成一个"甜甜圈图"(Doughnut Chart)的Chart.js JSON配置。请使用富有吸引力且区分明显的专业色彩。`,
         marketForecast: `为关于"${topic}"的市场，生成一个预测未来5年规模的"折线图"(Line Chart)的Chart.js JSON配置。`,
         futureTrends: `为关于"${topic}"的市场，生成一个展示3个核心趋势未来5年变化的"多线图"(Multi-axis Line Chart)的Chart.js JSON配置。`,
     };
@@ -26,7 +26,22 @@ function buildChartPrompt(topic, chartType) {
 
         **具体要求:**
         ${specificPrompt}
-        - 对于需要显示数据标签的图表，请在 'options' 对象中加入 'plugins.datalabels' 配置，确保标签清晰可见。
+        
+        **关于数据标签的强制范例:**
+        对于所有图表，必须在 'options.plugins' 对象中包含 'datalabels' 配置以显示数据标签。
+        对于甜甜圈图，请使用类似下面的配置，以百分比形式在图表外部显示标签:
+        "plugins": {
+          "datalabels": {
+            "formatter": "%%p",
+            "color": "#fff",
+            "backgroundColor": "rgba(0,0,0,0.7)",
+            "borderRadius": 4,
+            "padding": 6,
+            "anchor": "end",
+            "align": "end",
+            "offset": 10
+          }
+        }
 
         请直接输出JSON对象。
     `;
