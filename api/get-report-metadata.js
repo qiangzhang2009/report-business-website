@@ -1,5 +1,3 @@
-import { NextResponse } from 'next/server';
-
 function inferRegionAndGetData(topic) {
     const lowerCaseTopic = topic.toLowerCase();
     
@@ -74,28 +72,24 @@ function inferRegionAndGetData(topic) {
     return regionData['GLOBAL'];
 }
 
-export async function POST(req) {
+export default async function handler(req, res) {
+    if (req.method !== 'POST') {
+        res.setHeader('Allow', ['POST']);
+        return res.status(405).end(`Method ${req.method} Not Allowed`);
+    }
+
     try {
-        const { topic } = await req.json();
+        const { topic } = req.body;
         if (!topic) {
-            return new NextResponse(JSON.stringify({ error: 'Topic is required' }), {
-                status: 400,
-                headers: { 'Content-Type': 'application/json' },
-            });
+            return res.status(400).json({ error: 'Topic is required' });
         }
         
         const metadata = inferRegionAndGetData(topic);
         
-        return new NextResponse(JSON.stringify(metadata), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        return res.status(200).json(metadata);
 
     } catch (error) {
         console.error('Metadata generation error:', error);
-        return new NextResponse(JSON.stringify({ error: 'Failed to generate report metadata' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        return res.status(500).json({ error: 'Failed to generate report metadata' });
     }
 } 
