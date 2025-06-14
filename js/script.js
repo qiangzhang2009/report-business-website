@@ -1,25 +1,117 @@
+// Main entry point after DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // --- 1. Element Cache ---
+    const elements = {
+        topicInput: document.getElementById('topic-input'),
+        triggerBtn: document.getElementById('trigger-payment-modal-btn'),
+        paymentModal: document.getElementById('payment-modal'),
+        paymentModalCloseBtn: document.querySelector('#payment-modal .modal-close'),
+        confirmPaymentBtn: document.getElementById('confirm-payment-btn'),
+        missionControlModal: document.getElementById('mission-control-modal'),
+        missionModalCloseBtn: document.querySelector('#mission-control-modal .modal-close'),
+        missionInput: document.getElementById('mission-input'),
+        executeMissionBtn: document.getElementById('execute-mission-btn'),
+        generateBtn: document.getElementById('generate-btn'), // For direct generation if needed
+        spinner: document.getElementById('spinner') // Assuming a spinner element exists
+    };
+
+    // --- 2. Modal Logic ---
+    function openModal(modal) {
+        if (modal) modal.style.display = 'flex';
+    }
+
+    function closeModal(modal) {
+        if (modal) modal.style.display = 'none';
+    }
+    
+    // --- 3. Event Listeners ---
+    if (elements.triggerBtn) {
+        elements.triggerBtn.addEventListener('click', () => {
+            if (!elements.topicInput.value.trim()) {
+                alert('请输入您感兴趣的行业或产品！');
+                elements.topicInput.focus();
+                return;
+            }
+            openModal(elements.paymentModal);
+        });
+    }
+
+    if (elements.confirmPaymentBtn) {
+        elements.confirmPaymentBtn.addEventListener('click', () => {
+            closeModal(elements.paymentModal);
+            openModal(elements.missionControlModal);
+            // Pre-fill the mission input with the topic from the main page
+            if (elements.missionInput && elements.topicInput) {
+                elements.missionInput.value = elements.topicInput.value;
+            }
+            if (elements.missionInput) elements.missionInput.focus();
+        });
+    }
+    
+    if (elements.executeMissionBtn) {
+        elements.executeMissionBtn.addEventListener('click', () => {
+            const topic = elements.missionInput.value.trim();
+            if (!topic) {
+                alert('报告任务目标不能为空！');
+                elements.missionInput.focus();
+                return;
+            }
+            closeModal(elements.missionControlModal);
+            generateReport(topic); // Execute the main report generation
+        });
+    }
+
+    // Direct generation for simpler pages/buttons
+    if (elements.generateBtn) {
+        elements.generateBtn.addEventListener('click', () => {
+            const topic = document.getElementById('topic').value; // Assuming a different input for this flow
+            generateReport(topic);
+        });
+    }
+
+    // Shared modal close logic
+    [elements.paymentModalCloseBtn, elements.missionModalCloseBtn].forEach(btn => {
+        if(btn) {
+            btn.addEventListener('click', () => {
+                closeModal(elements.paymentModal);
+                closeModal(elements.missionControlModal);
+            });
+        }
+    });
+
+    [elements.paymentModal, elements.missionControlModal].forEach(modal => {
+        if(modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        }
+    });
+});
+
+// --- 4. Core Report Generation Logic ---
 let reportWindow = null;
 let reportTopic = '';
 
-async function generateReport() {
-    const topicInput = document.getElementById('topic');
-    const generateBtn = document.getElementById('generate-btn');
-    const spinner = document.getElementById('spinner');
-
-    reportTopic = topicInput.value;
+async function generateReport(topic) {
+    reportTopic = topic;
     if (!reportTopic) {
-        alert('请输入报告主题！');
+        alert('报告主题不能为空！');
         return;
     }
-
-    generateBtn.disabled = true;
-    spinner.style.display = 'inline-block';
+    
+    // Show spinner and disable button if they exist in the current context
+    const generateBtn = document.getElementById('trigger-payment-modal-btn') || document.getElementById('generate-btn');
+    const spinner = document.getElementById('spinner'); // A general spinner
+    if(generateBtn) generateBtn.disabled = true;
+    if(spinner) spinner.style.display = 'inline-block';
 
     reportWindow = window.open('', '_blank');
     if (!reportWindow) {
         alert('请允许弹窗！');
-        generateBtn.disabled = false;
-        spinner.style.display = 'none';
+        if(generateBtn) generateBtn.disabled = false;
+        if(spinner) spinner.style.display = 'none';
         return;
     }
 
@@ -87,10 +179,8 @@ async function generateReport() {
         reportWindow.document.write(reportSkeleton);
         reportWindow.document.close();
 
-        // Global plugin registration
         reportWindow.Chart.register(reportWindow.ChartDataLabels);
         
-        // Wait for libs to load before attaching event listener
         reportWindow.onload = () => {
             reportWindow.document.getElementById('download-btn-pdf').addEventListener('click', () => downloadPDF());
         };
@@ -139,16 +229,14 @@ async function generateReport() {
             reportWindow.document.body.innerHTML = `<h1>报告生成失败</h1><p>错误详情: ${error.message}</p><p>请关闭此窗口重试。</p>`;
         }
     } finally {
-        generateBtn.disabled = false;
-        spinner.style.display = 'none';
+        if(generateBtn) generateBtn.disabled = false;
+        if(spinner) spinner.style.display = 'none';
     }
 }
 
 async function sanitizeAndParseJson(response) {
     let text = await response.text();
-    // 1. Remove markdown fences
     text = text.replace(/^```json\s*|```\s*$/g, '');
-    // 2. Aggressively remove JS arrow functions
     text = text.replace(/"formatter"\s*:\s*\([^)]*\)\s*=>\s*\{[^}]*\},?/g, '');
     try {
         return JSON.parse(text);
@@ -163,7 +251,6 @@ async function downloadPDF() {
         alert("报告窗口已关闭，无法下载PDF。");
         return;
     }
-    // Access libs from the reportWindow's scope
     const { jsPDF } = reportWindow.jspdf;
     const html2canvas = reportWindow.html2canvas;
 
@@ -177,7 +264,7 @@ async function downloadPDF() {
     try {
         for (let i = 0; i < sections.length; i++) {
             const section = sections[i];
-            await new Promise(resolve => setTimeout(resolve, 100)); // Give browser time to render
+            await new Promise(resolve => setTimeout(resolve, 100));
             
             const canvas = await html2canvas(section, {
                 scale: 2,
@@ -185,7 +272,6 @@ async function downloadPDF() {
                 allowTaint: true,
                 backgroundColor: '#050a30',
                 onclone: (clonedDoc) => {
-                    // Try to ensure all content is visible for rendering
                     clonedDoc.querySelector('.report-container').style.margin = '0';
                 }
             });
@@ -210,11 +296,3 @@ async function downloadPDF() {
         btn.disabled = false;
     }
 }
-
-// Attach the main function to the button after the DOM is loaded.
-document.addEventListener('DOMContentLoaded', function() {
-    const generateBtn = document.getElementById('generate-btn');
-    if (generateBtn) {
-        generateBtn.addEventListener('click', generateReport);
-    }
-});
