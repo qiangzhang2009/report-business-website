@@ -2,8 +2,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     // --- 1. Element Cache ---
     const elements = {
+        // From index.html
         topicInput: document.getElementById('topic-input'),
-        triggerBtn: document.getElementById('trigger-payment-modal-btn'),
+        triggerBtnIndex: document.getElementById('trigger-payment-modal-btn'),
+        // From services.html
+        triggerBtnServices: document.getElementById('trigger-payment-modal-from-services-btn'),
+        
+        // Shared Modals
         paymentModal: document.getElementById('payment-modal'),
         paymentModalCloseBtn: document.querySelector('#payment-modal .modal-close'),
         confirmPaymentBtn: document.getElementById('confirm-payment-btn'),
@@ -11,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
         missionModalCloseBtn: document.querySelector('#mission-control-modal .modal-close'),
         missionInput: document.getElementById('mission-input'),
         executeMissionBtn: document.getElementById('execute-mission-btn'),
-        generateBtn: document.getElementById('generate-btn'), // For direct generation if needed
-        spinner: document.getElementById('spinner') // Assuming a spinner element exists
+        
+        // General elements
+        spinner: document.getElementById('spinner')
     };
 
     // --- 2. Modal Logic ---
@@ -24,25 +30,34 @@ document.addEventListener('DOMContentLoaded', function() {
         if (modal) modal.style.display = 'none';
     }
     
-    // --- 3. Event Listeners ---
-    if (elements.triggerBtn) {
-        elements.triggerBtn.addEventListener('click', () => {
-            if (!elements.topicInput.value.trim()) {
-                alert('请输入您感兴趣的行业或产品！');
-                elements.topicInput.focus();
-                return;
-            }
-            openModal(elements.paymentModal);
-        });
+    // --- 3. Unified Event Listeners ---
+    const openPaymentHandler = () => {
+        // On index.html, topic is required before showing modal
+        if (elements.topicInput && !elements.topicInput.value.trim()) {
+            alert('请输入您感兴趣的行业或产品！');
+            elements.topicInput.focus();
+            return;
+        }
+        openModal(elements.paymentModal);
+    };
+
+    if (elements.triggerBtnIndex) {
+        elements.triggerBtnIndex.addEventListener('click', openPaymentHandler);
+    }
+    if (elements.triggerBtnServices) {
+        elements.triggerBtnServices.addEventListener('click', openPaymentHandler);
     }
 
     if (elements.confirmPaymentBtn) {
         elements.confirmPaymentBtn.addEventListener('click', () => {
             closeModal(elements.paymentModal);
             openModal(elements.missionControlModal);
-            // Pre-fill the mission input with the topic from the main page
-            if (elements.missionInput && elements.topicInput) {
+            // Pre-fill mission input ONLY if we are on index.html and the input exists
+            if (elements.missionInput && elements.topicInput && elements.topicInput.value) {
                 elements.missionInput.value = elements.topicInput.value;
+            } else if (elements.missionInput) {
+                // Clear it for the services page flow
+                elements.missionInput.value = '';
             }
             if (elements.missionInput) elements.missionInput.focus();
         });
@@ -58,14 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             closeModal(elements.missionControlModal);
             generateReport(topic); // Execute the main report generation
-        });
-    }
-
-    // Direct generation for simpler pages/buttons
-    if (elements.generateBtn) {
-        elements.generateBtn.addEventListener('click', () => {
-            const topic = document.getElementById('topic').value; // Assuming a different input for this flow
-            generateReport(topic);
         });
     }
 
@@ -102,7 +109,7 @@ async function generateReport(topic) {
     }
     
     // Show spinner and disable button if they exist in the current context
-    const generateBtn = document.getElementById('trigger-payment-modal-btn') || document.getElementById('generate-btn');
+    const generateBtn = document.getElementById('trigger-payment-modal-btn') || document.getElementById('trigger-payment-modal-from-services-btn');
     const spinner = document.getElementById('spinner'); // A general spinner
     if(generateBtn) generateBtn.disabled = true;
     if(spinner) spinner.style.display = 'inline-block';
