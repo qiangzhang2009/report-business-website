@@ -31,6 +31,7 @@ export default async function handler(req, res) {
 
     // 4. This is the master prompt to instruct the AI
     const prompt = `
+        The entire report MUST be generated in Simplified Chinese.
         You are a world-class market analyst. Your task is to generate a concise, data-driven "Experience Version" market insight report on a specific topic.
         The report MUST be in HTML format. You must return ONLY the HTML content for the report section itself, without any preamble, explanation, or markdown fences.
         The root element must be a single div: <div id="report-content">...</div>.
@@ -40,7 +41,7 @@ export default async function handler(req, res) {
         Required HTML Structure:
         <div id="report-content">
             <style>
-                #report-content { font-family: 'Roboto', sans-serif; color: #333; }
+                #report-content { font-family: 'Roboto', 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; color: #333; }
                 #report-content h3 { font-family: 'Orbitron', sans-serif; font-size: 22px; color: #1a2c5b; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; margin-top: 15px; }
                 #report-content h4 { font-family: 'Orbitron', sans-serif; font-size: 18px; color: #3a4c7b; margin-top: 20px; }
                 #report-content p { font-size: 16px; line-height: 1.7; color: #444; }
@@ -48,29 +49,29 @@ export default async function handler(req, res) {
                 #report-content ul { list-style-type: none; padding-left: 0; }
                 #report-content li { background-color: #f7f9fc; border-left: 3px solid #0056b3; margin-bottom: 10px; padding: 10px 15px; }
             </style>
-            <h3>${topic} - Market Snapshot (Experience Version)</h3>
-            <p>This is an AI-generated preliminary insight report for the <strong>${topic}</strong> market. The full version includes over 20 data charts and in-depth analysis.</p>
+            <h3>${topic} - 市场快照 (体验版)</h3>
+            <p>这是一份由AI生成的关于<strong>${topic}</strong>市场的初步洞察报告。完整版包含超过20个数据图表和深度分析。</p>
             
-            <h4>Key Insights</h4>
-            <p>[Generate 1-2 sentences summarizing the most critical market insights and trends for "${topic}"]</p>
+            <h4>核心洞察</h4>
+            <p>[Generate 1-2 sentences summarizing the most critical market insights and trends for "${topic}" in Simplified Chinese]</p>
 
-            <h4>Market Size & Growth</h4>
-            <p>[Generate a brief estimate and description of the market size and growth rate (CAGR) for "${topic}"]</p>
+            <h4>市场规模与增长</h4>
+            <p>[Generate a brief estimate and description of the market size and growth rate (CAGR) for "${topic}" in Simplified Chinese]</p>
 
-            <h4>Key Drivers</h4>
+            <h4>关键驱动力</h4>
             <ul>
-                <li>[Generate the 1st driving factor]</li>
-                <li>[Generate the 2nd driving factor]</li>
-                <li>[Generate the 3rd driving factor]</li>
+                <li>[Generate the 1st driving factor in Simplified Chinese]</li>
+                <li>[Generate the 2nd driving factor in Simplified Chinese]</li>
+                <li>[Generate the 3rd driving factor in Simplified Chinese]</li>
             </ul>
 
-            <h4>Foreseeable Challenges</h4>
+            <h4>可预见的挑战</h4>
             <ul>
-                <li>[Generate the 1st challenge]</li>
-                <li>[Generate the 2nd challenge]</li>
+                <li>[Generate the 1st challenge in Simplified Chinese]</li>
+                <li>[Generate the 2nd challenge in Simplified Chinese]</li>
             </ul>
 
-            <p class="highlight">This is just the tip of the iceberg. Order the full report now to get a comprehensive analysis of the competitive landscape, consumer personas, technological trends, and regulatory environment.</p>
+            <p class="highlight">这只是冰山一角。立即订购完整报告，以获得对竞争格局、消费者画像、技术趋势和监管环境的全面分析。</p>
         </div>
     `;
 

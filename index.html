@@ -248,21 +248,17 @@
             <button class="modal-close" aria-label="关闭">&times;</button>
             <div class="mission-control-header">
                 <i class="fas fa-rocket"></i>
-                <h3>任务指令已激活</h3>
-                <p>请输入您的目标，我们将立即为您启动全球市场分析引擎。</p>
+                <h3>任务指令中心</h3>
             </div>
-            <div class="mission-form">
-                <input type="text" id="mission-input" placeholder="例如：电动汽车 在 欧盟市场" aria-label="报告任务输入">
-                <button id="execute-mission-btn" class="btn-primary"><i class="fas fa-cogs"></i> 生成精美速览报告</button>
-            </div>
-            <div id="mission-loader" style="display: none;">
-                <p>正在连接全球数据节点...</p>
-                <div class="loader"></div>
-                <p class="eta">预计完成时间：3分钟</p>
-            </div>
+            <p class="modal-subtitle">请明确输入您需要AI分析的市场、产品或主题</p>
+            <textarea id="mission-input" placeholder="例如：分析一下2024年拉美地区的咖啡市场趋势和主要玩家"></textarea>
+            <button id="execute-mission-btn" class="btn-primary">
+                <div id="mission-loader" class="loader-small" style="display: none;"></div>
+                <span class="btn-text">立即执行任务</span>
+            </button>
         </div>
     </div>
 
-    <script src="js/script.js?v=2024061201"></script>
+    <script src="js/script.js?v=20240614_final"></script>
 </body>
 </html> 
