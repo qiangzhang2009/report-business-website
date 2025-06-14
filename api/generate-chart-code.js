@@ -4,44 +4,31 @@ export const config = {
 
 function buildChartPrompt(topic, chartType) {
     const chartPrompts = {
-        marketShare: `为关于"${topic}"的市场份额分析，生成一个"甜甜圈图"(Doughnut Chart)的Chart.js JSON配置。使用专业、和谐的商业色彩。`,
-        marketSize: `为关于"${topic}"的市场规模，生成一个从2020年到2029年规模与增长率预测的"复合图表"(Bar and Line Chart)的Chart.js JSON配置。`,
-        techAdoptionCurve: `为关于"${topic}"市场的关键技术，生成一个"技术采纳曲线(散点图)"(Scatter Chart)的Chart.js JSON配置。`,
-        consumerDemographics: `为关于"${topic}"市场的消费者年龄或类型分布，生成一个"甜甜圈图"(Doughnut Chart)的Chart.js JSON配置。请使用富有吸引力且区分明显的专业色彩。`,
-        marketForecast: `为关于"${topic}"的市场，生成一个预测未来5年规模的"折线图"(Line Chart)的Chart.js JSON配置。`,
-        futureTrends: `为关于"${topic}"的市场，生成一个展示3个核心趋势未来5年变化的"多线图"(Multi-axis Line Chart)的Chart.js JSON配置。`,
+        marketShare: `生成一个 JSON 对象，用于配置关于"${topic}"市场份额的"甜甜圈图"(Doughnut Chart)。`,
+        marketSize: `生成一个 JSON 对象，用于配置关于"${topic}"市场从2020年到2029年规模预测的"柱状图"(Bar Chart)。`,
+        techAdoptionCurve: `生成一个 JSON 对象，用于配置关于"${topic}"市场关键技术的"技术采纳曲线(散点图)"(Scatter Chart)。`,
+        consumerDemographics: `
+            为关于 "${topic}" 市场的报告，生成一个JSON对象，用于配置"雷达图"(Radar Chart)。
+            **核心要求:**
+            1. 对比3-5个核心用户群体（例如："价格敏感型企业", "技术早期采用者", "大型跨国公司", "中小型企业"）。
+            2. 评估维度必须包含 "购买力", "品牌忠诚度", "技术需求度", "服务敏感度", "市场规模" 这5个。
+            3. **数据必须符合商业逻辑，例如"大型跨国公司"的购买力通常最高，而"价格敏感型企业"则最低。数据分布不能过于平坦或随机。**
+        `
     };
 
     const specificPrompt = chartPrompts[chartType] || `生成一个关于"${topic}"的图表JSON对象。`;
 
     return `
-        你是一个数据可视化专家，也是一个资深市场分析师。你的唯一任务是根据下面的要求，生成一个纯粹的、符合 Chart.js 格式的 JSON 配置对象。
+        你是一个数据可视化专家和资深市场分析师。你的唯一任务是根据下面的要求，生成一个纯粹的、符合 Chart.js 格式的 JSON 配置对象。
 
-        **不可违背的铁律 (ULTRA-IMPORTANT):**
-        1.  **绝对纯净的JSON**: 你的输出必须是、也只能是一个符合RFC 8259标准的、纯粹的JSON字符串。
-        2.  **严禁任何JS代码**: 绝对禁止在JSON值中包含任何形式的JavaScript代码，特别是箭头函数 (e.g., \`(value) => ...\`) 或任何回调函数。所有值必须是JSON原生类型 (string, number, boolean, array, object, null)。
-        3.  **数据真实性:** 必须使用你知识库中关于 "${topic}" 的真实、权威的公开数据进行估算和预测。严禁虚构数据。
-        4.  **强制中文:** 所有图表内的标签和文本，无一例外，必须全部使用简体中文。
-        5.  **JSON结构:** 你的回复必须以 \`{\` 作为第一个字符，并以 \`}\` 作为最后一个字符。禁止包含任何 \`\`\`json, \`\`\`, HTML, Markdown或解释性文字。
+        **天条级规则(必须严格遵守):**
+        1.  **强制中文:** 所有图表内的标签和文本，无一例外，必须全部使用简体中文。
+        2.  **纯粹JSON:** 你的回复必须是一个纯粹的JSON对象。绝对禁止包含任何 \`\`\`json, \`\`\`, HTML, Markdown或任何解释性文字。
+        3.  **JSON开始/结束:** 你的回复必须以 \`{\` 作为第一个字符，并以 \`}\` 作为最后一个字符。
+        4.  **数据真实性:** 你生成的所有数据都必须基于对真实世界宏观经济和市场趋势的理解，使其具有高度的说服力和合理性。严禁编造毫无根据的、随机的数字。
 
         **具体要求:**
         ${specificPrompt}
-        
-        **关于数据标签的强制范例:**
-        对于所有图表，必须在 'options.plugins' 对象中包含 'datalabels' 配置以显示数据标签。
-        对于甜甜圈图，请使用类似下面的配置，以百分比形式在图表外部显示标签:
-        "plugins": {
-          "datalabels": {
-            "formatter": "%%p",
-            "color": "#fff",
-            "backgroundColor": "rgba(0,0,0,0.7)",
-            "borderRadius": 4,
-            "padding": 6,
-            "anchor": "end",
-            "align": "end",
-            "offset": 10
-          }
-        }
 
         请直接输出JSON对象。
     `;
